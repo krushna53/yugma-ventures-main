@@ -1,5 +1,8 @@
 import React from 'react'
 import SimpleCarousel from '../components/SimpleCarousel'
+
+import Contact from '../components/Contact'
+
 import EventCardBlock from '../components/EventCardBlock';
 // import FounderCard from '../components/FounderCard';
 import FounderSection from '../components/FounderSection';
@@ -36,7 +39,9 @@ const Home = () => {
 
   return (
     <div>
-      <SimpleCarousel />
+
+      <SimpleCarousel/>
+      
       <div>
         <h1>Upcoming Events</h1>
         <EventCardBlock events={events} />
@@ -44,6 +49,9 @@ const Home = () => {
       <div >
         <FounderSection/>
       </div>
+      
+      <Contact/>
+
     </div>
   )
 }

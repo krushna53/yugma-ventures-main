@@ -1,16 +1,34 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css'; // Import your CSS file
-import ScrollComponent from './ScrollComponent';
+import logo from '../images/yugma.png'
 
 const Navbar = () => {
+    const [isAffixed, setAffixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setAffixed(true);
+        console.log('OK');
+      } else {
+        setAffixed(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-    <ScrollComponent/>
-    <nav className="nav">
+    <nav className={isAffixed ? 'nav affix' : 'nav'}>
         <div className="container">
             <div className="logo">
-                <a href="#">Your Logo</a>
+                <a href="#"><img src={logo} alt="" /></a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul className="navlinks">
@@ -20,11 +38,6 @@ const Navbar = () => {
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <span className="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
         </div>
     </nav>
     </div>

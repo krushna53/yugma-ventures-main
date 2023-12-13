@@ -1,6 +1,8 @@
 import React from 'react'
 import SimpleCarousel from '../components/SimpleCarousel'
 import EventCardBlock from '../components/EventCardBlock';
+// import FounderCard from '../components/FounderCard';
+import FounderSection from '../components/FounderSection';
 
 const Home = () => {
 
@@ -27,12 +29,20 @@ const Home = () => {
       tag: 'past',
     },
   ];
+
+
+  
+
+
   return (
     <div>
-      <SimpleCarousel/>
+      <SimpleCarousel />
       <div>
         <h1>Upcoming Events</h1>
         <EventCardBlock events={events} />
+      </div>
+      <div >
+        <FounderSection/>
       </div>
     </div>
   )

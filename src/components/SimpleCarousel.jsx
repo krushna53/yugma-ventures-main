@@ -31,7 +31,7 @@ const SimpleCarousel = () => {
     <div className="simple-carousel">
       <button onClick={prevSlide}>&lt;</button>
       <img src={slides[currentSlide].url} alt={slides[currentSlide].label} />
-      <p className="slide-label">{slides[currentSlide].label}</p>
+      
       <button onClick={nextSlide}>&gt;</button>
     </div>
   );

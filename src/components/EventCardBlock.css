@@ -1,0 +1,90 @@
+/* EventCardBlock.css */
+
+
+.event-navbar {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background color */
+    padding: 10px;
+  }
+  
+.event-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .event-navbar li {
+    margin: 0 15px;
+    padding: 8px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .event-navbar li:hover {
+    text-decoration: rgba(52, 152, 219, 0.8); /* Hover background color */
+    color: #b85cec;
+  }
+  
+  .event-navbar li.active {
+    text-decoration: rgba(52, 152, 219, 0.8); /* Active background color */
+    color: #b85cec;
+  }
+
+
+
+.event-card-block {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px; /* Added margin for centering */
+   
+  }
+  
+  .event-card {
+    max-width: calc(100% / 4);
+    margin: 10px;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    overflow-x: hidden; /* Ensure the overflow is hidden for the zoom effect */
+    overflow-y: hidden;
+    background-color: rgb(235, 255, 248);
+  
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .event-card-img {
+    overflow: hidden;
+  }
+  
+  .event-card img {
+    width: 100%;
+    height: 325px;
+    border-radius: 3%;
+    transition: transform 0.9s ease-in-out;
+    /* overflow: hidden; */
+  }
+  
+  .event-card:hover img {
+    transform: scale(1.2); /* Zoom effect on hover */
+    
+  }
+  
+  .event-details {
+    padding: 10px;
+  }
+  
+  .event-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .event-details p.date-place {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  

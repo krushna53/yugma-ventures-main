@@ -1,0 +1,89 @@
+/* .founders {
+    display: flex;
+  }
+   */
+  .card-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+    margin-top: 200px;
+  }
+
+  /* .card-container {
+    margin-top: 200px;
+  } */
+  
+  .card {
+    position: relative;
+    max-width: calc(100% / 4);
+    height: 200px;
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+  
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+    border-radius: 3%;
+  }
+  
+  .card:hover {
+    height: 500px;
+  }
+  
+  .card .image {
+    position: relative;
+    width: auto;
+    height: auto;
+    border-radius: 3%;
+    top: -30%;
+    align-self: center;
+    /* left: 8px; */
+    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); */
+    z-index: 1;
+  }
+  
+  .card .image img {
+    max-width: 100%;
+    border-radius: 3%;
+  }
+  
+  .card .content {
+    position: relative;
+    top: -140px;
+    padding: 10px 15px;
+    color: #111;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .card:hover .content {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: #333; /* Adjust the color as needed */
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    color: #0077b5; /* Change to the desired hover color */
+  }

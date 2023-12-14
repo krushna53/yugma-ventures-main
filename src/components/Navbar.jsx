@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css'; // Import your CSS file
-import logo from '../images/yugma.png'
+import logo from '../images/yugma.png';
+import { MdLightMode } from "react-icons/md";
 
-const Navbar = () => {
-    const [isAffixed, setAffixed] = useState(false);
+const Navbar = ({ toggleTheme }) => {
+  const [isAffixed, setAffixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setAffixed(true);
-        console.log('OK');
       } else {
         setAffixed(false);
       }
@@ -25,8 +25,9 @@ const Navbar = () => {
 
   return (
     <div>
-    <nav className={isAffixed ? 'nav affix' : 'nav'}>
+      <nav className={isAffixed ? 'nav affix' : 'nav'}>
         <div className="container">
+
             <div className="logo">
                 <a href="#"><img src={logo} alt="" /></a>
             </div>
@@ -37,10 +38,13 @@ const Navbar = () => {
                     <li><a href="#">Events</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
+                    <li><label onClick={toggleTheme}><MdLightMode/></label></li>
+
                 </ul>
             </div>
+
         </div>
-    </nav>
+      </nav>
     </div>
   );
 };

@@ -15,6 +15,9 @@ const EventCardBlock = ({ events }) => {
 
   return (
     <div>
+      <div className='Event'>
+      <h1>Upcoming Events</h1>
+      </div>
       <nav className="event-navbar">
         <ul>
           <li className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>

@@ -1,7 +1,6 @@
 .service-container {
   text-align: center;
   padding: 20px;
-  /* Change to your desired hover color */
   background-color: #F1F8FB;
 }
 
@@ -35,9 +34,14 @@
 }
 
 .Card-root:hover {
-  background: linear-gradient(90deg, #0045FF 0%, #BD29F2 100%);/* Change to your desired hover color */
+
+  background: linear-gradient(90deg, rgba(199, 11, 251, 0.6), rgba(54, 54, 255, 0.6));/* Change to your desired hover color */
+
+
+/*   background: linear-gradient(90deg, #0045FF 0%, #BD29F2 100%); */
 
   }
+
 
 
 .image {

@@ -7,6 +7,7 @@ import EventCardBlock from '../components/EventCardBlock';
 // import FounderCard from '../components/FounderCard';
 import FounderSection from '../components/FounderSection';
 import Navbar from '../components/Navbar'
+import AboutUs from '../components/AboutUs';
 
 const Home = () => {
 
@@ -48,6 +49,7 @@ const Home = () => {
         <EventCardBlock events={events} />
       </div>
       <div className='FounderSection'>
+        <AboutUs/>
         <FounderSection/>
       </div>
       <div className='contact'>

@@ -9,7 +9,7 @@ import { GrTechnology } from "react-icons/gr";
 import { BsDiagram3Fill } from "react-icons/bs";
 export default function ActionAreaCard() {
     return (
-        <div className='container'>
+        <div className='service-container'>
             <h1 id = 'title'>
                 Our Services
             </h1>

@@ -1,74 +1,73 @@
 .simple-carousel {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .simple-carousel::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(199, 11, 251, 0.6), rgba(54, 54, 255, 0.6));
-    pointer-events: none;
-  }
-  
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
 
-  .simple-carousel img {
-    width: 100%;
-    height: 570px;
-    /* transition: transform 0.5s ease-in-out; */
-  }
-  
-  .simple-carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
-  }
-  
-  .simple-carousel button:first-child {
-    left: 0;
-  }
-  
-  .simple-carousel button:last-child {
-    right: 0;
-  }
+.simple-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(199, 11, 251, 0.6), rgba(54, 54, 255, 0.6));
+  pointer-events: none;
+}
 
-  .simple-carousel h3 {
-    position: absolute;
-    top:30%;
-    left: 42%;
-    transform: translateY(-50%);
-    color: aliceblue;
-    font-size: 30px;
-    text-align: center;
-  }
 
-  .simple-carousel h2 {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    left: 37%;
-    color: aliceblue;
-    font-size: 30px;
-    text-align: center;
-  }
+.simple-carousel img {
+  width: 100%;
+  height: 570px;
+  /* transition: transform 0.5s ease-in-out; */
+}
 
-  .simple-carousel p{
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    left: 20%;
-    padding-right: 250px;
-    color: aliceblue;
-    font-size: 20px;
-    text-align: center;
-  }
-  
+.simple-carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.simple-carousel button:first-child {
+  left: 0;
+}
+
+.simple-carousel button:last-child {
+  right: 0;
+}
+
+.simple-carousel h3 {
+  position: absolute;
+  top:30%;
+  left: 42%;
+  transform: translateY(-50%);
+  color: aliceblue;
+  font-size: 30px;
+  text-align: center;
+}
+
+.simple-carousel h2 {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  left: 37%;
+  color: aliceblue;
+  font-size: 30px;
+  text-align: center;
+}
+
+.simple-carousel p{
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  left: 20%;
+  padding-right: 250px;
+  color: aliceblue;
+  font-size: 20px;
+  text-align: center;
+}

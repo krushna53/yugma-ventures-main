@@ -23,7 +23,7 @@ const ContactUs = () => {
     <div className = 'contact'>
       <h2 className='contactus'>Contact Us</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='Name'>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -34,7 +34,7 @@ const ContactUs = () => {
             required
           />
         </div>
-        <div>
+        <div className='email'>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -45,7 +45,7 @@ const ContactUs = () => {
             required
           />
         </div>
-        <div>
+        <div className='message'>
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"

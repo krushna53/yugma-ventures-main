@@ -53,10 +53,23 @@
   color: #fff;
   line-height: 65px;
   font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .nav div.main_list ul li a:hover {
   color: #00E676;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.affix {
+  padding: 0;
+  background-color: #111;
 }
 
 .nav {

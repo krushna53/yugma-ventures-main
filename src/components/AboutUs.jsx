@@ -22,6 +22,7 @@ const AboutUs = () => {
 
       <div className='founders-section'>
         <h1 className='founders-heading'>Our Founders</h1>
+
       </div>
     </div>
   );

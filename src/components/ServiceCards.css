@@ -1,0 +1,68 @@
+.service-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #F1F8FB;
+}
+
+
+
+.Services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+#title{
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100%;
+  font-style: italic;
+  text-decoration: solid;
+}
+
+.Card-root {
+  width: 300px;
+  margin: 20px;
+  padding: 30px 30px 30px 30px;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  background: #FFFFFF;
+  text-align: center;
+  box-shadow: 0px 10px 20px 0px rgba(0, 69.00000000000021, 255, 0.06);
+  overflow: hidden;
+}
+
+.Card-root:hover {
+
+  background: linear-gradient(90deg, rgba(199, 11, 251, 0.6), rgba(54, 54, 255, 0.6));/* Change to your desired hover color */
+
+
+/*   background: linear-gradient(90deg, #0045FF 0%, #BD29F2 100%); */
+
+  }
+
+
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.image svg {
+  font-size: 40px; /* Change to your desired icon size */
+  border-radius: 50%; /* Make the icon circular */
+  background-color: #f1f8f8; /* Add a background color to the circular icon */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 0;
+}

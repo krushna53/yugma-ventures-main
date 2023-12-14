@@ -25,11 +25,13 @@ const ContactUs = () => {
         <h1>Contact US</h1>
       </div>
     <div className = 'contact'>
+
       <div className="leftside">
       <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label><br/>
+
           <input
             type="text"
             id="name"
@@ -39,8 +41,10 @@ const ContactUs = () => {
             required
           />
         </div>
+
         <div>
           <label htmlFor="email">Email:</label><br/>
+
           <input
             type="email"
             id="email"
@@ -50,8 +54,10 @@ const ContactUs = () => {
             required
           />
         </div>
+
         <div>
           <label htmlFor="message">Message:</label><br/>
+
           <textarea
             id="message"
             name="message"

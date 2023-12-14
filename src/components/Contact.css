@@ -1,4 +1,7 @@
-/* ContactUs.css */
+.contact {
+  text-align: left;
+}
+
 
 .ContactUS {
   display: flex;

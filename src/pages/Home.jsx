@@ -1,11 +1,16 @@
 import React from 'react'
 import SimpleCarousel from '../components/SimpleCarousel'
-
+import ServiceCards from '../components/ServiceCards'
 import Contact from '../components/Contact'
 
 import EventCardBlock from '../components/EventCardBlock';
 // import FounderCard from '../components/FounderCard';
 import FounderSection from '../components/FounderSection';
+
+// import Navbar from '../components/Navbar'
+
+
+import AboutUs from '../components/AboutUs';
 
 const Home = () => {
 
@@ -37,23 +42,37 @@ const Home = () => {
   
 
 
+  
+
+
   return (
-    <div>
+
+    <div className='home-container'>
+      
+
 
       <SimpleCarousel/>
-      
-      <div>
-        <h1>Upcoming Events</h1>
+      <div className='Services'>
+        <ServiceCards/>
+      </div>
+      <div className='Events'>      
         <EventCardBlock events={events} />
       </div>
-      <div >
+
+      <div className='FounderSection'>
+
+        <AboutUs/>
         <FounderSection/>
+
       </div>
-      
-      <Contact/>
+      <div className='contact'>
+        <Contact/>
+        </div>
 
     </div>
+   
+
   )
 }
 
-export default Home
+export default Home;

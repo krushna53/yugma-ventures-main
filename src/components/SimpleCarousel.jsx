@@ -65,6 +65,10 @@ const SimpleCarousel = () => {
   return (
     <div className="simple-carousel">
       <button onClick={prevSlide}>&lt;</button>
+
+      
+      
+
         <img
           src={slides[currentSlide].url}
           alt={slides[currentSlide].header}
@@ -74,6 +78,7 @@ const SimpleCarousel = () => {
           <h2 className="header">{slides[currentSlide].header}</h2>
           <p className="info">{slides[currentSlide].info}</p>
         </div>
+
       <button onClick={nextSlide}>&gt;</button>
     </div>
 

@@ -74,16 +74,16 @@
     
   }
   
-  .event-details {
+  .event-card-details {
     padding: 10px;
   }
   
-  .event-details h3 {
+  .event-card-details h3 {
     margin: 0;
     font-size: 1.2em;
   }
   
-  .event-details p.date-place {
+  .event-card-details p.date-place {
     margin: 5px 0;
     font-size: 0.9em;
   }

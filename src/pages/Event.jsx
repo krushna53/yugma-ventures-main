@@ -6,11 +6,11 @@ const Event = () => {
   const eventDetails = [
     {
       name: 'Learning in Web3 and Blockchain',
-      imageUrl: 'https://example.com/event1-image.jpg',
-      date: 'Jan 1, 2023',
-      place: 'Viman Nagar, Pune',
+      imageUrl: 'https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=1,quality=75,width=960,height=480/event-covers/pd/5e114149-9cd8-4b4a-9a37-940916de7e5e',
+      date: 'Jan 1',
+      // place: 'Viman Nagar, Pune',
       venue: 'Tech Hall',
-      whyAttend: 'Explore the latest trends in Web3 and Blockchain. Network with industry experts and enthusiasts.',
+      whyAttend: ['Explore Limitless Potential:Gain insights into the vast opportunities AI presents for MSMEs.','Networking Opportunities: Connect with like-minded professionals, industry experts, and thought leaders.','Expert Speakers: Learn from industry experts, successful entrepreneurs, and AI pioneers.'],
       whoShouldAttend: ['Developers', 'Blockchain enthusiasts', 'Tech enthusiasts'],
       registrationLinkAttendee: 'https://example.com/register-attendee',
       registrationLinkSpeaker: 'https://example.com/register-speaker',
@@ -19,8 +19,8 @@ const Event = () => {
     {
       name: 'understanding of web development',
       imageUrl: 'https://example.com/event1-image.jpg',
-      date: 'Jan 1, 2023',
-      place: 'Viman Nagar, Pune',
+      date: 'Jan 1',
+      // place: 'Viman Nagar, Pune',
       venue: 'Tech Hall',
       whyAttend: 'Explore the latest trends in Web3 and Blockchain. Network with industry experts and enthusiasts.',
       whoShouldAttend: ['Developers', 'Blockchain enthusiasts', 'Tech enthusiasts'],
@@ -40,29 +40,56 @@ const Event = () => {
 
   return (
     <div>
-      <div className="event-details">
-        <img src={event.imageUrl} alt={event.name} />
-        <h2>{event.name}</h2>
-        <p>Date: {event.date}</p>
-        <p>Place: {event.place}</p>
-        <p>Venue: {event.venue}</p>
+      <div className='event-detail-block'>
+        <div className="event-details">
+          <img src={event.imageUrl} alt={event.name} />
+          <div className='event-short-detail'>
+            <div className='event-name'>
+              <h2>{event.name}</h2>
+            </div>
+            <div className='event-date-venue'>
+              <div className='event-date'>
+                <div>Date: {event.date}</div>
+              </div>
+              {/* <div className='event-place'>
+              <p>Place: {event.place}</p>
+              </div> */}
+              <div className='event-venue'>
+                <div>Venue: {event.venue}</div>
+              </div>
+            </div>
+          </div>
 
-        <div className="event-description">
-          <h3>Why Attend?</h3>
-          <p>{event.whyAttend}</p>
+          <div className="event-description">
+            <div className='event-who-why'>
+              <div className='event-why'>
+                <h3>Why Attend?</h3>
+                <ul>
+                  {event.whyAttend.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
 
-          <h3>Who Should Attend?</h3>
-          <ul>
-            {event.whoShouldAttend.map((point, i) => (
-              <li key={i}>{point}</li>
-            ))}
-          </ul>
+              <div className='event-who'>
+                <h3>Who Should Attend?</h3>
+                <ul>
+                  {event.whoShouldAttend.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="registration-options">
+              <button onClick={() => handleRegistration('attendee')}>Register as Attendee</button>
+              <button onClick={() => handleRegistration('speaker')}>Register as Speaker</button>
+            </div>
+
+          </div>
         </div>
-      </div>
 
-      <div className="registration-options">
-        <button onClick={() => handleRegistration('attendee')}>Register as Attendee</button>
-        <button onClick={() => handleRegistration('speaker')}>Register as Speaker</button>
+
       </div>
     </div>
   );

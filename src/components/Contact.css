@@ -1,0 +1,20 @@
+.contact {
+  text-align: left;
+}
+
+.contact h2{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100%;
+  font-style: italic;
+  text-decoration: solid;
+}
+
+label{
+  font-size: 25px;
+  text-align: left;
+  display: inline;
+  margin-bottom: 10px;
+  
+}

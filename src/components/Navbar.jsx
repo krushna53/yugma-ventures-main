@@ -32,10 +32,11 @@ const Navbar = () => {
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul className="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
         </div>

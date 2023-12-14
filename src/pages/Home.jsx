@@ -7,6 +7,7 @@ import Contact from '../components/Contact'
 import EventCardBlock from '../components/EventCardBlock';
 // import FounderCard from '../components/FounderCard';
 import FounderSection from '../components/FounderSection';
+import AboutUs from '../components/AboutUs';
 
 const Home = () => {
 
@@ -42,9 +43,6 @@ const Home = () => {
 
     <div className='home-container'>
       
-        
-
-    <div>
 
       <SimpleCarousel/>
       <ServiceCards/>
@@ -53,7 +51,9 @@ const Home = () => {
         <EventCardBlock events={events} />
       </div>
       <div >
+        <AboutUs/>
         <FounderSection/>
+
       </div>
       
       <Contact/>

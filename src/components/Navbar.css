@@ -5,20 +5,22 @@
   line-height: 65px;
   text-align: center;
   z-index: 100;
+  border-bottom: 10px;
+  border-color: #111  ;
   /* background-color: black; */
 }
 
-.nav div.logo {
+.nav div.logo img{
   float: left;
-  width: auto;
-  height: auto;
+  width: 150px;
+  height: 60px;
   padding-left: 3rem;
 }
 
 .nav div.logo a {
   text-decoration: none;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .nav div.logo a:hover {
@@ -50,10 +52,22 @@
   text-decoration: none;
   color: #fff;
   line-height: 65px;
-  font-size: 2.4rem;
+  font-size: 1.3rem;
 }
 
 .nav div.main_list ul li a:hover {
   color: #00E676;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.affix {
+  padding: 0;
+  background-color: #111;
 }
 

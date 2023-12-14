@@ -39,6 +39,7 @@ const Navbar = ({ toggleTheme }) => {
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><label onClick={toggleTheme}><MdLightMode/></label></li>
+
                 </ul>
             </div>
 

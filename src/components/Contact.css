@@ -1,43 +1,97 @@
 /* ContactUs.css */
 
-.contact div {
-    max-width: 400px;
-    margin: auto;
-  }
-  
+.ContactUS {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.ContactUS .heading{
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+.contact {
+  display: flex;
+  background: white;
+  height: 700px;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
   .contact h2 {
+    margin: 5rem;
     text-align: center;
-    color: #333;
+    color: #000000;
   }
   
   .contact form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .leftside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact .leftside form div{
+    align-self: flex-start;
   }
   
   .contact label {
-    margin-bottom: 0.5em;
-    color: #333;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0.5rem;
   }
   
   .contact input,
   textarea {
     padding: 0.5em;
-    margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-bottom: 3em;
+    border-color: transparent;
+    border-bottom: 1px solid #ccc;
+    resize: none;
   }
   
   .contact button {
+    margin: 50px;
     padding: 0.5em 1em;
+    width: 100px;
+    height: 40px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
   }
   
   .contact button:hover {
     background-color: #0056b3;
+  }
+
+  .rightside{
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+  
+  }
+  .picture{
+    height: 100%;
+    width: 100%;
+  }
+
+  .picture img{
+    height: 100%;
+    width: 100%;
   }
   

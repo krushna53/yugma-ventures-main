@@ -11,16 +11,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(199, 11, 251, 0.6), rgba(54, 54, 255, 0.6));
+    height: 900px;
+    background: linear-gradient(to bottom, rgba(140, 15, 175, 0.677), rgba(39, 39, 233, 0.6));
     pointer-events: none;
+
   }
-  
 
   .simple-carousel img {
     width: 100%;
-    height: 570px;
-    /* transition: transform 0.5s ease-in-out; */
+    height: 900px;
   }
   
   .simple-carousel button {
@@ -44,31 +43,32 @@
   .simple-carousel h3 {
     position: absolute;
     top:30%;
-    left: 42%;
     transform: translateY(-50%);
     color: aliceblue;
-    font-size: 30px;
-    text-align: center;
+    font-size: 50px;
   }
 
   .simple-carousel h2 {
     position: absolute;
     top: 40%;
+    margin-top: 80px;
     transform: translateY(-50%);
-    left: 37%;
     color: aliceblue;
-    font-size: 30px;
-    text-align: center;
+    font-size: 80px;
   }
 
   .simple-carousel p{
     position: absolute;
     top: 60%;
     transform: translateY(-50%);
-    left: 20%;
-    padding-right: 250px;
     color: aliceblue;
-    font-size: 20px;
-    text-align: center;
+    font-size: 30px;
   }
   
+  .simple-carousel .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }

@@ -20,11 +20,16 @@ const ContactUs = () => {
   };
 
   return (
+    <section className='ContactUS'>
+      <div className="heading">
+        <h1>Contact US</h1>
+      </div>
     <div className = 'contact'>
-      <h2>Contact Us</h2>
+      <div className="leftside">
+      <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name:</label><br/>
           <input
             type="text"
             id="name"
@@ -35,7 +40,7 @@ const ContactUs = () => {
           />
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email:</label><br/>
           <input
             type="email"
             id="email"
@@ -46,7 +51,7 @@ const ContactUs = () => {
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Message:</label><br/>
           <textarea
             id="message"
             name="message"
@@ -58,6 +63,14 @@ const ContactUs = () => {
         <button type="submit">Submit</button>
       </form>
     </div>
+
+    <div className="rightside">
+    <div className='picture'>
+      <img src="https://th.bing.com/th/id/OIP.Gal8T40MNWTINM15QEuLAwHaLH?rs=1&pid=ImgDetMain" alt="Image" />
+    </div>
+    </div>
+      </div>
+    </section> 
   );
 };
 

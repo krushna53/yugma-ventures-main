@@ -70,10 +70,9 @@ const SimpleCarousel = () => {
           alt={slides[currentSlide].header}
         />
         <div className="content">
-        <h3 className="slide-why">{slides[currentSlide].why}</h3>
-        <h2 className="header">{slides[currentSlide].header}</h2>
-        <p className="info">{slides[currentSlide].info}</p>
-
+          <h3 className="slide-why">{slides[currentSlide].why}</h3>
+          <h2 className="header">{slides[currentSlide].header}</h2>
+          <p className="info">{slides[currentSlide].info}</p>
         </div>
       <button onClick={nextSlide}>&gt;</button>
     </div>

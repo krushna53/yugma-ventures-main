@@ -22,7 +22,7 @@ const AboutUs = () => {
 
       <div className='founders-section'>
         <h1 className='founders-heading'>Our Founders</h1>
-        {/* You can include FounderCard components or other content for founders here */}
+
       </div>
     </div>
   );

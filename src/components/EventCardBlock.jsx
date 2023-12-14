@@ -1,6 +1,5 @@
-// EventCardBlock.js
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './EventCardBlock.css';
 
 const EventCardBlock = ({ events }) => {
@@ -24,7 +23,10 @@ const EventCardBlock = ({ events }) => {
           <li className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>
             All
           </li>
-          <li className={filter === 'upcoming' ? 'active' : ''} onClick={() => setFilter('upcoming')}>
+          <li
+            className={filter === 'upcoming' ? 'active' : ''}
+            onClick={() => setFilter('upcoming')}
+          >
             Upcoming
           </li>
           <li className={filter === 'past' ? 'active' : ''} onClick={() => setFilter('past')}>
@@ -35,7 +37,7 @@ const EventCardBlock = ({ events }) => {
 
       <div className="event-card-block">
         {filteredEvents.map((event, index) => (
-          <div className={`event-card ${event.tag}`} key={index}>
+          <Link key={index} to={`/event/${index}`} className={`event-card ${event.tag}`}>
             <div className="event-card-img">
               <img src={event.imageUrl} alt={event.name} />
             </div>
@@ -43,7 +45,7 @@ const EventCardBlock = ({ events }) => {
               <h3>{event.name}</h3>
               <p className="date-place">{`${event.date}  |  ${event.place}`}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

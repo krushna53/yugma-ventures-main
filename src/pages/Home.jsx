@@ -1,5 +1,6 @@
 import React from 'react'
 import SimpleCarousel from '../components/SimpleCarousel'
+import ServiceCards from '../components/ServiceCards'
 
 import Contact from '../components/Contact'
 
@@ -38,10 +39,15 @@ const Home = () => {
 
 
   return (
+
+    <div className='home-container'>
+      
+        
+
     <div>
 
       <SimpleCarousel/>
-      
+      <ServiceCards/>
       <div>
         <h1>Upcoming Events</h1>
         <EventCardBlock events={events} />

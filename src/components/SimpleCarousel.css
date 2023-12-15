@@ -29,16 +29,17 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    font-size: 2em;
+    font-size: 3em;
     cursor: pointer;
+    color: white;
   }
   
   .simple-carousel button:first-child {
-    left: 0;
+    left: 15px;
   }
   
   .simple-carousel button:last-child {
-    right: 0;
+    right: 15px;
   }
 
   .simple-carousel h3 {

@@ -42,37 +42,34 @@ const Home = () => {
   
 
 
-  
-
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      window.scrollTo({
+        top: sectionElement.offsetTop - 50,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
-
-    <div className='home-container'>
-      
-
-
-      <SimpleCarousel/>
-      <div className='Services'>
-        <ServiceCards/>
+    <div className="home-container">
+      <SimpleCarousel />
+      <div className="Services" id="services">
+        <ServiceCards />
       </div>
-      <div className='Events'>      
+      <div className="Events" id="events">
         <EventCardBlock events={events} />
       </div>
-
-      <div className='FounderSection'>
-
-        <AboutUs/>
-        <FounderSection/>
-
+      <div className="FounderSection" id="founder">
+        <AboutUs />
+        <FounderSection />
       </div>
-      <div className='contact'>
-        <Contact/>
-        </div>
-
+      <div className="contact" id="contact">
+        <Contact />
+      </div>
     </div>
-   
-
-  )
-}
+  );
+};
 
 export default Home;

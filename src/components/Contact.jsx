@@ -30,7 +30,7 @@ const ContactUs = () => {
       <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name:</label><br/>
+          <label htmlFor="name">Name:</label>
 
           <input
             type="text"
@@ -43,7 +43,7 @@ const ContactUs = () => {
         </div>
 
         <div>
-          <label htmlFor="email">Email:</label><br/>
+          <label htmlFor="email">Email:</label>
 
           <input
             type="email"
@@ -56,7 +56,7 @@ const ContactUs = () => {
         </div>
 
         <div>
-          <label htmlFor="message">Message:</label><br/>
+          <label htmlFor="message">Message:</label>
 
           <textarea
             id="message"

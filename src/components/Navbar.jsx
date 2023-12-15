@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../images/yg.png';
+import sunsym from '../images/sun.png';
 import Switch from 'react-switch';
 
 const Navbar = ({ toggleTheme }) => {
@@ -30,8 +31,7 @@ const Navbar = ({ toggleTheme }) => {
 
   return (
     <div>
-      <nav className={isAffixed ? 'nav affix' : 'nav'}>
-        <div className="container">
+      <nav className={isAffixed ? 'nav affix'  : 'nav'}>
           <div className="logo">
             <a href="#"><img src={logo} alt="" /></a>
           </div>
@@ -42,21 +42,22 @@ const Navbar = ({ toggleTheme }) => {
               <li><a href="#">Events</a></li>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div className="theme_switch">
+              <div className="theme_switch">
             <Switch
               onChange={handleThemeToggle}
               checked={checked}
               height={24}
               width={48}
+              borderRadius={15}
               onColor="#00E676"
               offColor="#333"
               checkedIcon={false}
               uncheckedIcon={false}
             />
           </div>
-        </div>
+            </ul>
+          </div>
+          
       </nav>
     </div>
   );

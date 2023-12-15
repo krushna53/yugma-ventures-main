@@ -1,19 +1,15 @@
 .service-container {
   text-align: center;
   padding: 20px;
-  background-color: #F1F8FB;
 }
-
-
 
 .Services {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  
 }
 
-#title{
+#title {
   font-size: 36px;
   margin-bottom: 20px;
   text-align: center;
@@ -26,7 +22,8 @@
   text-decoration: solid;
 
   /* Gradient Background */
-  background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
+  background: linear-gradient(90deg, #4CAF50, #2196F3);
+  /* Adjust colors as needed */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -45,48 +42,67 @@
   }
 }
 
-.Card-root {
-  width: 300px;
+.Services .Card-root {
+  width: calc(33.33% - 20px);
   margin: 20px;
-  padding: 30px 30px 30px 30px;
-  border-radius: 20px 20px 20px 20px;
+  padding: 30px;
+  border-radius: 20px;
   position: relative;
   background: #FFFFFF;
   text-align: center;
-  box-shadow: 0px 10px 20px 0px rgba(0, 69.00000000000021, 255, 0.06);
+  box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
   overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.Card-root:hover {
+.Services .Card-root:hover {
+  background-color: #f1f8fb;
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+  box-shadow: 0 15px 30px 0 rgba(0, 69, 255, 0.1); /* Adjust box-shadow on hover */
+}
 
-  background: linear-gradient(90deg, rgba(199, 11, 251, 0.6), rgba(54, 54, 255, 0.6));/* Change to your desired hover color */
-
-
-/*   background: linear-gradient(90deg, #0045FF 0%, #BD29F2 100%); */
-
-  }
-
-
-
-.image {
+.Services .image {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.image svg {
-  font-size: 40px; /* Change to your desired icon size */
-  border-radius: 50%; /* Make the icon circular */
-  background-color: #f1f8f8; /* Add a background color to the circular icon */
+.Services .image svg {
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: #f1f8f8;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.Services h1 {
   margin: 10px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  font-weight: 700; /* Increased font weight for emphasis */
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Added text shadow for depth */
+  letter-spacing: 1px; /* Adjust letter spacing for better readability */
 }
 
-p {
-  margin: 0;
+.Services p {
+  margin: 10px 0; /* Added margin for better spacing */
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px; /* Increased font size for better readability */
+  line-height: 1.6; /* Adjusted line height for better readability */
+  color: #777; /* Changed color to a softer tone */
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .Services .Card-root {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Services .Card-root {
+    width: calc(100% - 20px);
+  }
 }

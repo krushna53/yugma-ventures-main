@@ -22,7 +22,7 @@ const Event = () => {
       date: 'Jan 1',
       // place: 'Viman Nagar, Pune',
       venue: 'Tech Hall',
-      whyAttend: 'Explore the latest trends in Web3 and Blockchain. Network with industry experts and enthusiasts.',
+      whyAttend: ['Explore Limitless Potential:Gain insights into the vast opportunities AI presents for MSMEs.','Networking Opportunities: Connect with like-minded professionals, industry experts, and thought leaders.','Expert Speakers: Learn from industry experts, successful entrepreneurs, and AI pioneers.'],
       whoShouldAttend: ['Developers', 'Blockchain enthusiasts', 'Tech enthusiasts'],
       registrationLinkAttendee: 'https://example.com/register-attendee',
       registrationLinkSpeaker: 'https://example.com/register-speaker',

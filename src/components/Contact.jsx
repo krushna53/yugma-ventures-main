@@ -20,11 +20,11 @@ const ContactUs = () => {
   };
 
   return (
-    <section className='ContactUS'>
+    <div className='ContactUS'>
       <div className="heading">
         <h1>Contact US</h1>
       </div>
-    <div className = 'contact'>
+    <div className = 'contact-block'>
 
       <div className="leftside">
       <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
@@ -76,7 +76,7 @@ const ContactUs = () => {
     </div>
     </div>
       </div>
-    </section> 
+    </div> 
   );
 };
 

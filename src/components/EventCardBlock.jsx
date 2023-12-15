@@ -16,7 +16,7 @@ const EventCardBlock = ({ events }) => {
   return (
     <div>
       <div className='Event'>
-      <h1>Upcoming Events</h1>
+      <h1 className='event-heading'>Upcoming Events</h1>
       </div>
       <nav className="event-navbar">
         <ul>

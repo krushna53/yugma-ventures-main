@@ -42,6 +42,11 @@
    
   }
   
+  .event-card-block a {
+    text-decoration: none;
+    color: black;
+  }
+
   .event-card {
     max-width: calc(100% / 4);
     margin: 10px;
@@ -95,3 +100,35 @@
   font-style: italic;
 text-decoration: solid;
   }
+
+  .event-heading{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100%;
+    font-style: italic;
+    text-decoration: solid;
+  
+    /* Gradient Background */
+    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  
+    /* Animation */
+    animation: gradientAnimation 5s infinite alternate; 
+  }
+
+  /* Animation Keyframes */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

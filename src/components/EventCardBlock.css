@@ -42,6 +42,11 @@
    
   }
   
+  .event-card-block a {
+    text-decoration: none;
+    color: black;
+  }
+
   .event-card {
     max-width: calc(100% / 4);
     margin: 10px;

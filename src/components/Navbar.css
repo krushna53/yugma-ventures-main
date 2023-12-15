@@ -5,8 +5,6 @@
   line-height: 65px;
   text-align: center;
   z-index: 100;
-  border-bottom: 10px;
-  border-color: #111  ;
   /* background-color: black; */
 }
 
@@ -81,3 +79,155 @@
 
 }
 
+
+
+
+/* Navbar.css */
+
+/* Common styles for both affixed and non-affixed states */
+.nav {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  z-index: 100; /* Added solid to the border */
+  background-color: transparent; /* Set default background color to transparent */
+  transition: all 0.4s ease;
+}
+
+.nav div.logo img {
+  margin-top: 10px;
+  float: left;
+  width: 150px; /* Adjusted the width */
+  height: 50px; /* Adjusted the height */
+  padding-left: 1rem; /* Adjusted padding */
+}
+
+.nav div.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.nav div.logo a:hover {
+  color: #00E676;
+}
+
+.nav div.main_list {
+  height: 90px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  height: 90px;
+  padding: 0;
+  padding-right: 2rem; /* Adjusted padding */
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 90px;
+  font-size: 1.2rem; /* Adjusted font size */
+  transition: color 0.2s ease-in;
+}
+
+.nav div.main_list ul li a:hover {
+  color: #000000;
+}
+
+/* Affix styles */
+.affix {
+  background-color: #111;
+}
+
+.affix div.main_list ul li a:hover {
+  color: #e943ff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .nav {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .nav div.logo img {
+    width: 120px;
+    height: 40px;
+    padding-left: 0.5rem;
+  }
+
+  .nav div.logo a {
+    font-size: 1.2rem;
+  }
+
+  .nav div.main_list {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav div.main_list ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav div.main_list ul li {
+    height: auto;
+    padding: 10px 0;
+    padding-right: 0;
+  }
+}
+
+
+.theme_switch {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem; /* Adjusted padding */
+}
+
+.react-switch-bg {
+  border: 1px solid #00E676;
+}
+
+.react-switch-handle {
+  border: 2px solid #00E676;
+}
+
+.affix .theme_switch {
+  color: #e943ff;
+}
+
+.theme_switch {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 1rem; /* Adjusted padding */
+}
+
+.vertical-switch {
+  transform: rotate(90deg);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .theme_switch {
+    margin-left: 0;
+    margin-top: 10px; /* Adjusted margin-top for spacing */
+    padding-right: 0; /* Removed padding */
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-end; /* Align the switch to the right on small screens */
+  }
+}

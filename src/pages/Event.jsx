@@ -1,33 +1,36 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { FaLightbulb, FaUserFriends, FaChalkboardTeacher } from 'react-icons/fa'; // Import icons from react-icons
 import './Event.css';
 
 const Event = () => {
   const eventDetails = [
     {
       name: 'Learning in Web3 and Blockchain',
-      imageUrl: 'https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=1,quality=75,width=960,height=480/event-covers/pd/5e114149-9cd8-4b4a-9a37-940916de7e5e',
+      imageUrl: 'https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       date: 'Jan 1',
-      // place: 'Viman Nagar, Pune',
       venue: 'Tech Hall',
-      whyAttend: ['Explore Limitless Potential:Gain insights into the vast opportunities AI presents for MSMEs.','Networking Opportunities: Connect with like-minded professionals, industry experts, and thought leaders.','Expert Speakers: Learn from industry experts, successful entrepreneurs, and AI pioneers.'],
+      place: 'Pune',
+      introTitle: 'WELCOME TO THE WORLD OF DATA, APPS AND AI COLLABORATION',
+      introDesc: 'Snowflake is coming home to San Francisco. Join us at Snowflake Summit 2024 to explore all the cutting-edge innovation the Data Cloud has to offer. Discover the latest in AI, genAI, Apache Iceberg, streaming, privacy-preserving collaboration, flexible programmability, application development and much more.',
+      whyAttend: ['Gain insights into the vast opportunities AI presents for MSMEs.', 'Connect with like-minded professionals, industry experts, and thought leaders.', 'Learn from industry experts, successful entrepreneurs, and AI pioneers.'],
       whoShouldAttend: ['Developers', 'Blockchain enthusiasts', 'Tech enthusiasts'],
       registrationLinkAttendee: 'https://example.com/register-attendee',
       registrationLinkSpeaker: 'https://example.com/register-speaker',
     },
-
     {
-      name: 'understanding of web development',
+      name: 'Understanding of Web Development',
       imageUrl: 'https://example.com/event1-image.jpg',
       date: 'Jan 1',
-      // place: 'Viman Nagar, Pune',
       venue: 'Tech Hall',
-      whyAttend: ['Explore Limitless Potential:Gain insights into the vast opportunities AI presents for MSMEs.','Networking Opportunities: Connect with like-minded professionals, industry experts, and thought leaders.','Expert Speakers: Learn from industry experts, successful entrepreneurs, and AI pioneers.'],
+      place: 'Pune',
+      introTitle: 'WELCOME TO THE WORLD OF DATA, APPS AND AI COLLABORATION',
+      introDesc: 'Snowflake is coming home to San Francisco. Join us at Snowflake Summit 2024 to explore all the cutting-edge innovation the Data Cloud has to offer. Discover the latest in AI, genAI, Apache Iceberg, streaming, privacy-preserving collaboration, flexible programmability, application development and much more.',
+      whyAttend: ['Gain insights into the vast opportunities AI presents for MSMEs.', 'Connect with like-minded professionals, industry experts, and thought leaders.', 'Learn from industry experts, successful entrepreneurs, and AI pioneers.'],
       whoShouldAttend: ['Developers', 'Blockchain enthusiasts', 'Tech enthusiasts'],
       registrationLinkAttendee: 'https://example.com/register-attendee',
       registrationLinkSpeaker: 'https://example.com/register-speaker',
     },
-    // Add more events as needed
   ];
 
   const { index } = useParams();
@@ -39,58 +42,58 @@ const Event = () => {
   };
 
   return (
-    <div>
-      <div className='event-detail-block'>
+    <div className='event-detail-block'>
+      <div className='event-img-detail'>
+        <img src={event.imageUrl} alt={event.name} className="event-background" />
+
         <div className="event-details">
-          <img src={event.imageUrl} alt={event.name} />
-          <div className='event-short-detail'>
-            <div className='event-name'>
-              <h2>{event.name}</h2>
+          <div className='event-name'>
+            <h1>{event.name}</h1>
+          </div>
+          <div className='event-date-venue'>
+            {/* <div className='event-date'> */}
+              <h2>{event.venue} | {event.place} | {event.date}</h2>
+            {/* </div> */}
+            {/* <div className='event-venue'>
+              <p>{event.venue}</p>
+            </div> */}
+          </div>
+          <div className="registration-options">
+            <button onClick={() => handleRegistration('attendee')}>Register as Attendee</button>
+            <button onClick={() => handleRegistration('speaker')}>Register as Speaker</button>
+          </div>
+        </div>
+      </div>
+      <div className="event-description">
+          <div className='event-intro'>
+            <div className='event-intro-title'>
+              <h1>{event.introTitle}</h1>
             </div>
-            <div className='event-date-venue'>
-              <div className='event-date'>
-                <div>Date: {event.date}</div>
-              </div>
-              {/* <div className='event-place'>
-              <p>Place: {event.place}</p>
-              </div> */}
-              <div className='event-venue'>
-                <div>Venue: {event.venue}</div>
-              </div>
+            <div className='event-intro-desc'>
+              <p>{event.introDesc}</p>
             </div>
           </div>
-
-          <div className="event-description">
-            <div className='event-who-why'>
-              <div className='event-why'>
-                <h3>Why Attend?</h3>
-                <ul>
-                  {event.whyAttend.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className='event-who'>
-                <h3>Who Should Attend?</h3>
-                <ul>
-                  {event.whoShouldAttend.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
+          <div className='event-who-why'>
+            <div className='event-why'>
+              <h1>Why Attend?</h1>
+              <ul>
+                <li><FaLightbulb /> {event.whyAttend[0]}</li>
+                <li><FaUserFriends /> {event.whyAttend[1]}</li>
+                <li><FaChalkboardTeacher /> {event.whyAttend[2]}</li>
+              </ul>
             </div>
 
-            <div className="registration-options">
-              <button onClick={() => handleRegistration('attendee')}>Register as Attendee</button>
-              <button onClick={() => handleRegistration('speaker')}>Register as Speaker</button>
+            <div className='event-who'>
+              <h1>Who Should Attend?</h1>
+              <ul>
+                {event.whoShouldAttend.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
             </div>
 
           </div>
         </div>
-
-
-      </div>
     </div>
   );
 };

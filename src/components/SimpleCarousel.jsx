@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./SimpleCarousel.css"; // Create a CSS file for styling
+import brandImage from "../images/brandpositioning.jpg"
 
 const SimpleCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      url: "https://static.vecteezy.com/system/resources/previews/001/127/277/original/business-people-competition-with-time-vector.jpg",
+      url: "https://s3.amazonaws.com/startupcollective-com/wp-content/uploads/business-competition-1024x681.jpg"/*"https://static.vecteezy.com/system/resources/previews/001/127/277/original/business-people-competition-with-time-vector.jpg"*/,
       why: "Why US ?",
       header: 'Market Competition',
       info: 'Fierce competition in the market poses a challenge for businesses to differentiate and capture market share.',
@@ -24,7 +25,7 @@ const SimpleCarousel = () => {
       info: 'Navigating complex regulatory landscapes poses challenges,requiring businesses to stay compliant and avoid risks.',
     },
     {
-      url: "https://goodish.agency/wp-content/uploads/2021/01/BRAND-2.jpg",
+      url: {brandImage},
       why: "Why US ?",
       header: 'Brand Positioning',
       info: 'Positioning your brand amidst market turbulence requires strategic foresight, agility, and a commitment to delivering value.',

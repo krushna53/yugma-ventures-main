@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../images/yg.png';
-import sunsym from '../images/sun.png';
 import Switch from 'react-switch';
 
 const Navbar = ({ toggleTheme }) => {

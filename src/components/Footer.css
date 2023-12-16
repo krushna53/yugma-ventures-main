@@ -8,6 +8,11 @@
 .footer-sec h2 {
     padding-bottom: 20px;
     padding-top: 30px;
+    color: #333;
+}
+
+.footer-sec p{
+    color: #333;
 }
 
 .footer-sec button {

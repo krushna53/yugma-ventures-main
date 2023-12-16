@@ -118,42 +118,7 @@
   color: #000000;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  .nav {
-    height: auto;
-    padding: 10px 0;
-  }
 
-  .nav div.logo img {
-    width: 120px;
-    height: 40px;
-    padding-left: 0.5rem;
-  }
-
-  .nav div.logo a {
-    font-size: 1.2rem;
-  }
-
-  .nav div.main_list {
-    float: none;
-    text-align: center;
-    margin-top: 10px;
-    
-  }
-
-  .nav div.main_list ul {
-    display: flex;
-    flex-direction: column;
-    
-  }
-
-  .nav div.main_list ul li {
-    height: auto;
-    padding: 10px 0;
-    padding-right: 0;
-  }
-}
 
 
 .theme_switch {
@@ -182,44 +147,49 @@
   transform: rotate(90deg);
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  
   .nav {
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .nav .logo img {
-    width: 120px;
-    height: 40px;
-    padding-left: 0.5rem;
-  }
-
-  .nav .logo a {
-    font-size: 1.2rem;
-  }
-
-  .nav .main_list {
-    float: none;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .nav .main_list ul {
+    height: 70px;
+    line-height: 50px;
     display: flex;
-    flex-direction: column;
   }
+  .nav .logo img {
+    margin-top: -25px;
+    transform: scale(0.3); 
+  }
+  .nav div.main_list {
+    margin-top: -125px;
+    margin-right: -125px;
+   }
+   
+   .nav div.main_list ul li{
+    margin-right: 25px;
+   }
+  .nav div.main_list ul li a{
+    font-size: 0.7rem;
+  }
+}
 
-  .nav .main_list ul li {
-    height: auto;
-    padding: 10px 0;
-    margin-right: 0; /* Adjusted margin-right to stack items vertically */
+@media only screen and (max-width: 480px) {
+  .nav {
+    height: 80px; 
+    line-height: auto;
+    display: inline;
+  }
+  .nav .logo img {
+    margin-top: -50px;
+    margin-left: -100px;
+    transform: scale(0.2); 
+  }
+  .nav .main_list {
+    margin-right:-200px;
+
+  }
+  .nav div.main_list ul li {
+    font-size: 0.8rem; 
   }
   .theme_switch {
-    margin-left: 0;
-    margin-top: 10px; /* Adjusted margin-top for spacing */
-    padding-right: 0; /* Removed padding */
-    flex-direction: column; /* Stack items vertically on small screens */
-    align-items: flex-end; /* Align the switch to the right on small screens */
+    display: none; 
   }
 }

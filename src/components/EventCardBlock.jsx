@@ -43,6 +43,7 @@ const EventCardBlock = ({ events }) => {
                 <div className="event-card-tags">Past</div>
                 <img src={event.imageUrl} alt={event.name} />
               </div>
+              
             ) : (
               <Link to={`/event/${index}`} className="event-card-img-link">
                 <div className="event-card-img">
@@ -51,6 +52,7 @@ const EventCardBlock = ({ events }) => {
                 </div>
               </Link>
             )}
+
             <div className="event-card-details">
               <h3>{event.name}</h3>
               <p className="date-place">{`${event.date}  |  ${event.place}`}</p>

@@ -12,6 +12,10 @@
   transition: all 0.4s ease;
 }
 
+.nav .logo {
+  float: left;
+}
+
 .nav .logo img {
   margin-top: -40px;
   margin-left: -10px;
@@ -118,9 +122,6 @@
   color: #000000;
 }
 
-
-
-
 .theme_switch {
   max-width: 100px;
   display: flex;
@@ -147,49 +148,87 @@
   transform: rotate(90deg);
 }
 
+
 @media only screen and (max-width: 768px) {
-  
   .nav {
     height: 70px;
     line-height: 50px;
     display: flex;
+    justify-content: space-around;
+    padding: 10px;
   }
+
   .nav .logo img {
-    margin-top: -25px;
-    transform: scale(0.3); 
+    margin-top: -50px;
+    margin-left: -60px; /* Adjusted the margin-left to align properly */
+    transform: scale(0.3);
   }
+
   .nav div.main_list {
-    margin-top: -125px;
-    margin-right: -125px;
-   }
-   
-   .nav div.main_list ul li{
-    margin-right: 25px;
-   }
-  .nav div.main_list ul li a{
-    font-size: 0.7rem;
+    margin-top: 0; /* Removed the negative margin-top */
+    margin-right: 0;
+    text-align: center;
   }
+
+  .nav div.main_list ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Make the main list items stay in a single line */
+    align-items: center;
+    justify-content: center; /* Center the main list items */
+    margin-top: -10px;
+  }
+
+  .nav div.main_list ul li {
+    margin-right: 15px; /* Adjusted margin for better spacing */
+  }
+  .theme_switch{
+    margin-bottom:25px ;
+    margin-left: 10px;
+  }
+  
 }
 
 @media only screen and (max-width: 480px) {
   .nav {
-    height: 80px; 
-    line-height: auto;
-    display: inline;
+    height: 50px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row; /* Ensure horizontal alignment */
+    justify-content: space-around;
+    align-items: center;
   }
-  .nav .logo img {
-    margin-top: -50px;
-    margin-left: -100px;
-    transform: scale(0.2); 
-  }
-  .nav .main_list {
-    margin-right:-200px;
 
+  .nav .logo img {
+    margin-top: -10px;
+    margin-left: -130px;
+    transform: scale(0.2);
   }
+
+  .nav .main_list {
+    margin-left: -60px;
+    margin-top: 0; /* Removed unnecessary margin-top */
+  }
+
+  .nav div.main_list ul {
+    display: flex;
+    flex-direction: row; /* Ensure horizontal alignment for list items */
+    align-items: center;
+    padding: 0;
+    margin-left: -20px;
+  }
+
   .nav div.main_list ul li {
-    font-size: 0.8rem; 
+    margin-right: 10px; 
+    /* Adjusted margin for better spacing */
+    margin-top: 15px;
+    font-size: 15px;
   }
-  .theme_switch {
-    display: none; 
+  .nav div.main_list ul li a{
+    font-size: 15px;
   }
+
+
+
 }

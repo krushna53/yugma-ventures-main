@@ -17,6 +17,7 @@
     pointer-events: none;
 
   }
+  
 
   .simple-carousel img {
     width: 100%;
@@ -29,30 +30,79 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    font-size: 3em;
-    cursor: pointer;
+    font-size: 2em;
     color: white;
+    cursor: pointer;
   }
   
   .simple-carousel button:first-child {
-    left: 15px;
+    left: 0;
   }
   
   .simple-carousel button:last-child {
-    right: 15px;
+    right: 0;
   }
+
+  @-webkit-keyframes fadeInUpSD {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+  
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInUpSD {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-50%-100px);
+      transform: translateY(-50%-100px);
+    }
+  
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+  
+  .fadeInUpSD {
+    -webkit-animation-name: fadeInUpSD;
+    animation-name: fadeInUpSD;
+  }
+
+  .carousel-content {
+    display: flex;
+    
+    left: 10%;
+    opacity: 1;
+    /* transition: opacity 3s ease-in-out; */
+    max-width: 70%;
+  }
+  
 
   .simple-carousel h3 {
     position: absolute;
-    top:30%;
+    animation-name: fadeInUpSD;
+    animation-duration: 1s;
+    top:40%;
+    left: 10%;
     transform: translateY(-50%);
     color: aliceblue;
-    font-size: 50px;
+    font-size: 20px;
   }
 
   .simple-carousel h2 {
     position: absolute;
+    animation-name: fadeInUpSD;
+    animation-duration: 2s;
     top: 40%;
+    left: 10%;
     margin-top: 80px;
     transform: translateY(-50%);
     color: aliceblue;
@@ -61,16 +111,14 @@
 
   .simple-carousel p{
     position: absolute;
+    animation-name: fadeInUpSD;
+    animation-duration: 3s;
     top: 60%;
+    left: 10%;
     transform: translateY(-50%);
     color: aliceblue;
     font-size: 30px;
+    max-width: 60%;
   }
   
-  .simple-carousel .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all 0.5s ease-in-out;
-  }
+  

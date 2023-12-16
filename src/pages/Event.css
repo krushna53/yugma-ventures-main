@@ -24,6 +24,7 @@
   z-index: 1; /* Ensure details appear on top of the image */
 }
 
+
 .event-details .event-name h2,
 .event-details .event-date-venue p,
 .registration-options button {

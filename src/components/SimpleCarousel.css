@@ -3,6 +3,7 @@
     position: relative;
     max-width: 100%;
     margin: auto;
+    height: 900px;
     overflow: hidden;
   }
   
@@ -22,12 +23,13 @@
   .simple-carousel img {
     width: 100%;
     height: 900px;
+    object-fit: cover;
   }
   
   .simple-carousel button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 55%;
+    transform: translateY(-250%);
     background: none;
     border: none;
     font-size: 2em;
@@ -76,49 +78,105 @@
     animation-name: fadeInUpSD;
   }
 
-  .carousel-content {
+  /* .carousel-content {
     display: flex;
-    
-    left: 10%;
-    opacity: 1;
+    /* background-color: rgb(54, 54, 54, 0.5); */
+    /* left: 10%;
+    opacity: 1; */
     /* transition: opacity 3s ease-in-out; */
-    max-width: 70%;
+  /*  max-width: 70%;
+  } */
+
+  .simple-carousel .carousel-inner-content {
+    background-color: rgb(54, 54, 54, 0.5);
+    top:40%;
+    /* z-index: 2; */
+    margin-left: 50px;
+    left: 10%;
+    max-width: 1000px;
+    height: 500px;
+    transform: translateY(-155%);
+    /* transform: translateX(20%); */
   }
   
 
-  .simple-carousel h3 {
-    position: absolute;
+  .simple-carousel .carousel-inner-content h3 {
+    position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 1s;
-    top:40%;
-    left: 10%;
+    top:10%;
+    left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
-    font-size: 20px;
+    font-size: 30px;
   }
 
-  .simple-carousel h2 {
-    position: absolute;
+  .simple-carousel .carousel-inner-content h2 {
+    position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 2s;
-    top: 40%;
-    left: 10%;
-    margin-top: 80px;
+    top: 5%;
+    left: 5%;
+    /* background-color: rgb(54, 54, 54, 0.5); */
+    /* margin-top: 100px; */
     transform: translateY(-50%);
     color: aliceblue;
     font-size: 80px;
   }
 
-  .simple-carousel p{
-    position: absolute;
+  .simple-carousel .carousel-inner-content p{
+    position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 3s;
-    top: 60%;
-    left: 10%;
+    /* top: 20%; */
+    top: 5%;
+    left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
     font-size: 30px;
     max-width: 60%;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .simple-carousel {
+      height: 500px; /* Adjust the height as needed for smaller screens */
+    }
+  
+    .simple-carousel::before {
+      height: 500px; /* Adjust the height as needed for smaller screens */
+    }
+  
+    .simple-carousel .carousel-inner-content {
+      top: 5%; /* Adjust the top position as needed for smaller screens */
+      max-width: 380px;
+      /* left: -3%; */
+      margin-left: 15px;
+      height: 250px; 
+      transform: translateY(-300%);
+    }
+    .simple-carousel .carousel-inner-content h3 {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  
+    .simple-carousel .carousel-inner-content h2 {
+      font-size: 25px; /* Adjust the font size as needed for smaller screens */
+      margin-top: 20px;
+      top: 10%;
+    }
+  
+    .simple-carousel .carousel-inner-content p {
+      font-size: 15px; /* Adjust the font size as needed for smaller screens */
+      top: 20%;
+    }
+
+    .simple-carousel button {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      
+    }
   }
   
   

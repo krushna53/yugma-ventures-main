@@ -51,7 +51,7 @@ const Event = () => {
             <h1>{event.name}</h1>
           </div>
           <div className='event-date-venue'>
-              <h2>{event.venue} | {event.place} | {event.date}</h2>
+              <h2>{event.venue}   | {event.place}   |   {event.date}</h2>
           </div>
           <div className="registration-options">
             <button onClick={() => handleRegistration('attendee')}>Register as Attendee</button>
@@ -59,6 +59,7 @@ const Event = () => {
           </div>
         </div>
       </div>
+      <div className="event-description-container">
       <div className="event-description">
           <div className='event-intro'>
             <div className='event-intro-title'>
@@ -89,6 +90,8 @@ const Event = () => {
 
           </div>
         </div>
+      </div>
+      
     </div>
   );
 };

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
 import brandImage from "../images/brandpositioning.jpg";
+import regulatryImage from "../images/regulation.jpg";
+import techImage from "../images/techdisp.jpg";
+import marketImage from "../images/market.jpg";
+import talentImage from "../images/talent.jpg";
+import financeImage from "../images/talent.webp";
 import "./SimpleCarousel.css"; // Create a CSS file for styling
 
 const SimpleCarousel = () => {
@@ -8,19 +13,19 @@ const SimpleCarousel = () => {
 
   const slides = [
     {
-      url: "https://s3.amazonaws.com/startupcollective-com/wp-content/uploads/business-competition-1024x681.jpg" /*"https://static.vecteezy.com/system/resources/previews/001/127/277/original/business-people-competition-with-time-vector.jpg"*/,
+      url: marketImage,
       why: "Why US ?",
       header: "Market Competition",
       info: "Fierce competition in the market poses a challenge for businesses to differentiate and capture market share.",
     },
     {
-      url: "https://www.hrdconnect.com/wp-content/uploads/2020/09/shutterstock_111003869-scaled.jpg",
+      url: talentImage,
       why: "Why US ?",
       header: "Talent Auquisation",
       info: "Attracting and retaining skilled talent is a constant challenge,impacting organizational productivity and success.",
     },
     {
-      url: "https://i.pinimg.com/originals/ca/c5/90/cac5909fa1628c7a87752b9d17454870.jpg",
+      url: regulatryImage,
       why: "Why US ?",
       header: "Regulatory Compliance",
       info: "Navigating complex regulatory landscapes poses challenges,requiring businesses to stay compliant and avoid risks.",
@@ -32,13 +37,13 @@ const SimpleCarousel = () => {
       info: "Positioning your brand amidst market turbulence requires strategic foresight, agility, and a commitment to delivering value.",
     },
     {
-      url: "https://www.who.int/images/default-source/departments/health-financing/health-financing-and-uhc-(8).tmb-1200v.jpg?sfvrsn=add44264_6",
+      url: financeImage,
       why: "Why US ?",
       header: "Financial Constraints",
       info: "Limited financial resources can hinder growth and innovation, requiring strategic financial management.",
     },
     {
-      url: "https://peoplementalityinc.com/wp-content/uploads/2018/02/digital-disruption-1.jpg",
+      url: techImage,
       why: "Why US ?",
       header: "Technological Disruption",
       info: "Rapid technological advancements require businesses to adapt quickly, often leading to operational challenges.",
@@ -48,6 +53,11 @@ const SimpleCarousel = () => {
 
   // const generateAnimationNames = (index) => `fadeInUpSD-${index}`;
   const generateAnimationNames = () => `fadeInUpSD-${currentSlide}`;
+
+  const reset = () => {
+    slides[currentSlide].style.opacity = 0;
+    slides[currentSlide].style.zIndex = 0;
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);

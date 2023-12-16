@@ -104,7 +104,7 @@
     position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 1s;
-    top:10%;
+    top:15%;
     left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
@@ -115,7 +115,7 @@
     position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 2s;
-    top: 5%;
+    top: 20%;
     left: 5%;
     /* background-color: rgb(54, 54, 54, 0.5); */
     /* margin-top: 100px; */
@@ -129,7 +129,7 @@
     animation-name: fadeInUpSD;
     animation-duration: 3s;
     /* top: 20%; */
-    top: 5%;
+    top: 25%;
     left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
@@ -162,7 +162,7 @@
   
     .simple-carousel .carousel-inner-content h2 {
       font-size: 25px; /* Adjust the font size as needed for smaller screens */
-      margin-top: 20px;
+      margin-top: 30px;
       top: 10%;
     }
   

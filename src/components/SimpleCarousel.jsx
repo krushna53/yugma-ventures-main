@@ -54,6 +54,11 @@ const SimpleCarousel = () => {
   // const generateAnimationNames = (index) => `fadeInUpSD-${index}`;
   const generateAnimationNames = () => `fadeInUpSD-${currentSlide}`;
 
+  const reset = () => {
+    slides[currentSlide].style.opacity = 0;
+    slides[currentSlide].style.zIndex = 0;
+  };
+
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };

@@ -11,6 +11,7 @@ import FounderSection from '../components/FounderSection';
 
 
 import AboutUs from '../components/AboutUs';
+import Footer from '../components/Footer';
 
 const Home = () => {
 
@@ -67,6 +68,9 @@ const Home = () => {
       </div>
       <div className="contact" id="contact">
         <Contact />
+      </div>
+      <div className="footer" id="footer">
+        <Footer/>
       </div>
     </div>
   );

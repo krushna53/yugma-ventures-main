@@ -36,27 +36,18 @@ const EventCardBlock = ({ events }) => {
       </nav>
 
       <div className="event-card-block">
-        {filteredEvents.map((event, index) => (
-          <div key={index} className={`event-card ${event.tag}`}>
-            {event.tag === 'past' ? (
-              <div className="event-card-img">
-                <div className="event-card-tags">Past</div>
-                <img src={event.imageUrl} alt={event.name} />
-              </div>
-            ) : (
-              <Link to={`/event/${index}`} className="event-card-img-link">
-                <div className="event-card-img">
-                  <div className="event-card-tags">{event.tag}</div>
-                  <img src={event.imageUrl} alt={event.name} />
-                </div>
-              </Link>
-            )}
-            <div className="event-card-details">
-              <h3>{event.name}</h3>
-              <p className="date-place">{`${event.date}  |  ${event.place}`}</p>
-            </div>
+      {filteredEvents.map((event, index) => (
+        <Link key={index} to={event.tag === 'past' ? '#' : `/event/${index}`} className={`event-card ${event.tag}`}>
+          <div className="event-card-img">
+            <div className="event-card-tags">{event.tag}</div>
+            <img src={event.imageUrl} alt={event.name} />
           </div>
-        ))}
+          <div className="event-card-details">
+            <h3>{event.name}</h3>
+            <p className="date-place">{`${event.date}  |  ${event.place}`}</p>
+          </div>
+        </Link>
+      ))}
       </div>
     </div>
   );

@@ -51,6 +51,9 @@ const SimpleCarousel = () => {
     // Add more slides as needed
   ];
 
+  // const generateAnimationNames = (index) => `fadeInUpSD-${index}`;
+  const generateAnimationNames = () => `fadeInUpSD-${currentSlide}`;
+
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
@@ -72,10 +75,10 @@ const SimpleCarousel = () => {
   return (
     <div className="simple-carousel">
       <img src={slides[currentSlide].url} alt={slides[currentSlide].header} />
-      <div className="content">
-        <h3 className="slide-why">{slides[currentSlide].why}</h3>
-        <h2 className="header">{slides[currentSlide].header}</h2>
-        <p className="info">{slides[currentSlide].info}</p>
+      <div className={`carousel-content fadeInUpSD ${generateAnimationNames(currentSlide)}`}>
+        <h3>{slides[currentSlide].why}</h3>
+        <h2>{slides[currentSlide].header}</h2>
+        <p>{slides[currentSlide].info}</p>
       </div>
 
       <div className="buttons">

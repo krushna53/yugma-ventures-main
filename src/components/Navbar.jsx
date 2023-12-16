@@ -42,7 +42,7 @@ const Navbar = ({ toggleTheme }) => {
         </div>
         <div className="main_list">
           <ul className="navlinks">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li onClick={() => scrollToSection('services')}>Services</li>
             <li onClick={() => scrollToSection('events')}>Events</li>
             <li onClick={() => scrollToSection('founder')}>AboutUs</li>

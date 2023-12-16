@@ -3,6 +3,7 @@
     position: relative;
     max-width: 100%;
     margin: auto;
+    height: 900px;
     overflow: hidden;
   }
   
@@ -26,8 +27,8 @@
   
   .simple-carousel button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 55%;
+    transform: translateY(-250%);
     background: none;
     border: none;
     font-size: 2em;
@@ -76,45 +77,58 @@
     animation-name: fadeInUpSD;
   }
 
-  .carousel-content {
+  /* .carousel-content {
     display: flex;
-    
-    left: 10%;
-    opacity: 1;
+    /* background-color: rgb(54, 54, 54, 0.5); */
+    /* left: 10%;
+    opacity: 1; */
     /* transition: opacity 3s ease-in-out; */
-    max-width: 70%;
+  /*  max-width: 70%;
+  } */
+
+  .simple-carousel .carousel-inner-content {
+    background-color: rgb(54, 54, 54, 0.5);
+    top:40%;
+    /* z-index: 2; */
+    margin-left: 50px;
+    left: 10%;
+    max-width: 1000px;
+    height: 500px;
+    transform: translateY(-155%);
+    /* transform: translateX(20%); */
   }
   
 
-  .simple-carousel h3 {
-    position: absolute;
+  .simple-carousel .carousel-inner-content h3 {
+    position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 1s;
-    top:40%;
-    left: 10%;
+    top:10%;
+    left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
-    font-size: 20px;
+    font-size: 30px;
   }
 
-  .simple-carousel h2 {
-    position: absolute;
+  .simple-carousel .carousel-inner-content h2 {
+    position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 2s;
-    top: 40%;
-    left: 10%;
-    margin-top: 80px;
+    top: 5%;
+    left: 5%;
+    /* background-color: rgb(54, 54, 54, 0.5); */
+    /* margin-top: 100px; */
     transform: translateY(-50%);
     color: aliceblue;
     font-size: 80px;
   }
 
-  .simple-carousel p{
-    position: absolute;
+  .simple-carousel .carousel-inner-content p{
+    position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 3s;
-    top: 60%;
-    left: 10%;
+    /* top: 20%; */
+    left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
     font-size: 30px;

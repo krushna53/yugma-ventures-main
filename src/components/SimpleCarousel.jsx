@@ -71,9 +71,11 @@ const SimpleCarousel = () => {
     <div className="simple-carousel">
       <img src={slides[currentSlide].url} alt={slides[currentSlide].header} />
       <div className={`carousel-content fadeInUpSD ${generateAnimationNames(currentSlide)}`}>
-        <h3>{slides[currentSlide].why}</h3>
-        <h2>{slides[currentSlide].header}</h2>
-        <p>{slides[currentSlide].info}</p>
+        <div className="carousel-inner-content">
+          <h3>{slides[currentSlide].why}</h3>
+          <h2>{slides[currentSlide].header}</h2>
+          <p>{slides[currentSlide].info}</p>
+        </div>
       </div>
 
       <div className="buttons">

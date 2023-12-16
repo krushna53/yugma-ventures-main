@@ -33,15 +33,16 @@
   position: relative;
   width: auto;
   height: auto;
+  margin-top: -30%;
   border-radius: 3%;
-  top: -30%;
   align-self: center;
   z-index: 1;
+  transition: 0.3s ease-in-out;
 }
 
-.card:hover .image {
+/* .card:hover .image {
   top: -10%;
-}
+} */
 
 .card .image img {
   max-width: 100%;
@@ -50,7 +51,7 @@
 
 .card .content {
   position: relative;
-  top: -140px;
+  top: -60px;
   padding: 10px 15px;
   color: #111;
   text-align: center;

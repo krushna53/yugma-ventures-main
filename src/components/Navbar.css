@@ -52,12 +52,25 @@
   margin-right: 50px; /* Adjusted padding */
 }
 
+.nav div.main_list ul li {
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 90px;
+  font-size: 1.2rem; /* Adjusted font size */
+  transition: color 0.2s ease-in;
+}
+
 .nav div.main_list ul li a {
   text-decoration: none;
   color: #ffffff;
   line-height: 90px;
   font-size: 1.2rem; /* Adjusted font size */
   transition: color 0.2s ease-in;
+}
+
+.nav div.main_list ul li:hover {
+  color: #000000;
+  transition: all 0.2s ease-in;
 }
 
 .nav div.main_list ul li a:hover {
@@ -78,6 +91,13 @@
   background-color: #F1F8FB;
 }
 
+.affix div.main_list ul li {
+  text-decoration: none;
+  color: #000000;
+  line-height: 90px;
+  font-size: 1.2rem; /* Adjusted font size */
+  transition: color 0.2s ease-in;
+}
 
 .affix div.main_list ul li a {
   text-decoration: none;
@@ -85,6 +105,10 @@
   line-height: 90px;
   font-size: 1.2rem; /* Adjusted font size */
   transition: color 0.2s ease-in;
+}
+
+.affix div.main_list ul li:hover {
+  color: #000000;
 }
 
 .affix div.main_list ul li a:hover {
@@ -157,6 +181,37 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
+  .nav {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .nav .logo img {
+    width: 120px;
+    height: 40px;
+    padding-left: 0.5rem;
+  }
+
+  .nav .logo a {
+    font-size: 1.2rem;
+  }
+
+  .nav .main_list {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav .main_list ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav .main_list ul li {
+    height: auto;
+    padding: 10px 0;
+    margin-right: 0; /* Adjusted margin-right to stack items vertically */
+  }
   .theme_switch {
     margin-left: 0;
     margin-top: 10px; /* Adjusted margin-top for spacing */

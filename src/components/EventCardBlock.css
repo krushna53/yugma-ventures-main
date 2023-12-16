@@ -42,6 +42,7 @@
   justify-content: center;
   gap: 10px;
   margin: 20px; /* Added margin for centering */
+  cursor: pointer;
  
 }
 
@@ -65,8 +66,23 @@
   }
 }
 
+.event-card-tags {
+  display: flex;
+  position: relative;
+  max-width: fit-content;
+  top: 35px;
+  margin-left: 5px;
+  background-color: rgba(51, 51, 51, 0.5); /* rgba(51, 51, 51, 0.7) sets the color to #333 with 70% opacity */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1;
+}
+
 .event-card-img {
   overflow: hidden;
+  margin-top: -30px;
 }
 
 .event-card img {

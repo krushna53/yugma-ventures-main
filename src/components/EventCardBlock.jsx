@@ -41,6 +41,7 @@ const EventCardBlock = ({ events }) => {
           <div className="event-card-img">
             <div className="event-card-tags">{event.tag}</div>
             <img src={event.imageUrl} alt={event.name} />
+
           </div>
           <div className="event-card-details">
             <h3>{event.name}</h3>

@@ -1,4 +1,3 @@
-
 /* Navbar.css */
 
 /* Common styles for both affixed and non-affixed states */
@@ -14,11 +13,14 @@
 }
 
 .nav .logo img {
-  margin-top: 20px;
+  margin-top: -40px;
+  margin-left: -40px;
   float: left;
-  width: 150px; /* Adjusted the width */
-  height: 50px; /* Adjusted the height */
-  padding-left: 3rem; /* Adjusted padding */
+  /* width: 150px; 
+  height: 50px;  */
+  padding-left: 0rem; /* Adjusted padding */
+  object-fit: cover;
+  transform: scale(0.38) ;
 }
 
 .nav .logo a {
@@ -58,6 +60,7 @@
   line-height: 90px;
   font-size: 1.2rem; /* Adjusted font size */
   transition: color 0.2s ease-in;
+  cursor: pointer;
 }
 
 .nav div.main_list ul li a {

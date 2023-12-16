@@ -2,160 +2,176 @@
 
 
 .event-navbar {
-    background-color: rgba(255, 255, 255, 0.5); /* Transparent background color */
-    padding: 10px;
-  }
-  
-.event-navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .event-navbar li {
-    margin: 0 15px;
-    padding: 8px 16px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .event-navbar li:hover {
-    text-decoration: rgba(52, 152, 219, 0.8); /* Hover background color */
-    color: #b85cec;
-  }
-  
-  .event-navbar li.active {
-    text-decoration: rgba(52, 152, 219, 0.8); /* Active background color */
-    color: #b85cec;
-  }
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent background color */
+  padding: 10px;
+}
 
-  .event-navbar {
-    background-color: transparent; /* Remove the gray background color */
-    padding: 10px;
-  }
+.event-navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.event-navbar li {
+  margin: 0 15px;
+  padding: 8px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.event-navbar li:hover {
+  text-decoration: rgba(52, 152, 219, 0.8); /* Hover background color */
+  color: #b85cec;
+}
+
+.event-navbar li.active {
+  text-decoration: rgba(52, 152, 219, 0.8); /* Active background color */
+  color: #b85cec;
+}
+
+.event-navbar {
+  background-color: transparent; /* Remove the gray background color */
+  padding: 10px;
+}
 
 .event-card-block {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px; /* Added margin for centering */
-   
-  }
-  
-  .event-card-block a {
-    text-decoration: none;
-    color: black;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px; /* Added margin for centering */
+  cursor: pointer;
+ 
+}
 
-  .event-card {
-    max-width: calc(100% / 3); /* Adjust the percentage as needed */
-    margin: 10px;
-    border-radius: 3%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    overflow-x: hidden; /* Ensure the overflow is hidden for the zoom effect */
-    overflow-y: hidden;
-    background-color: #F1F8F8;
-  
-    &:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-  }
+.event-card-block a {
+  text-decoration: none;
+  color: black;
+}
 
-  .event-card-img {
-    overflow: hidden;
-  }
-  
-  .event-card img {
-    width: 100%;
-    height: 325px;
-    border-radius: 3%;
-    transition: transform 0.9s ease-in-out;
-    /* overflow: hidden; */
-  }
-  
-  .event-card:hover img {
-    transform: scale(1.2); /* Zoom effect on hover */
-    
-  }
-  
-  .event-card-details {
-    padding: 10px;
-  }
-  
-  .event-card-details h3 {
-    margin: 0;
-    font-size: 1.2em;
-  }
-  
-  .event-card-details p.date-place {
-    margin: 5px 0;
-    font-size: 0.9em;
-  }
-  
-  .Event h1{
-    font-size: 50px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 100%;
-  font-style: italic;
-text-decoration: solid;
-  }
+.event-card {
+  max-width: calc(100% / 3); /* Adjust the percentage as needed */
+  margin: 10px;
+  border-radius: 3%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  overflow-x: hidden; /* Ensure the overflow is hidden for the zoom effect */
+  overflow-y: hidden;
+  background-color: #F1F8F8;
 
-  .event-heading{
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100%;
-    font-style: italic;
-    text-decoration: solid;
-  
-    /* Gradient Background */
-    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  
-    /* Animation */
-    animation: gradientAnimation 5s infinite alternate; 
-  }
-
-  /* Animation Keyframes */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 }
 
+.event-card-tags {
+  display: flex;
+  position: relative;
+  max-width: fit-content;
+  top: 35px;
+  margin-left: 5px;
+  background-color: rgba(51, 51, 51, 0.5); /* rgba(51, 51, 51, 0.7) sets the color to #333 with 70% opacity */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+.event-card-img {
+  overflow: hidden;
+  margin-top: -30px;
+}
+
+.event-card img {
+  width: 100%;
+  height: 325px;
+  border-radius: 3%;
+  transition: transform 0.9s ease-in-out;
+  /* overflow: hidden; */
+}
+
+.event-card:hover img {
+  transform: scale(1.2); /* Zoom effect on hover */
+  
+}
+
+.event-card-details {
+  padding: 10px;
+}
+
+.event-card-details h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.event-card-details p.date-place {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.Event h1{
+  font-size: 50px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 100%;
+font-style: italic;
+text-decoration: solid;
+}
+
+.event-heading{
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100%;
+  font-style: italic;
+  text-decoration: solid;
+
+  /* Gradient Background */
+  background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* Animation */
+  animation: gradientAnimation 5s infinite alternate; 
+}
+
+/* Animation Keyframes */
+@keyframes gradientAnimation {
+0% {
+  background-position: 0% 50%;
+}
+100% {
+  background-position: 100% 50%;
+}
+}
+
 @media screen and (max-width: 768px) {
-  .event-navbar li {
-    padding: 8px 10px;
-    font-size: 0.9em;
-  }
+.event-navbar li {
+  padding: 8px 10px;
+  font-size: 0.9em;
+}
 
-  .event-card-block {
-    flex-direction: column;
-    align-items: center;
-  }
+.event-card-block {
+  flex-direction: column;
+  align-items: center;
+}
 
-  .event-card {
-    max-width: 100%;
-  }
+.event-card {
+  max-width: 100%;
+}
 
-  .event-card img {
-    height: auto;
-  }
+.event-card img {
+  height: auto;
+}
 
-  .event-heading {
-    font-size: 28px;
-  }
+.event-heading {
+  font-size: 28px;
+}
 }

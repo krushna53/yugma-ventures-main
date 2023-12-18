@@ -203,10 +203,6 @@ text-align: center;
 
 /* Additional adjustments for better mobile view */
 @media only screen and (max-width: 480px) {
-  .event-why ul li,
-  .event-who ul li {
-    /* flex: 0 0 calc(100% - 20px); Adjust for full width on smaller screens */
-  }
   .event-details {
     max-width: 100%; /* Adjust width for smaller screens */
     /* font-size: 0.5rem; */

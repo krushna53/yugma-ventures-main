@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import logo from '../images/yg.png';
 import Switch from 'react-switch';
+import { useNavigate, useLocation } from 'react-router-dom'; // Import useNavigate and useLocation
 import { IoMdMenu } from "react-icons/io";
 import { IoIosSunny, IoIosMoon } from "react-icons/io";
 const Navbar = ({ toggleTheme }) => {
   const [isAffixed, setAffixed] = useState(false);
   const [checked, setChecked] = useState(false);
-  const [isMenuOpen, setMenuOpen] = useState(false); // New state for menu
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate(false);
+  const location = useLocation(false); // Get the current location
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +39,14 @@ const Navbar = ({ toggleTheme }) => {
       setMenuOpen(false);
     }
 
-    scrollToSection(sectionId);
+    // Conditionally navigate based on the current location
+    if (location.pathname.startsWith('/event')) {
+      // If in the event page, navigate to home
+      navigate('/');
+    } else {
+      // Otherwise, scroll to the section
+      scrollToSection(sectionId);
+    }
   };
 
   const scrollToSection = (sectionId) => {
@@ -59,10 +69,10 @@ const Navbar = ({ toggleTheme }) => {
         <div className={`main_list ${isMenuOpen ? 'open' : ''}`}>
           <ul className="navlinks">
             <li><a href="/">Home</a></li>
-            <li onClick={() => scrollToSection('services')}>Services</li>
-            <li onClick={() => scrollToSection('events')}>Events</li>
-            <li onClick={() => scrollToSection('founder')}>AboutUs</li>
-            <li onClick={() => scrollToSection('contact')} className='contact'>Contact</li>
+            <li onClick={() => handleNavLinkClick('services')}>Services</li>
+            <li onClick={() => handleNavLinkClick('events')}>Events</li>
+            <li onClick={() => handleNavLinkClick('founder')}>AboutUs</li>
+            <li onClick={() => handleNavLinkClick('contact')} className='contact'>Contact</li>
             
           </ul>
         </div>

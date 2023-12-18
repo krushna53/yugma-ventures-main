@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaLightbulb, FaUserFriends, FaChalkboardTeacher } from 'react-icons/fa'; // Import icons from react-icons
 import './Event.css';
@@ -34,6 +34,15 @@ const Event = () => {
       registrationLinkSpeaker: 'https://example.com/register-speaker',
     },
   ];
+
+  // Scroll to top when the component mounts
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+
 
   const { index } = useParams();
   const event = eventDetails[index];

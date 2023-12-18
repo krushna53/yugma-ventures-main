@@ -104,7 +104,7 @@
     position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 1s;
-    top:15%;
+    top:10%;
     left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
@@ -115,7 +115,7 @@
     position: relative;
     animation-name: fadeInUpSD;
     animation-duration: 2s;
-    top: 20%;
+    top: 5%;
     left: 5%;
     /* background-color: rgb(54, 54, 54, 0.5); */
     /* margin-top: 100px; */
@@ -129,7 +129,7 @@
     animation-name: fadeInUpSD;
     animation-duration: 3s;
     /* top: 20%; */
-    top: 25%;
+    top: 5%;
     left: 5%;
     transform: translateY(-50%);
     color: aliceblue;
@@ -149,9 +149,10 @@
   
     .simple-carousel .carousel-inner-content {
       top: 5%; /* Adjust the top position as needed for smaller screens */
-      max-width: 380px;
+      max-width: 100%;
       /* left: -3%; */
-      margin-left: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
       height: 250px; 
       transform: translateY(-300%);
     }
@@ -162,12 +163,13 @@
   
     .simple-carousel .carousel-inner-content h2 {
       font-size: 25px; /* Adjust the font size as needed for smaller screens */
-      margin-top: 30px;
+      margin-top: 20px;
       top: 10%;
     }
   
     .simple-carousel .carousel-inner-content p {
       font-size: 15px; /* Adjust the font size as needed for smaller screens */
+      margin-top: 15px;
       top: 20%;
     }
 

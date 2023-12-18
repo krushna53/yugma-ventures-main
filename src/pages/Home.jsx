@@ -4,11 +4,13 @@ import ServiceCards from '../components/ServiceCards'
 import Contact from '../components/Contact'
 
 import EventCardBlock from '../components/EventCardBlock';
+import MSME from '../images/MSMEEvent_jp.jpg';
+import MEJ from '../images/Mumbai_Ent_Jp.jpg';
+import KEJ from '../images/Kolkata_ent_jp.jpg';
 // import FounderCard from '../components/FounderCard';
 import FounderSection from '../components/FounderSection';
 
 // import Navbar from '../components/Navbar'
-
 
 import AboutUs from '../components/AboutUs';
 import Footer from '../components/Footer';
@@ -17,25 +19,25 @@ const Home = () => {
 
   const events = [
     {
-      name: 'Learning in Web3 and Blockchain',
-      imageUrl: 'https://wp.mehedidb.com/utech/wp-content/uploads/elementor/thumbs/Technology__-11-pepn1lkx1z8urolwviw08mbshux4t0dfa5p9kxxoxc.jpg',
-      date: 'Jan 1',
-      place: 'Viman nagar, Pune',
-      tag: 'upcoming',
+      name: 'ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION',
+      imageUrl: MSME,
+      date: 'Dec 16',
+      place: 'Mumbai Press Club, Mumbai',
+      tag: 'Upcoming',
     },
     {
-      name: 'Understanding of Web Development',
-      imageUrl: 'https://wp.mehedidb.com/utech/wp-content/uploads/elementor/thumbs/Technology__23-pepn1lkx1z8urolwviw08mbshux4t0dfa5p9kxxoxc.jpg',
-      date: 'Feb 15',
-      place: 'Camp, Pune',
-      tag: 'upcoming',
+      name: 'MUMBAI ENTREPRUNERS AWARD 2022',
+      imageUrl: MEJ,
+      date: 'April 12',
+      place: 'Vile Parle, Mumbai',
+      tag: 'Past',
     },
     {
-      name: 'Frameworks and Technologies',
-      imageUrl: 'https://wp.mehedidb.com/utech/wp-content/uploads/elementor/thumbs/Technology__21-pepn1lkx1z8urolwviw08mbshux4t0dfa5p9kxxoxc.jpg',
-      date: 'Mar 30',
-      place: 'Hadapsar, Pune',
-      tag: 'past',
+      name: 'KOLKATA ENTREPRUNERS AWARD 2022',
+      imageUrl: KEJ,
+      date: 'June 17',
+      place: 'Kolkata',
+      tag: 'Past',
     },
   ];
 

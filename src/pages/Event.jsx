@@ -2,14 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { FaLightbulb, FaUserFriends, FaChalkboardTeacher } from 'react-icons/fa'; // Import icons from react-icons
 import './Event.css';
-import MSME from '../images/MSMEEvent.png'
-import Footer from '../components/Footer';
 
 const Event = () => {
   const eventDetails = [
     {
-      name: 'ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION',
-      imageUrl: MSME,
+      name: 'Learning in Web3 and Blockchain',
+      imageUrl: 'https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       date: 'Jan 1',
       venue: 'Tech Hall',
       place: 'Pune',
@@ -44,7 +42,6 @@ const Event = () => {
   };
 
   return (
-    <>
     <div className='event-detail-block'>
       <div className='event-img-detail'>
         <img src={event.imageUrl} alt={event.name} className="event-background" />
@@ -96,10 +93,6 @@ const Event = () => {
       </div>
       
     </div>
-    <div className="footer" id="footer">
-        <Footer/>
-      </div>
-    </>
   );
 };
 

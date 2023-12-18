@@ -3,6 +3,7 @@ import './Navbar.css';
 import logo from '../images/yg.png';
 import Switch from 'react-switch';
 import { IoMdMenu } from "react-icons/io";
+import { IoIosSunny, IoIosMoon } from "react-icons/io";
 const Navbar = ({ toggleTheme }) => {
   const [isAffixed, setAffixed] = useState(false);
   const [checked, setChecked] = useState(false);
@@ -66,16 +67,22 @@ const Navbar = ({ toggleTheme }) => {
           </ul>
         </div>
         <div className="theme_switch">
+          {checked ? (
+            <IoIosMoon size={20} color="#333" />
+          ) : (
+            <IoIosSunny size={20} color="#333" />
+          )}
               <Switch
                 onChange={handleThemeToggle}
                 checked={checked}
                 height={20}
                 width={44}
                 borderRadius={15}
-                onColor="#ffffff"
+                onColor="#333"
                 offColor="#333"
                 checkedIcon={false}
                 uncheckedIcon={false}
+
               />
             </div>
             <div className="menu-icon" onClick={toggleMenu}>

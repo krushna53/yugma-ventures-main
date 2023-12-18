@@ -145,53 +145,6 @@
 
 /* ... other styles ... */
 
-/* Responsive styles for screens smaller than 768px */
-@media only screen and (max-width: 768px) {
-  .ContactUS {
-    width: 90%; /* Adjust width for smaller screens */
-  }
-
-  .leftside,
-  .rightside {
-    width: 100%;
-  }
-
-  .leftside h2 {
-    font-size: 20px; /* Adjust font size for smaller screens */
-    margin-bottom: 20px;
-  }
-
-  .leftside form {
-    margin-top: 15px;
-  }
-
-  .leftside label {
-    font-size: 12px; /* Adjust font size for smaller screens */
-  }
-
-  .leftside input,
-  .leftside textarea {
-    width: 100%;
-  }
-
-  .picture img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-/* ... other styles ... */
-
-.picture img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease; /* Add a transition effect on transform */
-}
-
-.picture:hover img {
-  transform: scale(1.1); /* Increase scale on hover */
-}
 
 /* Existing styles... */
 
@@ -199,6 +152,7 @@
 @media only screen and (max-width: 768px) {
   .ContactUS {
     width: 90%; /* Adjust width for smaller screens */
+    padding-right: 0;
   }
 
   .leftside{

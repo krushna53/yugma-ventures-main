@@ -150,6 +150,11 @@
     padding: 10px;
   }
 
+  .nav .logo {
+    float: left;
+    padding-right: 20px;
+  }
+
   .nav .logo img {
     margin-top: -50px;
     margin-left: -70px; /* Adjusted the margin-left to align properly */
@@ -173,14 +178,20 @@
   }
 
   .nav div.main_list ul li {
-    margin-right: 12px; /* Adjusted margin for better spacing */
+    margin-right: 0; /* Adjusted margin for better spacing */
+    font-size: 1rem;
   }
+
+  .nav div.main_list ul li a {
+    font-size: 1rem;
+  }
+
   .theme_switch{
     margin-bottom:25px ;
     margin-left: -50px;
   }
   .contact{
-    padding-right: 12px;
+    padding-right: 30px;
   }
 }
 
@@ -206,7 +217,7 @@
 @media only screen and (max-width: 768px) {
   .menu-icon {
     display: block;
-    margin-right: 40px;
+    margin-right: 50px;
   }
   .nav .main_list{
     height: 60px;

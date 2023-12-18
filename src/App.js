@@ -18,7 +18,6 @@ const App = () => {
 
   return (
     <Router>
-
       <div className={`App ${theme}`}>
         <Navbar toggleTheme={toggleTheme} />
         <Routes>
@@ -26,9 +25,6 @@ const App = () => {
           <Route path="/event/:index" element={<Event />} />
         </Routes>
       </div>
-
-      
-
     </Router>
   );
 };

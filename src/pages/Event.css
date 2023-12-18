@@ -1,10 +1,50 @@
 /* Styling for the background image and details container */
+
+
+.event-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  max-width: 100%;
+  z-index: 1; /* Ensure details appear on top of the image */
+}
+
 .event-img-detail {
   position: relative;
   overflow: hidden; /* Ensure child elements don't overflow */
+  /* object-fit: cover; */
+  
+
 }
+
+.event-img-detail img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.event-description-container {
+  display: flex;
+  color: #333; /* Set background color */
+  /* padding: 20px; */
+  border-radius: 10px;
+  margin: 20px auto; /* Center the details horizontally */
+  width: 95%; /* Adjust width as needed */
+}
+
 .event-description-container:hover{
   transform: scale(1.01);
+}
+
+.event-description {
+  background: #f1f8fb;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto; /* Center the details horizontally */
+  width: 95%; /* Adjust width as needed */
+  position: relative;
 }
 
 /* Styling for the event name */
@@ -17,41 +57,69 @@
   color: #fff;
 }
 
+.event-name h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Background overlay for better visibility */
+  padding: 20px; /* Add padding for better readability */
+  border-radius: 15px; /* Optional: Add border-radius for a subtle rounded look */
+  transform: translateY(-20%);
+}
+
 /* Styling for the event date and venue */
-.event-date-venue {
-  position: relative;
-  bottom: 60px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2rem; /* Adjust font size as needed */
+.event-date-venue:hover{
+  transform: scale(1.1);
+  color: #f1f8fb;
+}
+
+.event-date-venue h2 {
+  font-size: 1.5rem;
   color: #fff;
   opacity: 0.9; /* Adjust opacity as needed for visibility */
+  /* transform: translateY(%); */
+  font-size: 30px;
+text-align: center;
+}
+.event-date-venue {
+  margin-top: 50px; /* Adjust as needed */
+  margin-bottom: 30px;
 }
 
-/* Styling for the registration options buttons */
-.registration-options {
-  position: relative;
-  top: 20px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%);
+.registration-options button:hover {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* transform: scale(1.02); */
 }
 
-/* Styling for the event description container */
-.event-description {
-  background: #f1f8fb;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto; /* Center the details horizontally */
-  width: 95%; /* Adjust width as needed */
-  position: relative;
+.registration-options button {
+  background-color: #f1f8fb; /* Mint color */
+  color: #333;
+  padding: 20px 30px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 15px;
+  margin-top: 10px;
+  transform: translateY(25px);
 }
+
 
 /* Styling for the "Why Attend?" and "Who Should Attend?" cards */
 .event-why ul,
 .event-who ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
 }
 
 .event-why ul li,
@@ -67,91 +135,13 @@
   box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-/* Additional adjustments for better responsiveness */
-@media only screen and (max-width: 768px) {
-  .event-why ul li,
-  .event-who ul li {
-    flex: 0 0 calc(50% - 20px); /* Adjust for two columns on smaller screens */
-  }
-  .event-details {
-    width: 90%; /* Adjust as needed */
-  }
-  .event-name h1 {
-    font-size: 20px;
-  }
-  .event-date-venue {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
-  }
-}
-
-/* Additional adjustments for better mobile view */
-@media only screen and (max-width: 480px) {
-  .event-why ul li,
-  .event-who ul li {
-    flex: 0 0 calc(100% - 20px); /* Adjust for full width on smaller screens */
-  }
-  .event-details {
-    width: 100%; /* Adjust width for smaller screens */
-    font-size: 0.5rem;
-  }
-
-  .event-name h1 {
-    font-size: 0.5rem; /* Adjust font size for smaller screens */
-    padding: 0%; /* Adjust padding for better readability */
-    border-radius: 8px; /* Adjust border-radius for a subtle rounded look */
-    transform: translateY(-20%); /* Adjust translateY for better vertical alignment */
-  }
-
-  .event-date-venue {
-    font-size: 0.2rem; /* Adjust font size for smaller screens */
-    bottom: 20px; /* Adjust bottom position for better spacing */
-  }
-
-  .registration-options {
-
-    bottom: 0; /* Adjust bottom position for better spacing */
-  }
-
-  .registration-options button {
-    padding: 15px 20px; /* Adjust button padding for better touch responsiveness */
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-
-  /* Centering event name and date-venue */
-  .event-name,
-  .event-date-venue {
-    text-align: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-
-.event-description-container {
-  color: #333; /* Set background color */
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto; /* Center the details horizontally */
-  width: 95%; /* Adjust width as needed */
-}
-
-.event-why ul,
-.event-who ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  font-style: normal;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- 
-}
 .event-who ul li:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 .event-why ul li:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .event-why h1,
@@ -188,72 +178,74 @@
   font-style: oblique;
 }
 
-.event-description {
-  background: #f1f8fb;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto; /* Center the details horizontally */
-  width: 95%; /* Adjust width as needed */
+
+
+/* Additional adjustments for better responsiveness */
+@media only screen and (max-width: 768px) {
+  .event-why ul li,
+  .event-who ul li {
+    flex: 0 0 calc(50% - 20px); /* Adjust for two columns on smaller screens */
+  }
+  .event-details {
+    width: 90%; /* Adjust as needed */
+  }
+  .event-name h1 {
+    font-size: 20px;
+  }
+  .event-date-venue {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
 }
 
-.registration-options button:hover {
-  background-color: #7b7b7b ; /* Darker mint on hover */
-  color: #fff;
-  transform: scale(1.1);
+/* Additional adjustments for better mobile view */
+@media only screen and (max-width: 480px) {
+  .event-why ul li,
+  .event-who ul li {
+    /* flex: 0 0 calc(100% - 20px); Adjust for full width on smaller screens */
+  }
+  .event-details {
+    max-width: 100%; /* Adjust width for smaller screens */
+    /* font-size: 0.5rem; */
+  }
+
+  .event-name {
+    bottom: 0;
+  }
+
+
+
+  .event-name h1 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    /* padding: 0%; */
+    margin-top: 50px;
+    border-radius: 8px; /* Adjust border-radius for a subtle rounded look */
+    transform: translateY(0%); /* Adjust translateY for better vertical alignment */
+  }
+
+  .event-date-venue h2 {
+    font-size: 0.7rem; /* Adjust font size for smaller screens */
+    margin-top: -30px;
+    /* bottom: 20px; Adjust bottom position for better spacing */
+  }
+
+  .registration-options {
+    margin-top: -40px;
+    bottom: 0; /* Adjust bottom position for better spacing */
+  }
+
+  .registration-options button {
+    padding: 10px 15px; /* Adjust button padding for better touch responsiveness */
+    font-size: 0.7rem; /* Adjust font size for smaller screens */
+    margin-top: -40px;
+  }
+
+  /* Centering event name and date-venue */
+  
+  /* .event-date-venue {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  } */
 }
 
-.registration-options button {
-  background-color: #f1f8fb; /* Mint color */
-  color: #333;
-  padding: 20px 30px;
-  border: none;
-  margin-right: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 15px;
-  margin-top: 10px;
-  transform: translateY(25px);
-}
-
-.event-date-venue:hover{
-  transform: scale(1.1);
-  color: #f1f8fb;
-}
-
-.event-date-venue h2 {
-  font-size: 1.5rem;
-  color: #fff;
-  opacity: 0.9; /* Adjust opacity as needed for visibility */
-  /* transform: translateY(%); */
-  font-size: 30px;
-text-align: center;
-}
-.event-date-venue {
-  margin-top: 50px; /* Adjust as needed */
-  margin-bottom: 30px;
-}
-
-.event-name h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.5); /* Background overlay for better visibility */
-  padding: 20px; /* Add padding for better readability */
-  border-radius: 15px; /* Optional: Add border-radius for a subtle rounded look */
-  transform: translateY(-20%);
-}
-
-.event-details {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  width: 80%;
-  z-index: 1; /* Ensure details appear on top of the image */
-}

@@ -1,79 +1,205 @@
-/* Reset some default styles */
-body, h1, h2, p, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-
-/* Styling for the overall event detail block */
-.event-detail-block {
-  position: relative;
-}
-
 /* Styling for the background image and details container */
 .event-img-detail {
   position: relative;
-  opacity: 0.8;
+  overflow: hidden; /* Ensure child elements don't overflow */
 }
-
-/* Styling for the background image */
-.event-background {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Styling for the event details container */
-.event-details {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  width: 80%;
-  z-index: 1; /* Ensure details appear on top of the image */
+.event-description-container:hover{
+  transform: scale(1.01);
 }
 
 /* Styling for the event name */
-.event-name h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: uppercase;
+.event-name {
+  position: relative;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem; /* Adjust font size as needed */
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.5); /* Background overlay for better visibility */
-  padding: 20px; /* Add padding for better readability */
-  border-radius: 15px; /* Optional: Add border-radius for a subtle rounded look */
-transform: translateY(-20%);
 }
 
 /* Styling for the event date and venue */
 .event-date-venue {
-  margin-top: 50px; /* Adjust as needed */
-  margin-bottom: 30px;
-}
-
-.event-date-venue h2 {
-  font-size: 1.5rem;
+  position: relative;
+  bottom: 60px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem; /* Adjust font size as needed */
   color: #fff;
   opacity: 0.9; /* Adjust opacity as needed for visibility */
-  /* transform: translateY(%); */
-  font-size: 30px;
-text-align: center;
-}
-
-.event-date-venue:hover{
-  transform: scale(1.1);
-  color: #f1f8fb;
 }
 
 /* Styling for the registration options buttons */
-.registration-options {/* Adjust as needed */
+.registration-options {
+  position: relative;
+  top: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Styling for the event description container */
+.event-description {
+  background: #f1f8fb;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto; /* Center the details horizontally */
+  width: 95%; /* Adjust width as needed */
+  position: relative;
+}
+
+/* Styling for the "Why Attend?" and "Who Should Attend?" cards */
+.event-why ul,
+.event-who ul {
   display: flex;
-  justify-content: center;
-  transform: translateY(100%);
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.event-why ul li,
+.event-who ul li {
+  flex: 0 0 calc(100% / 3 - 20px); /* Calculate the width dynamically */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  text-align: left;
+  box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Additional adjustments for better responsiveness */
+@media only screen and (max-width: 768px) {
+  .event-why ul li,
+  .event-who ul li {
+    flex: 0 0 calc(50% - 20px); /* Adjust for two columns on smaller screens */
+  }
+  .event-details {
+    width: 90%; /* Adjust as needed */
+  }
+  .event-name h1 {
+    font-size: 20px;
+  }
+  .event-date-venue {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Additional adjustments for better mobile view */
+@media only screen and (max-width: 480px) {
+  .event-why ul li,
+  .event-who ul li {
+    flex: 0 0 calc(100% - 20px); /* Adjust for full width on smaller screens */
+  }
+  .event-details {
+    width: 100%; /* Adjust width for smaller screens */
+    font-size: 0.5rem;
+  }
+
+  .event-name h1 {
+    font-size: 0.5rem; /* Adjust font size for smaller screens */
+    padding: 0%; /* Adjust padding for better readability */
+    border-radius: 8px; /* Adjust border-radius for a subtle rounded look */
+    transform: translateY(-20%); /* Adjust translateY for better vertical alignment */
+  }
+
+  .event-date-venue {
+    font-size: 0.2rem; /* Adjust font size for smaller screens */
+    bottom: 20px; /* Adjust bottom position for better spacing */
+  }
+
+  .registration-options {
+
+    bottom: 0; /* Adjust bottom position for better spacing */
+  }
+
+  .registration-options button {
+    padding: 15px 20px; /* Adjust button padding for better touch responsiveness */
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  /* Centering event name and date-venue */
+  .event-name,
+  .event-date-venue {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+.event-description-container {
+  color: #333; /* Set background color */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto; /* Center the details horizontally */
+  width: 95%; /* Adjust width as needed */
+}
+
+.event-why ul,
+.event-who ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+.event-who ul li:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.event-why ul li:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.event-why h1,
+.event-who h1 {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+}
+
+.event-why,
+.event-who {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.event-intro-desc p {
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.event-intro-title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+}
+
+.event-description {
+  background: #f1f8fb;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto; /* Center the details horizontally */
+  width: 95%; /* Adjust width as needed */
+}
+
+.registration-options button:hover {
+  background-color: #7b7b7b ; /* Darker mint on hover */
+  color: #fff;
+  transform: scale(1.1);
 }
 
 .registration-options button {
@@ -87,154 +213,47 @@ text-align: center;
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 15px;
+  margin-top: 10px;
+  transform: translateY(25px);
 }
 
-.registration-options button:hover {
-  background-color: #7b7b7b ; /* Darker mint on hover */
+.event-date-venue:hover{
+  transform: scale(1.1);
+  color: #f1f8fb;
+}
+
+.event-date-venue h2 {
+  font-size: 1.5rem;
   color: #fff;
-  transform: scale(1.1);
+  opacity: 0.9; /* Adjust opacity as needed for visibility */
+  /* transform: translateY(%); */
+  font-size: 30px;
+text-align: center;
+}
+.event-date-venue {
+  margin-top: 50px; /* Adjust as needed */
+  margin-bottom: 30px;
 }
 
-/* Styling for the event description container */
-.event-description {
-  background: #f1f8fb;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto; /* Center the details horizontally */
-  width: 95%; /* Adjust width as needed */
-}
-
-/* Styling for the event intro title */
-.event-intro-title h1 {
-  font-size: 2rem;
+.event-name h1 {
+  font-size: 4rem;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  font-style: oblique;
-}
-
-/* Styling for the event intro desc */
-.event-intro-desc p {
-  font-size: 1.2rem;
-  text-align: left;
-  margin-bottom: 20px;
-  font-style: normal;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-/* Styling for the "Why Attend?" and "Who Should Attend?" cards */
-.event-why,
-.event-who {
-  text-align: center;
-  margin: 20px 0;
-}
-
-
-.event-why h1,
-.event-who h1 {
-  font-size: 1.7em;
-  font-weight: bold;
-  margin-bottom: 10px;
   text-transform: uppercase;
-  font-family: 'Courier New', Courier, monospace;
-  font-style: oblique;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Background overlay for better visibility */
+  padding: 20px; /* Add padding for better readability */
+  border-radius: 15px; /* Optional: Add border-radius for a subtle rounded look */
+  transform: translateY(-20%);
 }
 
-/* Styling for the card layout of "Why Attend?" points */
-.event-why ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  
-}
-
-.event-why ul li {
-  width: calc(100% / 3);
-  margin: 10px;
-  padding: 20px;
-  border-radius: 15px;
-  background: #FFFFFF;
-  text-align: left;
-  box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  
-}
-
-.event-why ul li:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-}
-
-/* Styling for the card layout of "Who Should Attend?" points */
-.event-who ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.event-who ul li {
-  width: calc(100% / 3);
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  background: #FFFFFF;
+.event-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
   text-align: center;
-  box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.event-who ul li:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-}
-
-.event-why ul,
-.event-who ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  font-style: normal;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- 
-}
-
-.event-description-container {
-  color: #333; /* Set background color */
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto; /* Center the details horizontally */
-  width: 95%; /* Adjust width as needed */
-}
-
-.event-description-container:hover{
-  transform: scale(1.01);
-}
-
-
-@media only screen and (max-width: 768px) {
-  .event-details {
-    width: 90%;
-  }
-  .event-why ul,
-  .event-who ul {
-    flex-wrap: nowrap;
-  }
-  .registration-options {
-    flex-direction: column;
-  }
-  .event-why h1,
-  .event-who h1 {
-    font-size: 1.5em;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .event-name h1 {
-    font-size: 3rem;
-  }
-  .event-description-container {
-    width: 100%;
-  }
+  width: 80%;
+  z-index: 1; /* Ensure details appear on top of the image */
 }

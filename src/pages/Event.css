@@ -3,8 +3,11 @@
 
 .event-details {
   position: absolute;
+  background: rgba(0, 0, 0, 0.5); 
   top: 50%;
   left: 50%;
+  padding: 40px; /* Add padding for better readability */
+  border-radius: 15px;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
@@ -21,6 +24,7 @@
 }
 
 .event-img-detail img {
+  opacity: 0.7;
   object-fit: cover;
   width: 100%;
 }
@@ -63,7 +67,7 @@
   text-transform: uppercase;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.5); /* Background overlay for better visibility */
+  /* background: rgba(0, 0, 0, 0.5); Background overlay for better visibility */
   padding: 20px; /* Add padding for better readability */
   border-radius: 15px; /* Optional: Add border-radius for a subtle rounded look */
   transform: translateY(-20%);
@@ -206,6 +210,8 @@ text-align: center;
   .event-details {
     max-width: 100%; /* Adjust width for smaller screens */
     /* font-size: 0.5rem; */
+    padding: 0;
+    padding-bottom: 40px;
   }
 
   .event-name {

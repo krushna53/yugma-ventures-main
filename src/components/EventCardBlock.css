@@ -102,6 +102,7 @@
   padding: 10px;
   background-color: #f1f8fb;
   color: #333;
+  max-width: 351px;
 }
 
 .event-card-details h3 {

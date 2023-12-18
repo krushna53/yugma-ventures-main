@@ -10,7 +10,7 @@ const FounderSection = ({}) => {
         {
           name: 'SUNIL GOENKA',
           post: 'Co-Founder & CEO',
-          description: "Sunil Goenka specializes in business communication services, encompassing PR Branding, Content Strategy, and Customer Connect Initiatives, complemented by his role as a Business Development advisor. With a notable portfolio, he has successfully served over 200 brands within his professional domain. Sunil also holds the esteemed position of curator for the Mumbai Entrepreneurs Award and Kolkata Entrepreneurs Award.",
+          description: "Sunil Goenka specializes in business communication services, encompassing PR Branding, Content Strategy, and Customer Connect Initiatives, complemented by his role as a Business Development advisor. With a notable portfolio, he has successfully served over 200 brands within his professional domain. Sunil also holds the esteemed position of curator for the Mumbai Entrepreneurs Award and Kolkata Entrepreneurs Award.The recognition and respect these awards enjoy stem from Sunil's commitment to an organic and meticulous awardee selection process.The recognition and respect these awards enjoy stem from Sunil's commitment to an organic and meticulous awardee selection process.",
           imageUrl: 'https://yugmav.in/images/SunilGoenka1.png',
           linkedin: 'https://www.linkedin.com/in/johndoe/',
           twitter: 'https://twitter.com/johndoe',

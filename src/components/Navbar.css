@@ -2,18 +2,20 @@
 
 /* Common styles for both affixed and non-affixed states */
 .nav {
+  display: flex;
   width: 100%;
   height: 90px;
   position: fixed;
   line-height: 65px;
-  text-align: center;
   z-index: 100; /* Added solid to the border */
   background-color: transparent; /* Set default background color to transparent */
   transition: all 0.4s ease;
+  justify-content: space-evenly;
 }
 
 .nav .logo {
   float: left;
+  padding-right: 60px;
 }
 
 .nav .logo img {
@@ -49,12 +51,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-right: 100px;
 }
 
 .nav div.main_list ul li {
   height: 90px;
-  padding: 0;
   margin-right: 50px; /* Adjusted padding */
 }
 
@@ -125,8 +125,8 @@
 .theme_switch {
   max-width: 100px;
   display: flex;
-  margin: 0;
   margin-top: 32px;
+  margin-left: 0px;
   padding: 0;
   float: right;
 }
@@ -136,16 +136,7 @@
 }
 
 .react-switch-handle {
-  border: 2px solid #00E676;
-}
-
-.affix .theme_switch {
-  color: #e943ff;
-}
-
-
-.vertical-switch {
-  transform: rotate(90deg);
+  border: 2px solid #ffffff;
 }
 
 
@@ -160,7 +151,7 @@
 
   .nav .logo img {
     margin-top: -50px;
-    margin-left: -60px; /* Adjusted the margin-left to align properly */
+    margin-left: -70px; /* Adjusted the margin-left to align properly */
     transform: scale(0.3);
   }
 
@@ -181,54 +172,93 @@
   }
 
   .nav div.main_list ul li {
-    margin-right: 15px; /* Adjusted margin for better spacing */
+    margin-right: 12px; /* Adjusted margin for better spacing */
   }
   .theme_switch{
     margin-bottom:25px ;
-    margin-left: 10px;
+    margin-left: -50px;
   }
-  
+  .contact{
+    padding-right: 12px;
+  }
 }
 
-@media only screen and (max-width: 480px) {
-  .nav {
-    height: 50px;
-    line-height: 40px;
-    display: flex;
-    flex-direction: row; /* Ensure horizontal alignment */
-    justify-content: space-around;
-    align-items: center;
+
+
+/* Add these styles to Navbar.css */
+
+.menu-icon {
+  display: none; /* Hide by default for larger screens */
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 5px;
+  background-color: rgb(1, 1, 1);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Display the menu on smaller screens */
+@media only screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    margin-right: 40px;
+  }
+  .nav .main_list{
+    height: 60px;
+    padding-top: 10px;
   }
 
-  .nav .logo img {
+  .logo{
+    margin-right: 30px;
     margin-top: -10px;
-    margin-left: -130px;
-    transform: scale(0.2);
   }
 
-  .nav .main_list {
-    margin-left: -60px;
-    margin-top: 0; /* Removed unnecessary margin-top */
-  }
-
-  .nav div.main_list ul {
+  .theme_switch{
+    margin-top: 20px;
     display: flex;
-    flex-direction: row; /* Ensure horizontal alignment for list items */
-    align-items: center;
-    padding: 0;
-    margin-left: -20px;
   }
 
-  .nav div.main_list ul li {
-    margin-right: 10px; 
-    /* Adjusted margin for better spacing */
-    margin-top: 15px;
-    font-size: 15px;
+  .main_list {
+    display: none; /* Hide the links by default */
+    width: 100%;
+    position: absolute;
+    top: 70px; /* Adjust as needed based on your design */
+    left: 0;
+    right: 0;
   }
-  .nav div.main_list ul li a{
-    font-size: 15px;
+
+  .affix .main_list{
+    background-color: #F1F8FB;
+    transition: color 0.2s ease-in;
   }
 
+  .main_list.open {
+    display: block;
+  }
+
+  .main_list ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make the dropdown menu full width */
+    text-align: center; /* Center the menu items */
+  }
+
+  .main_list ul li {
+    margin: 2px -2px 10px 0px;
+    width: 100%; /* Make each menu item full width */
+  }
+}
 
 
+@media only screen and (max-width: 480px){
+  .theme_switch{
+    margin-right: 20px;
+  }
+  .nav .main_list{
+    height: 60px;
+  }
 }

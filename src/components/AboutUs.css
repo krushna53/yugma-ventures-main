@@ -4,19 +4,6 @@
     align-items: center;
 }
 
-.aboutus-heading {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100%;
-    font-style: italic;
-    text-decoration: solid;
-}
-
 .mission-section {
     background-color: #F1F8FB;
     padding: 30px;
@@ -33,7 +20,7 @@
 }
 
 .founders-heading {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -82,15 +69,13 @@
   }
 
   .aboutus-heading {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 20px;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100%;
-    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+  font-weight: bold;
     text-decoration: solid;
   
     /* Gradient Background */
@@ -189,9 +174,8 @@
     padding-top: 50px;
     padding-bottom: 0px;
     font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 100%;
-    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+  font-weight: bold;
     text-decoration: solid;
   
     /* Gradient Background */

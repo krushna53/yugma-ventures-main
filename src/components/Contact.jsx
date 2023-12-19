@@ -29,10 +29,11 @@ const ContactUs = () => {
       <div className="leftside">
       <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
+        <div className='form-content'>
+          {/* <label htmlFor="name">Name:</label> */}
 
           <input
+            placeholder='Name'
             type="text"
             id="name"
             name="name"
@@ -40,12 +41,11 @@ const ContactUs = () => {
             onChange={handleChange}
             required
           />
-        </div>
-
-        <div>
-          <label htmlFor="email">Email:</label>
+        
+          {/* <label htmlFor="email">Email:</label> */}
 
           <input
+            placeholder='Email'
             type="email"
             id="email"
             name="email"
@@ -53,12 +53,11 @@ const ContactUs = () => {
             onChange={handleChange}
             required
           />
-        </div>
-
-        <div>
-          <label htmlFor="message">Message:</label>
+       
+          {/* <label htmlFor="message">Message:</label> */}
 
           <textarea
+            placeholder='Message'
             id="message"
             name="message"
             value={formData.message}

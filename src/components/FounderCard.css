@@ -149,9 +149,14 @@
 @media screen and (max-width: 768px) {
   .card {
     max-width: 100%;
+    margin-bottom: 50px;
   }
 
   .card-container {
     margin-top: 100px; /* Adjust the margin-top as needed for responsiveness */
+  }
+
+  .card:hover {
+    height: fit-content;
   }
 }

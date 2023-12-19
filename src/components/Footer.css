@@ -29,3 +29,20 @@
     transform: scale(1.3);
     transition: color 0.3s, transform 0.3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+
+    .footer-sec {
+        padding-bottom: 10px;
+    }
+
+    .footer-sec h2  {
+        padding-bottom: 0;
+        padding-top: 15px;
+    }
+    
+    .footer-sec button{
+        font-size: 1.3em;
+        margin: 0px 10px;
+    }
+}

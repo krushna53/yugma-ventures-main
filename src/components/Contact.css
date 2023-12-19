@@ -105,13 +105,17 @@
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   margin-bottom: 1em;
-  font-size: larger;
   justify-content: center;
   /* transform: scaleX(2); */
   background-color: #f1f8fb;
   border-color: transparent;
   border-bottom: 1px solid #8f8f8f;
   resize: none;
+}
+
+.leftside input::placeholder,
+.leftside textarea::placeholder {
+  font-size: larger; /* Adjust font size as needed */
 }
 
 

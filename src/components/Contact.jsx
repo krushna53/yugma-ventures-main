@@ -1,83 +1,131 @@
-
 import './Contact.css';
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from "react-toastify";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isNameFocused, setIsNameFocused] = useState(false);
+  const [isEmailFocused, setIsEmailFocused] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const notify = () => {
+    toast.success(
+      "Thank you for contacting saata. We will respond to your message within 3 working days.😊",
+      {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      }
+    );
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can handle form submission logic here
-    console.log("Form submitted:", formData);
+    if (!name || !email || !message) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
+
+    console.log(
+      process.env.REACT_APP_EMAILJS_SERVICEID,
+      process.env.REACT_APP_EMAILJS_TEMPLATEID,
+      process.env.REACT_APP_EMAILJS_PUBLICKEY
+    );
+    
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICEID,
+        process.env.REACT_APP_EMAILJS_TEMPLATEID,
+        templateParams,
+        process.env.REACT_APP_EMAILJS_PUBLICKEY
+      )
+      .then(
+        (response) => {
+          notify();
+          setIsSent(true);
+          setName("");
+          setEmail("");
+          setMessage("");
+          setError("");
+          console.log("Email sent:", response);
+        },
+        (error) => {
+          console.error("Failed to send the email:", error);
+          setError("Oops! Something went wrong. Please try again later.");
+        }
+      );
   };
 
   return (
-    <div className='ContactUS'>
+    <div className="ContactUS">
       <div className="heading">
-        <h1>Contact US</h1>
+        <h1>Contact Us</h1>
       </div>
-    <div className = 'contact-block'>
-
-      <div className="leftside">
-      <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
-      <form onSubmit={handleSubmit}>
-        <div className='form-content'>
-          {/* <label htmlFor="name">Name:</label> */}
-
-          <input
-            placeholder='Name'
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        
-          {/* <label htmlFor="email">Email:</label> */}
-
-          <input
-            placeholder='Email'
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-       
-          {/* <label htmlFor="message">Message:</label> */}
-
-          <textarea
-            placeholder='Message'
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
+      <div className="contact-block">
+        <div className="leftside">
+          <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-content">
+              <input
+                placeholder="Name"
+                type="text"
+                id="name"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                  onFocus={() => setIsNameFocused(true)}
+                  onBlur={() => setIsNameFocused(false)}
+                required
+              />
+              <input
+                placeholder="Email"
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() => setIsEmailFocused(true)}
+                  onBlur={() => setIsEmailFocused(false)}
+                required
+              />
+              <input
+                placeholder="Message"
+                id="message"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-
-    <div className="rightside">
-    <div className='picture'>
-      <img src="https://th.bing.com/th/id/OIP.Gal8T40MNWTINM15QEuLAwHaLH?rs=1&pid=ImgDetMain" alt="Image" />
-    </div>
-    </div>
+        <div className="rightside">
+          <div className="picture">
+            <img
+              src="https://th.bing.com/th/id/OIP.Gal8T40MNWTINM15QEuLAwHaLH?rs=1&pid=ImgDetMain"
+              alt="Image"
+            />
+          </div>
+        </div>
       </div>
-    </div> 
+    </div>
   );
 };
 
 export default ContactUs;
-

@@ -43,6 +43,9 @@ const Navbar = ({ toggleTheme }) => {
     if (location.pathname.startsWith('/event')) {
       // If in the event page, navigate to home
       navigate('/');
+      setTimeout(()=>{
+        scrollToSection(sectionId);
+      },0);
     } else {
       // Otherwise, scroll to the section
       scrollToSection(sectionId);

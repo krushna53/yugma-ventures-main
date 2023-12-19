@@ -22,7 +22,7 @@ const App = () => {
         <Navbar toggleTheme={toggleTheme} />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/event/:index" element={<Event />} />
+          <Route path="/event/:eventPathName" element={<Event />} />
         </Routes>
       </div>
     </Router>

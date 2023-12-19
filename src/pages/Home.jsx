@@ -19,7 +19,7 @@ const Home = () => {
 
   const events = [
     {
-      eventName: 'elevate-msme-sector',
+      eventName: 'elevate-msme-sector-with-ai-powered-innovation',
       name: 'ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION',
       imageUrl: MSME,
       date: 'Dec 16',

@@ -85,9 +85,9 @@ const Event = () => {
             <div className='event-why'>
               <h1>Why Attend?</h1>
               <ul>
-                <li><FaLightbulb /> {event.whyAttend[0]}</li>
-                <li><FaUserFriends /> {event.whyAttend[1]}</li>
-                <li><FaChalkboardTeacher /> {event.whyAttend[2]}</li>
+                <li><FaLightbulb style={{ fontSize: '30px' }} /> {event.whyAttend[0]}</li>
+                <li><FaUserFriends style={{ fontSize: '30px' }} /> {event.whyAttend[1]}</li>
+                <li><FaChalkboardTeacher style={{ fontSize: '30px'}}/> {event.whyAttend[2]}</li>
               </ul>
             </div>
 

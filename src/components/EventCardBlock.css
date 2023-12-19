@@ -115,13 +115,7 @@
   font-size: 0.9em;
 }
 
-.Event h1{
-  font-size: 50px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-weight: 100%;
-font-style: italic;
-text-decoration: solid;
-}
+
 
 .event-heading{
   font-size: 36px;
@@ -130,9 +124,8 @@ text-decoration: solid;
   padding-top: 50px;
   padding-bottom: 0px;
   font-size: 50px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 100%;
-  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   text-decoration: solid;
 
   /* Gradient Background */

@@ -141,6 +141,7 @@ text-align: center;
   box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-sizing: border-box; /* Ensure padding is included in the width */
+  
 }
 
 .event-who ul li:hover {

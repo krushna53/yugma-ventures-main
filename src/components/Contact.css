@@ -99,8 +99,7 @@
   margin-bottom: 0.5rem;
 } */
 
-.leftside input,
-.leftside textarea {
+.leftside input {
   width: 98.5%;
   padding-top: 0.8em;
   padding-bottom: 0.8em;
@@ -113,15 +112,13 @@
   resize: none;
 }
 
-.leftside input::placeholder,
-.leftside textarea::placeholder {
+.leftside input::placeholder{
   font-size: larger; /* Adjust font size as needed */
 }
 
 
 
-.leftside input:focus,
-.leftside textarea:focus {
+.leftside input:focus {
   border-color: #007bff; /* Change border color on focus */
 }
 

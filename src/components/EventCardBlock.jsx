@@ -16,7 +16,7 @@ const EventCardBlock = ({ events }) => {
   return (
     <div>
       <div className='Event'>
-      <h1 className='event-heading'>Upcoming Events</h1>
+        <h1 className='event-heading'>Upcoming Events</h1>
       </div>
       <nav className="event-navbar">
         <ul>
@@ -36,8 +36,8 @@ const EventCardBlock = ({ events }) => {
       </nav>
 
       <div className="event-card-block">
-        {filteredEvents.map((event, index) => (
-          <Link key={index} to={event.tag === 'Past' ? '#' : `/event/${index}`} className={`event-card ${event.tag}`}>
+        {filteredEvents.map((event) => (
+          <Link key={event.eventName} to={event.tag === 'Past' ? '#' : `/event/${event.eventName}`} className={`event-card ${event.tag}`}>
             <div className="event-card-img">
               <div className="event-card-tags">{event.tag}</div>
               <img src={event.imageUrl} alt={event.name} />
@@ -48,7 +48,6 @@ const EventCardBlock = ({ events }) => {
             </div>
           </Link>
         ))}
-
       </div>
     </div>
   );

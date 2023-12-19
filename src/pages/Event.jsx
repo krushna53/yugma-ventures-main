@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 const Event = () => {
   const eventDetails = [
     {
+      eventName: 'elevate-msme-sector-with-ai-powered-innovation',
       name: 'ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION',
       imageUrl: MSME,
       date: '16th Dec',
@@ -35,6 +36,8 @@ const Event = () => {
     },
   ];
 
+  
+
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo({
@@ -44,8 +47,16 @@ const Event = () => {
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
 
-  const { index } = useParams();
-  const event = eventDetails[index];
+  // const { index } = useParams();
+  // const event = eventDetails[index];
+
+  const { eventPathName } = useParams();
+  const event = eventDetails.find((e) => e.eventName === eventPathName);
+
+  if (!event) {
+    return <div>Error: Event not found</div>;
+  }
+
 
   const handleRegistration = (type) => {
     const registrationLink = type === 'attendee' ? event.registrationLinkAttendee : event.registrationLinkSpeaker;

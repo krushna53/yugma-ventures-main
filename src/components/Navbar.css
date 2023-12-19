@@ -257,6 +257,7 @@
     flex-direction: column;
     width: 100%; /* Make the dropdown menu full width */
     text-align: center; /* Center the menu items */
+    font-weight: 600;
   }
 
   .main_list ul li {

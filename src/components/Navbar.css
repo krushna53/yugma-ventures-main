@@ -217,7 +217,7 @@
 @media only screen and (max-width: 768px) {
   .menu-icon {
     display: block;
-    margin-right: 50px;
+    margin-right: 20px;
   }
   .nav .main_list{
     height: 60px;
@@ -226,11 +226,11 @@
 
   .logo{
     margin-right: 30px;
-    margin-top: -10px;
+    margin-top: -15px;
   }
 
   .theme_switch{
-    margin-top: 20px;
+    margin-top: 22.5px;
     display: flex;
   }
 
@@ -269,9 +269,25 @@
 
 @media only screen and (max-width: 480px){
   .theme_switch{
-    margin-right: 20px;
+    margin-right: 5px;
   }
   .nav .main_list{
     height: 60px;
+  }
+
+  .menu-icon {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 390px){
+
+  .theme_switch{
+    margin-right: 20px;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: 30px;
   }
 }

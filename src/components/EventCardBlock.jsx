@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './EventCardBlock.css';
+import eventData from '../eventsData.json';
+
 
 const EventCardBlock = ({ events }) => {
   const [filter, setFilter] = useState('all');

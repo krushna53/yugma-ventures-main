@@ -14,10 +14,10 @@ const ContactUs = () => {
 
   const notify = () => {
     toast.success(
-      "Thank you for contacting saata. We will respond to your message within 3 working days.😊",
+      "Thank you for contacting yugma. We will respond to your message within 3 working days.😊",
       {
         position: "top-right",
-        autoClose: 1000,
+        autoClose: 5000, // Display the toast for 5 seconds
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -41,12 +41,6 @@ const ContactUs = () => {
       message: message,
     };
 
-    console.log(
-      process.env.REACT_APP_EMAILJS_SERVICEID,
-      process.env.REACT_APP_EMAILJS_TEMPLATEID,
-      process.env.REACT_APP_EMAILJS_PUBLICKEY
-    );
-    
     emailjs
       .send(
         process.env.REACT_APP_EMAILJS_SERVICEID,
@@ -79,41 +73,47 @@ const ContactUs = () => {
       <div className="contact-block">
         <div className="leftside">
           <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-content">
-              <input
-                placeholder="Name"
-                type="text"
-                id="name"
-                name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+          {isSent ? (
+            <div>
+              <p>Thank you for contacting yugma. We will respond to your message within 3 working days. 😊</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <div className="form-content">
+                <input
+                  placeholder="Name"
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   onFocus={() => setIsNameFocused(true)}
                   onBlur={() => setIsNameFocused(false)}
-                required
-              />
-              <input
-                placeholder="Email"
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <input
+                  placeholder="Email"
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   onFocus={() => setIsEmailFocused(true)}
                   onBlur={() => setIsEmailFocused(false)}
-                required
-              />
-              <input
-                placeholder="Message"
-                id="message"
-                name="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-              />
-            </div>
-            <button type="submit">Submit</button>
-          </form>
+                  required
+                />
+                <input
+                  placeholder="Message"
+                  id="message"
+                  name="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          )}
         </div>
         <div className="rightside">
           <div className="picture">

@@ -159,18 +159,21 @@
     .simple-carousel .carousel-inner-content h3 {
       margin-top: 10px;
       font-size: 15px;
+      margin-left: 20px;
     }
   
     .simple-carousel .carousel-inner-content h2 {
       font-size: 25px; /* Adjust the font size as needed for smaller screens */
       margin-top: 20px;
       top: 10%;
+      margin-left: 20px;
     }
   
     .simple-carousel .carousel-inner-content p {
       font-size: 15px; /* Adjust the font size as needed for smaller screens */
       margin-top: 15px;
       top: 20%;
+      margin-left: 20px;
     }
 
     .simple-carousel button {

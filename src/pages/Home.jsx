@@ -22,7 +22,7 @@ const Home = () => {
       eventName: 'elevate-msme-sector-with-ai-powered-innovation',
       name: 'ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION',
       imageUrl: MSME,
-      date: new Date('2022-12-16'), // Update the date format as per your requirement
+      date: new Date('2024-1-1'), // Update the date format as per your requirement
       place: 'Mumbai Press Club, Mumbai',
     },
     {

@@ -4,19 +4,19 @@
       {
         "eventName": "elevate-msme-sector-with-ai-powered-innovation",
         "name": "ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION",
-        "imageUrl": "http://localhost:3000/eventImage/MSMEEvent_jp.jpg",
+        "imageUrl": "../eventImage/MSMEEvent_jp.jpg",
         "date": "2024-01-01",
         "place": "Mumbai Press Club, Mumbai"
       },
       {
         "name": "MUMBAI ENTREPRENEURS AWARD 2022",
-        "imageUrl": "http://localhost:3000/eventImage/Mumbai_Ent_Jp.jpg",
+        "imageUrl": "../eventImage/Mumbai_Ent_Jp.jpg",
         "date": "2022-04-12",
         "place": "Vile Parle, Mumbai"
       },
       {
         "name": "KOLKATA ENTREPRENEURS AWARD 2022",
-        "imageUrl": "http://localhost:3000/eventImage/Kolkata_ent_jp.jpg",
+        "imageUrl": "../eventImage/Kolkata_ent_jp.jpg",
         "date": "2022-06-17",
         "place": "Kolkata"
       }
@@ -27,7 +27,7 @@
       {
         "eventName": "elevate-msme-sector-with-ai-powered-innovation",
         "name": "ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION",
-        "imageUrl": "http://localhost:3000/eventImage/MSMEEvent.png",
+        "imageUrl": "../eventImage/MSMEEvent.png",
         "date": "16th Dec",
         "venue": "Mumbai Press Club, Glass House, Mahapalika Marg, Azad Maidan, Fort, Mumbai, Maharashtra 400 001",
         "time": "2:30 pm - 5:30 pm",

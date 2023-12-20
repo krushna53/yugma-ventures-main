@@ -17,33 +17,40 @@ import Footer from '../components/Footer';
 
 const Home = () => {
 
-  const events = [
+ const events = [
     {
       eventName: 'elevate-msme-sector-with-ai-powered-innovation',
       name: 'ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION',
       imageUrl: MSME,
-      date: 'Dec 16',
+      date: new Date('2022-12-16'), // Update the date format as per your requirement
       place: 'Mumbai Press Club, Mumbai',
-      tag: 'Upcoming',
     },
     {
-      name: 'MUMBAI ENTREPRUNERS AWARD 2022',
+      name: 'MUMBAI ENTREPRENEURS AWARD 2022',
       imageUrl: MEJ,
-      date: 'April 12',
+      date: new Date('2022-04-12'),
       place: 'Vile Parle, Mumbai',
-      tag: 'Past',
     },
     {
-      name: 'KOLKATA ENTREPRUNERS AWARD 2022',
+      name: 'KOLKATA ENTREPRENEURS AWARD 2022',
       imageUrl: KEJ,
-      date: 'June 17',
+      date: new Date('2022-06-17'),
       place: 'Kolkata',
-      tag: 'Past',
     },
   ];
 
 
-  
+   // Function to categorize events as 'Upcoming' or 'Past'
+   const categorizeEvents = (event) => {
+    const currentDate = new Date();
+    return event.date >= currentDate ? 'Upcoming' : 'Past';
+  };
+
+  // Add the 'tag' property to each event based on categorization
+  const categorizedEvents = events.map((event) => ({
+    ...event,
+    tag: categorizeEvents(event),
+  }));
 
 
   const scrollToSection = (sectionId) => {
@@ -63,7 +70,7 @@ const Home = () => {
         <ServiceCards />
       </div>
       <div className="Events" id="events">
-        <EventCardBlock events={events} />
+        <EventCardBlock events={categorizedEvents} />
       </div>
       <div className="FounderSection" id="founder">
         <AboutUs />

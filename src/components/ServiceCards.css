@@ -47,9 +47,9 @@
   padding: 30px;
   border-radius: 20px;
   position: relative;
-  background: #FFFFFF;
+  background: #f1f8f8;
   text-align: center;
-  box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
+  box-shadow: 0 10px 20px 0 rgba(0, 68, 255, 0.12);
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -90,7 +90,7 @@
   font-family: 'Arial', 'Helvetica', sans-serif;
   font-size: 18px; /* Increased font size for better readability */
   line-height: 1.6; /* Adjusted line height for better readability */
-  color: #777; /* Changed color to a softer tone */
+  color: #595959; /* Changed color to a softer tone */
 }
 
 /* Media Queries for responsiveness */

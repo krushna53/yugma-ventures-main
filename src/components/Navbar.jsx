@@ -66,7 +66,7 @@ const Navbar = ({ toggleTheme }) => {
     <div>
       <nav className={isAffixed ? 'nav affix' : 'nav'}>
         <div className="logo">
-          <a href="#"><img src={logo} alt="" /></a>
+          <a href="#" aria-label="Yugma Ventures Home" ><img src={logo} alt="" /></a>
         </div>
         
         <div className={`main_list ${isMenuOpen ? 'open' : ''}`}>

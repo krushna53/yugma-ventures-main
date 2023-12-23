@@ -65,13 +65,16 @@
     .Vision,
     .Mission {
         height: auto; /* Adjust height for smaller screens */
+        margin: 20px;
     }
 
     .section-image {
-        border-radius: 10px 10px 0 0; /* Adjust border-radius for image on smaller screens */
+        display: none; /* Hide image on smaller screens */
     }
 
     .aboutUs-content {
-        margin-top: 10px; /* Adjust margin for separation on smaller screens */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-bottom: 10px;
     }
 }

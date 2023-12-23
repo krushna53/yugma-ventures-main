@@ -1,7 +1,7 @@
 .aboutUs-container{
-    display: inline;
+    display: flex;
+    flex-direction: column;
 }
-
 .aboutUs-heading{
     text-align: center;
     font-size: 70px;
@@ -9,19 +9,17 @@
     font-weight: 200;
     background: #333;
     color: antiquewhite;
-    
 }
-
 .Vision{
     display: flex;
     position: relative;
+    margin: auto;
 }
-
 .aboutUs-container h1{
     font-family: Houschka-medium;
     font-size: 2.5rem;
     line-height: 2.5rem;
-    color: #b03c00;
+    color: #B03C00;
     margin-bottom: 2rem;
 }
 .aboutUs-container p{
@@ -29,52 +27,50 @@
     font-size: 1.125rem;
     line-height: 2rem;
     letter-spacing: .03125rem;
-    color: #5e6162;
+    color: #5E6162;
     opacity: .9;
     margin-bottom: 0;
 }
-
-.Vision>.aboutUs-content{
-    position:absolute;
-    top:40%;
-    left: 30%;
-    transform: translate(0%,-50%);
+.aboutUs-content{
+    position:relative;
     text-align: center;
     margin: 50px;
     padding: 20px;
+    width: 90%;
+    max-width: 800px;
     background-color: rgba(255,255,255,1);
     border-radius: 0px;
     aspect-ratio: 24/9;
+    z-index: 10;
 }
 .Mission{
     display: flex;
     position: relative;
+    margin: auto;
 }
-
-.Mission>.aboutUs-content{
-    position: absolute;
-    top: 40%;
-    right: 30%;
-    transform: translate(0%, -50%);
-    text-align: center;
-    margin: 50px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 0px;
-    z-index: 1;
-    aspect-ratio: 24/9;
+.Vision >.aboutUs-content{
+    transform: translateX(0%);
 }
-
-
-.Mission > .image-container {
-    top: 50%;
-    right: 30%; /* Adjust this value to control the distance from the right */
-    transform: translate(65%, 0%);
+.Mission >.aboutUs-content{
+    transform: translateX(0%);
 }
 .section-image{
     border-radius: 0px;
-    margin: 20px 20px;
-    width: 700px; 
-    height: 500px;
-    
+    margin: 20px 0px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+} 
+
+@media (max-width: 768px) {
+    .aboutUs-content {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutUs-content {
+        width: 100%;
+        max-width: none;
+    }
 }

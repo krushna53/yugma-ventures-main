@@ -16,6 +16,7 @@ import eventData from '../eventsData.json';
 import AboutUs from '../components/AboutUs';
 import Footer from '../components/Footer';
 
+
 const Home = () => {
 
 //  const events = [

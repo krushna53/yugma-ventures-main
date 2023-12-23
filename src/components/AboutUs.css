@@ -1,20 +1,48 @@
 .aboutUs-container{
-    display: flex;
-    flex-direction: column;
+    display: inline;
 }
+
 .aboutUs-heading{
+    font-size: 4rem;
     text-align: center;
-    font-size: 70px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 200;
-    background: #333;
-    color: antiquewhite;
 }
-.Vision{
+
+.Vision,
+.Mission{
     display: flex;
-    position: relative;
-    margin: auto;
+    flex-direction: row;
+    justify-content: center; /* Centers the div horizontally */
+  align-items: center;     /* Centers the div vertically */
+  height: 70vh;
 }
+
+.section-image{
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    height: auto;
+    max-height: 400px; /* Set a maximum height for the image */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    border-radius: 10px; /* Add a border-radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.aboutUs-content{
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #f9f9f9; /* Add a light background color */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin-top: 20px; /* Add margin at the top for separation */
+    
+}
+.aboutUs-content:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Add a more prominent box shadow on hover */
+}
+
 .aboutUs-container h1{
     font-family: Houschka-medium;
     font-size: 2.5rem;
@@ -22,6 +50,7 @@
     color: #B03C00;
     margin-bottom: 2rem;
 }
+
 .aboutUs-container p{
     font-family: Basis-regular;
     font-size: 1.125rem;
@@ -31,46 +60,18 @@
     opacity: .9;
     margin-bottom: 0;
 }
-.aboutUs-content{
-    position:relative;
-    text-align: center;
-    margin: 50px;
-    padding: 20px;
-    width: 90%;
-    max-width: 800px;
-    background-color: rgba(255,255,255,1);
-    border-radius: 0px;
-    aspect-ratio: 24/9;
-    z-index: 10;
-}
-.Mission{
-    display: flex;
-    position: relative;
-    margin: auto;
-}
-.Vision >.aboutUs-content{
-    transform: translateX(0%);
-}
-.Mission >.aboutUs-content{
-    transform: translateX(0%);
-}
-.section-image{
-    border-radius: 0px;
-    margin: 20px 0px;
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-} 
 
-@media (max-width: 768px) {
-    .aboutUs-content {
-        margin: 10px;
+@media screen and (max-width: 768px) {
+    .Vision,
+    .Mission {
+        height: auto; /* Adjust height for smaller screens */
     }
-}
 
-@media (max-width: 576px) {
+    .section-image {
+        border-radius: 10px 10px 0 0; /* Adjust border-radius for image on smaller screens */
+    }
+
     .aboutUs-content {
-        width: 100%;
-        max-width: none;
+        margin-top: 10px; /* Adjust margin for separation on smaller screens */
     }
 }

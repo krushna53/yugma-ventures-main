@@ -1,215 +1,80 @@
-.aboutus-container {
-    max-width: 100%;
-    margin: 0 auto;
-    align-items: center;
+.aboutUs-container{
+    display: inline;
 }
 
-.mission-section {
-    background-color: #F1F8FB;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.mission-section h2 {
-    color: #333;
-}
-
-.founders-section {
+.aboutUs-heading{
     text-align: center;
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    background: #333;
+    color: antiquewhite;
+    
 }
 
-.founders-heading {
-    font-size: 50px;
-    margin-bottom: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.Vision{
+    display: flex;
+    position: relative;
 }
 
-.vision,
-.mission {
-  display: flex;
-  margin-bottom: 20px;
+.aboutUs-container h1{
+    font-family: Houschka-medium;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #b03c00;
+    margin-bottom: 2rem;
+}
+.aboutUs-container p{
+    font-family: Basis-regular;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    letter-spacing: .03125rem;
+    color: #5e6162;
+    opacity: .9;
+    margin-bottom: 0;
 }
 
-.section-content {
-  flex: 1;
-  padding: 20px;
-}
-
-.section-image {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Adjust styling as needed */
-.vision {
-  flex-direction: row;
-  
-}
-
-.mission {
-    flex-direction: row;
-  }
-
-  
-  
-  .section-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a slightly stronger shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add smooth transitions for scaling and shadow */
-  
-    /* Hover effect */
-    &:hover {
-      transform: scale(1.05); /* Enlarge the image on hover */
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Increase the shadow on hover */
-    }
-  }
-
-  .aboutus-heading {
-    font-size: 50px;
-    margin-bottom: 20px;
+.Vision>.aboutUs-content{
+    position:absolute;
+    top:40%;
+    left: 30%;
+    transform: translate(0%,-50%);
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-    text-decoration: solid;
-  
-    /* Gradient Background */
-    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  
-    /* Animation */
-    animation: gradientAnimation 5s infinite alternate; /* Adjust animation duration and timing function */
-  }
-  
-  /* Animation Keyframes */
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-
-
-
-  
-  
-  .section-content h2 {
-    color: #2c3e50; /* Update heading color */
-    font-size: 40px;
-    margin-bottom: 10px;
-  }
-  
-  .section-content p {
-    color: #555; /* Update paragraph text color */
-    font-size: 20px;
-    line-height: 1.6;
-    padding: 10px 50px ;
-  }
-
-  /* .vision,
-.mission {
-  display: flex;
-  margin-bottom: 20px;
-  position: relative; /* Add relative positioning to the parent container 
-} */
-
-.section-content,
-.section-image {
-  flex: 1;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add smooth transitions for scaling and shadow */
+    margin: 50px;
+    padding: 20px;
+    background-color: rgba(255,255,255,1);
+    border-radius: 0px;
+    aspect-ratio: 24/9;
+}
+.Mission{
+    display: flex;
+    position: relative;
 }
 
-.section-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Smooth transition on hover for both section-content and section-image */
-.vision:hover .section-content,
-.mission:hover .section-image {
-  transform: translateX(10px); /* Adjust the value to control the transition distance */
-}
-
-/* Hover effect for the section-image */
-.vision:hover .section-image,
-.mission:hover .section-content {
-  transform: translateX(-10px); /* Adjust the value to control the transition distance */
-}
-
-
-@media (max-width: 768px) {
-    .vision,
-    .mission {
-      flex-direction: column; /* Stack elements vertically on smaller screens */
-    }
-  
-    .section-content,
-    .section-image {
-      flex: 1;
-      transform: none; /* Remove transform on smaller screens */
-    }
-  
-    .vision:hover .section-content,
-    .mission:hover .section-image,
-    .vision:hover .section-image,
-    .mission:hover .section-content {
-      transform: none; /* Remove transform on hover for smaller screens */
-    }
-  }
-
-.founders-heading{
-    font-size: 36px;
-    margin-bottom: 20px;
+.Mission>.aboutUs-content{
+    position: absolute;
+    top: 40%;
+    right: 30%;
+    transform: translate(0%, -50%);
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    font-size: 50px;
-    font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-    text-decoration: solid;
-  
-    /* Gradient Background */
-    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  
-    /* Animation */
-    animation: gradientAnimation 5s infinite alternate; /* Adjust animation duration and timing function */
-  }
-  
-/* Animation Keyframes */
-@keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-
-  .vision,
-.mission {
-  display: flex;
-  margin-bottom: 20px;
-  width: 80%;
-  justify-content: center;
-  text-align: center;
-  align-self: center;
-  margin: 0 auto; 
+    margin: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    z-index: 1;
+    aspect-ratio: 24/9;
 }
 
-.vision{
-    margin-bottom: 25px;
+
+.Mission > .image-container {
+    top: 50%;
+    right: 30%; /* Adjust this value to control the distance from the right */
+    transform: translate(65%, 0%);
+}
+.section-image{
+    border-radius: 0px;
+    margin: 20px 20px;
+    width: 700px; 
+    height: 500px;
+    
 }

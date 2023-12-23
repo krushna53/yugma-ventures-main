@@ -11,7 +11,6 @@
   z-index: 100; /* Added solid to the border */
   background-color: transparent; /* Set default background color to transparent */
   transition: all 0.4s ease;
-  justify-content: space-evenly;
 }
 
 .nav .logo {
@@ -52,6 +51,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-left: 700px;
 }
 
 .nav div.main_list ul li {
@@ -158,13 +158,13 @@
   .nav .logo img {
     margin-top: -40px;
     margin-left: -70px; /* Adjusted the margin-left to align properly */
-    transform: scale(0.3);
   }
 
   .nav div.main_list {
     margin-top: 0; /* Removed the negative margin-top */
     margin-right: 0;
     text-align: center;
+    
   }
 
   .nav div.main_list ul {
@@ -175,6 +175,7 @@
     align-items: center;
     justify-content: center; /* Center the main list items */
     margin-top: -10px;
+    
   }
 
   .nav div.main_list ul li {

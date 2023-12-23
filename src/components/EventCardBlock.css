@@ -24,12 +24,12 @@
 
 .event-navbar li:hover {
   text-decoration: rgba(52, 152, 219, 0.8); /* Hover background color */
-  color: #b85cec;
+  color: #A93AE9;
 }
 
 .event-navbar li.active {
   text-decoration: rgba(52, 152, 219, 0.8); /* Active background color */
-  color: #b85cec;
+  color: #A93AE9;
 }
 
 .event-navbar {

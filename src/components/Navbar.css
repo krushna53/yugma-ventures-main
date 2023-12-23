@@ -140,6 +140,18 @@
   border: 2px solid #ffffff;
 }
 
+@media only screen and ( max-width: 1440px) and (min-width : 1025px){
+  .nav .main_list ul {
+    margin-left: 400px;
+  }
+}
+
+@media only screen and ( max-width: 1024px) and (min-width : 769px){
+  .nav .main_list ul {
+    margin-left: 100px;
+  }
+}
+
 
 @media only screen and (max-width: 768px) {
   .nav {

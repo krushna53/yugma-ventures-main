@@ -1,27 +1,38 @@
+
+
 .service-container {
-  text-align: center;
-  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-image: url('../images/services.jpg'); */
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%, rgb(34, 89, 255) 70%, rgb(66, 113, 255) 100%);
+  background-size: cover; /*Ensure the background covers the entire container*/
+  background-repeat: no-repeat; /* Prevent background image repetition */
+  /* background-attachment: fixed; Keep the background fixed when scrolling */
+  background-color: rgba(255, 255, 255, 0.3); 
+  padding: 50px;
+  background-position: center;
+  overflow: hidden;
 }
 
 .Services {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  /* justify-content: row; */
+  /* overflow-x:hidden; */
 }
 
 #title {
-  font-size: 36px;
+  font-size: 70px;
   margin-bottom: 20px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-bottom: 0px;
-  font-size: 50px;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-weight: bolder;
   text-decoration: solid;
-
+  /* -webkit-text-stroke: 1px #000000; */
   /* Gradient Background */
-  background: linear-gradient(90deg, #4CAF50, #2196F3);
+  background: linear-gradient(270deg, #fb12b5, #3a5eff);
   /* Adjust colors as needed */
   background-clip: text;
   -webkit-background-clip: text;
@@ -41,30 +52,14 @@
   }
 }
 
-.Services .Card-root {
-  width: calc(33.33% - 20px);
-  margin: 20px;
-  padding: 30px;
-  border-radius: 20px;
-  position: relative;
-  background: #FFFFFF;
-  text-align: center;
-  box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.Services .Card-root:hover {
-  background-color: #f1f8fb;
-  transform: scale(1.05); /* Add a slight scale effect on hover */
-  box-shadow: 0 15px 30px 0 rgba(0, 69, 255, 0.1); /* Adjust box-shadow on hover */
-}
 
 .Services .image {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .Services .image svg {
@@ -75,23 +70,95 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.Services .image img {
+  width: 200px; /* Make the image fill the circular container */
+  height: 200px; /* Maintain the aspect ratio of the image */
+}
+
+.Services .Card-root {
+  width: 300px;
+  height: 80%;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.398);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, left 1s ease-in;
+  
+  /* Removed white background and added a transparent background */
+  background: rgb(255, 255, 255);  ;
+}
+
+.Services .Card-root:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px 0 rgb(198, 134, 255);
+}
+
 .Services h1 {
   margin: 10px 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 32px;
-  font-weight: 700; /* Increased font weight for emphasis */
-  color: #333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Added text shadow for depth */
-  letter-spacing: 1px; /* Adjust letter spacing for better readability */
+  font-weight: 700;
+  /* color: rgb(34, 89, 255); */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  font-family: 'Droid Serif', serif;
 }
 
 .Services p {
-  margin: 10px 0; /* Added margin for better spacing */
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  font-size: 18px; /* Increased font size for better readability */
-  line-height: 1.6; /* Adjusted line height for better readability */
-  color: #777; /* Changed color to a softer tone */
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000;
 }
+
+
+/* .service-container .service-buttons {
+  margin-right: 900px;
+} */
+
+.service-container .service-buttons button {
+  background: none;
+  border: none;
+  margin-top: 10px;
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Animation styles */
+
+.Services .active-service {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px 0 rgb(198, 134, 255);
+}
+
+.Services .fadeInUpSD-0{
+  left : 400px;
+}
+
+.Services .fadeInUpSD-1{
+  left : 400px;
+}
+
+.Services .fadeInUpSD-2{
+  left : 400px;
+}
+
+.Services .fadeInUpSD-3{
+  left : -400px;
+}
+
+.Services .fadeInUpSD-4{
+  left : -400px;
+}
+
+.Services .fadeInUpSD-5{
+  left : -400px;
+}
+
+
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1200px) {
@@ -101,7 +168,73 @@
 }
 
 @media screen and (max-width: 768px) {
-  .Services .Card-root {
-    width: calc(100% - 20px);
+  
+  
+  .service-container {
+    padding: 20px; /* Reduce padding for smaller screens */
+    /* height: 60%; */
   }
+
+  #title {
+    font-size: 40px; /* Reduce font size for the title */
+    padding-top: 20px; /* Adjust spacing for the title */
+  }
+
+  /* .Services {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+  /*} */
+
+  .Services .Card-root {
+    width: 180px; /* Adjust the width */
+    height: 75%; /* Adjust the height to be auto or a specific value */
+    margin: 10px;
+    padding: 20px; /* Adjust the padding */
+    border-radius: 10px; /* Adjust the border-radius */
+    box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1); /* Adjust the box-shadow */
+  }
+
+  .Services .Card-root:hover {
+    /* transform: scale(0.95); */
+    box-shadow: 0 7px 15px 0 rgb(198, 134, 255); /* Adjust the box-shadow on hover */
+  }
+
+  .Services .image img {
+    width: 100px; /* Make the image fill the card on smaller screens */
+    height: 100px; /* Maintain the aspect ratio of the image */
+  }
+
+  .service-buttons button {
+    font-size: 2em; /* Reduce font size for buttons */
+  }
+
+  .Services h1 {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    /* color: rgb(34, 89, 255); */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    font-family: 'Droid Serif', serif;
+  }
+  
+  .Services p {
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    /* line-height: 1.6; */
+    color: #000000;
+  }
+
+  .Services .fadeInUpSD-0{
+    left : 550px;
+  }
+  
+  .Services .fadeInUpSD-5{
+    left : -550px;
+  }
+  
+
+  
 }
+
+

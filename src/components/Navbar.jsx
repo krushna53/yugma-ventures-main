@@ -24,10 +24,10 @@ const Navbar = ({ toggleTheme }) => {
     };
   }, []);
 
-  const handleThemeToggle = (isChecked) => {
-    setChecked(isChecked);
-    toggleTheme(isChecked ? 'dark' : 'light');
-  };
+  // const handleThemeToggle = (isChecked) => {
+  //   setChecked(isChecked);
+  //   toggleTheme(isChecked ? 'dark' : 'light');
+  // };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -66,7 +66,7 @@ const Navbar = ({ toggleTheme }) => {
     <div>
       <nav className={isAffixed ? 'nav affix' : 'nav'}>
         <div className="logo">
-          <a href="#"><img src={logo} alt="" /></a>
+          <a href="#" aria-label="Yugma Ventures Home" ><img src={logo} alt="" /></a>
         </div>
         
         <div className={`main_list ${isMenuOpen ? 'open' : ''}`}>
@@ -79,7 +79,7 @@ const Navbar = ({ toggleTheme }) => {
             
           </ul>
         </div>
-        <div className="theme_switch">
+        {/* <div className="theme_switch">
           {checked ? (
             <IoIosMoon size={20} color="#333" />
           ) : (
@@ -97,7 +97,7 @@ const Navbar = ({ toggleTheme }) => {
                 uncheckedIcon={false}
 
               />
-            </div>
+            </div> */}
             <div className="menu-icon" onClick={toggleMenu}>
           <div className="bar"></div>
           <div className="bar"></div>

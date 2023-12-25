@@ -1,214 +1,81 @@
-.aboutus-container {
-    max-width: 100%;
-    margin: 0 auto;
-    align-items: center;
+.aboutUs-container{
+    display: inline;
 }
 
-.mission-section {
-    background-color: #F1F8FB;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.mission-section h2 {
-    color: #333;
-}
-
-.founders-section {
+.aboutUs-heading{
+    margin-top: 130px;
+    font-size: 4rem;
     text-align: center;
 }
 
-.founders-heading {
-    font-size: 50px;
-    margin-bottom: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.vision,
-.mission {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.section-content {
-  flex: 1;
-  padding: 20px;
-}
-
-.section-image {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Adjust styling as needed */
-.vision {
-  flex-direction: row;
-  
-}
-
-.mission {
+.Vision,
+.Mission{
+    display: flex;
     flex-direction: row;
-  }
+    justify-content: center; /* Centers the div horizontally */
+  align-items: center;     /* Centers the div vertically */
+  height: 70vh;
+}
 
-  
-  
-  .section-image {
+.section-image{
+    width: 100vw;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a slightly stronger shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add smooth transitions for scaling and shadow */
-  
-    /* Hover effect */
-    &:hover {
-      transform: scale(1.05); /* Enlarge the image on hover */
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Increase the shadow on hover */
-    }
-  }
+    border-radius: 15px;
+    height: auto;
+    max-height: 400px; /* Set a maximum height for the image */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    border-radius: 10px; /* Add a border-radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
 
-  .aboutus-heading {
-    font-size: 50px;
-    margin-bottom: 20px;
+.aboutUs-content{
+    align-items: center;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-    text-decoration: solid;
-  
-    /* Gradient Background */
-    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  
-    /* Animation */
-    animation: gradientAnimation 5s infinite alternate; /* Adjust animation duration and timing function */
-  }
-  
-  /* Animation Keyframes */
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
+    padding: 20px;
+    width: 100%;
+    background-color: #f9f9f9; /* Add a light background color */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin-top: 20px; /* Add margin at the top for separation */
+    
+}
+.aboutUs-content:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Add a more prominent box shadow on hover */
+}
+
+.aboutUs-container h1{
+    font-family: Houschka-medium;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #B03C00;
+    margin-bottom: 2rem;
+}
+
+.aboutUs-container p{
+    font-family: Basis-regular;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    letter-spacing: .03125rem;
+    color: #5E6162;
+    opacity: .9;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .Vision,
+    .Mission {
+        height: auto; /* Adjust height for smaller screens */
+        margin: 20px;
     }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
 
-
-
-  
-  
-  .section-content h2 {
-    color: #2c3e50; /* Update heading color */
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .section-content p {
-    color: #555; /* Update paragraph text color */
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  /* .vision,
-.mission {
-  display: flex;
-  margin-bottom: 20px;
-  position: relative; /* Add relative positioning to the parent container 
-} */
-
-.section-content,
-.section-image {
-  flex: 1;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add smooth transitions for scaling and shadow */
-}
-
-.section-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Smooth transition on hover for both section-content and section-image */
-.vision:hover .section-content,
-.mission:hover .section-image {
-  transform: translateX(10px); /* Adjust the value to control the transition distance */
-}
-
-/* Hover effect for the section-image */
-.vision:hover .section-image,
-.mission:hover .section-content {
-  transform: translateX(-10px); /* Adjust the value to control the transition distance */
-}
-
-
-@media (max-width: 768px) {
-    .vision,
-    .mission {
-      flex-direction: column; /* Stack elements vertically on smaller screens */
-    }
-  
-    .section-content,
     .section-image {
-      flex: 1;
-      transform: none; /* Remove transform on smaller screens */
+        display: none; /* Hide image on smaller screens */
     }
-  
-    .vision:hover .section-content,
-    .mission:hover .section-image,
-    .vision:hover .section-image,
-    .mission:hover .section-content {
-      transform: none; /* Remove transform on hover for smaller screens */
-    }
-  }
 
-.founders-heading{
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    font-size: 50px;
-    font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-    text-decoration: solid;
-  
-    /* Gradient Background */
-    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  
-    /* Animation */
-    animation: gradientAnimation 5s infinite alternate; /* Adjust animation duration and timing function */
-  }
-  
-/* Animation Keyframes */
-@keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
+    .aboutUs-content {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-bottom: 10px;
     }
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-
-  .vision,
-.mission {
-  display: flex;
-  margin-bottom: 20px;
-  width: 80%;
-  justify-content: center;
-  text-align: center;
-  align-self: center;
-  margin: 0 auto; 
-}
-
-.vision{
-    margin-bottom: 25px;
 }

@@ -10,16 +10,16 @@ import './App.css';
 
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
+  // const [theme, setTheme] = useState('light');
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+  // const toggleTheme = () => {
+  //   setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+  // };
 
   return (
     <Router>
-      <div className={`App ${theme}`}>
-        <Navbar toggleTheme={toggleTheme} />
+      <div className={`App`}>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/event/:eventPathName" element={<Event />} />

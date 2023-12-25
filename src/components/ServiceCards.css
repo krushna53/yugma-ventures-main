@@ -5,7 +5,8 @@
   flex-direction: column;
   align-items: center;
   /* background-image: url('../images/services.jpg'); */
-  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%, rgb(34, 89, 255) 70%, rgb(66, 113, 255) 100%);
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%,#fb12b5 50%, #3a5eff 110%);
+  
   background-size: cover; /*Ensure the background covers the entire container*/
   background-repeat: no-repeat; /* Prevent background image repetition */
   /* background-attachment: fixed; Keep the background fixed when scrolling */

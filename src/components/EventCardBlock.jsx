@@ -16,7 +16,7 @@ const EventCardBlock = ({ events }) => {
   });
 
   return (
-    <div>
+    <div className='eventcard-container'>
       <div className='Event'>
         <h1 className='event-heading'>Events</h1>
       </div>

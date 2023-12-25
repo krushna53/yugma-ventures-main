@@ -5,8 +5,40 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  transform: scale(0.98);
   margin: 20px;
   margin-top: 200px;
+  
+}
+
+.founder-card-heading{
+  font-size: 70px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  text-decoration: solid;
+  /* -webkit-text-stroke: 1px #000000; */
+  /* Gradient Background */
+  background: linear-gradient(270deg, #fb12b5, #3a5eff);
+  /* Adjust colors as needed */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* Animation */
+  animation: gradientAnimation 5s infinite alternate;
+}
+
+/* Animation Keyframes */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .card {
@@ -154,6 +186,11 @@
 
   .card-container {
     margin-top: 100px; /* Adjust the margin-top as needed for responsiveness */
+  }
+
+  .founder-card-heading {
+    font-size: 40px; /* Reduce font size for the title */
+    padding-top: 20px; /* Adjust spacing for the title */
   }
 
   .card:hover {

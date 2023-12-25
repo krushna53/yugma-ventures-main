@@ -6,7 +6,7 @@ import missionImage from '../images/mission3.jpg';
 const AboutUs = () => {
   return (
     <div className='aboutUs-container'>
-      <h1 className='aboutUs-heading'>About Us</h1>
+      <div className='aboutUs-heading'>About Us</div>
       <div className='Vision'>
       <div className='image-container'>
           <img className='section-image' src={visionImage} alt='Vision' />

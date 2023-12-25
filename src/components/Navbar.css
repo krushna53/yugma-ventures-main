@@ -20,7 +20,7 @@
 
 .nav .logo img {
   margin-top: -40px;
-  margin-left: -10px;
+  margin-left: -30px;
   float: left;
   /* width: 150px; 
   height: 50px;  */
@@ -169,7 +169,7 @@
 
   .nav .logo img {
     margin-top: -40px;
-    margin-left: -70px; /* Adjusted the margin-left to align properly */
+    margin-left: -100px; /* Adjusted the margin-left to align properly */
   }
 
   .nav div.main_list {

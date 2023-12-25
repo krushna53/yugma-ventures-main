@@ -11,24 +11,29 @@
   margin: 0 auto; 
 }
 
-.heading {
-  font-size: 36px;
+.contact-heading {
+  margin-bottom: 30px;
+}
+
+.contact-heading h1 {
+  font-size: 70px;
   margin-bottom: 20px;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 0px;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  color: #333; /* Adjust color as needed */
-
+  font-weight: bolder;
+  text-decoration: solid;
+  /* -webkit-text-stroke: 1px #000000; */
   /* Gradient Background */
-  background: linear-gradient(90deg, #4CAF50, #2196F3); /* Adjust colors as needed */
+  background: linear-gradient(270deg, #fb12b5, #3a5eff);
+  /* Adjust colors as needed */
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 
   /* Animation */
-  animation: gradientAnimation 5s infinite alternate; /* Adjust animation duration and timing function */
+  animation: gradientAnimation 5s infinite alternate;
 }
 
 /* Animation Keyframes */
@@ -167,6 +172,11 @@
   .ContactUS {
     width: 90%; /* Adjust width for smaller screens */
     padding-right: 0;
+  }
+
+  .contact-heading h1 {
+    font-size: 40px; /* Reduce font size for the title */
+    padding-top: 20px; /* Adjust spacing for the title */
   }
 
   .leftside{

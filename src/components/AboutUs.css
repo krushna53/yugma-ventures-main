@@ -3,14 +3,39 @@
 }
 
 .aboutUs-heading{
-    margin-top: 130px;
-    font-size: 4rem;
+    font-size: 70px;
+    margin-bottom: 20px;
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    text-decoration: solid;
+    /* -webkit-text-stroke: 1px #000000; */
+    /* Gradient Background */
+    background: linear-gradient(270deg, #fb12b5, #3a5eff);
+    /* Adjust colors as needed */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Animation */
+    animation: gradientAnimation 5s infinite alternate;
 }
+
+/* Animation Keyframes */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 
 .Vision,
 .Mission{
     display: flex;
+    transform: scale(0.8);
     flex-direction: row;
     justify-content: center; /* Centers the div horizontally */
   align-items: center;     /* Centers the div vertically */
@@ -67,6 +92,12 @@
     .Mission {
         height: auto; /* Adjust height for smaller screens */
         margin: 20px;
+        transform: scale(1);
+    }
+
+    .aboutUs-heading {
+        font-size: 40px; /* Reduce font size for the title */
+        padding-top: 20px; /* Adjust spacing for the title */
     }
 
     .section-image {

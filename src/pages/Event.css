@@ -172,6 +172,7 @@ text-align: center;
   font-size: 1.2rem;
   text-align: left;
   margin-bottom: 20px;
+  text-align: center;
   font-family: Arial, sans-serif;
 
 }
@@ -211,13 +212,12 @@ text-align: center;
     /* font-size: 0.5rem; */
     padding: 0;
     padding-bottom: 40px;
+    top: 60%;
   }
 
   .event-name {
     bottom: 0;
   }
-
-
 
   .event-name h1 {
     font-size: 1rem; /* Adjust font size for smaller screens */
@@ -242,6 +242,30 @@ text-align: center;
     padding: 10px 15px; /* Adjust button padding for better touch responsiveness */
     font-size: 0.7rem; /* Adjust font size for smaller screens */
     margin-top: -40px;
+  }
+
+  .event-description h1{
+    font-size: 18px; /* Reduce font size for the title */
+    padding-top: 20px; /* Adjust spacing for the title */
+  }
+
+  .event-description p{
+    font-size: 16px; /* Reduce font size for the title */
+    padding-top: 20px; /* Adjust spacing for the title */
+  }
+
+  .event-who ul{
+    
+    font-size: 16px; /* Reduce font size for the title */
+    padding-top: 20px; /* Adjust spacing for the title */
+  
+  }
+
+  .event-why ul{
+    
+    font-size: 16px; /* Reduce font size for the title */
+    padding-top: 20px; /* Adjust spacing for the title */
+  
   }
 
   /* Centering event name and date-venue */

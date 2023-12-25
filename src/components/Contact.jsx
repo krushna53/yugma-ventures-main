@@ -67,7 +67,7 @@ const ContactUs = () => {
 
   return (
     <div className="ContactUS">
-      <div className="heading">
+      <div className="contact-heading">
         <h1>Contact Us</h1>
       </div>
       <div className="contact-block">

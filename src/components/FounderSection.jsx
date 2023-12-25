@@ -37,11 +37,14 @@ const FounderSection = ({}) => {
       ];
 
   return (
-    <div className="card-container">
-      {founders.map((founder, index) => (
-        <FounderCard key={index} {...founder} />
-      ))}
-    </div>
+    <>
+      <div className='founder-card-heading'>Our Founders</div>
+      <div className="card-container">
+        {founders.map((founder, index) => (
+          <FounderCard key={index} {...founder} />
+        ))}
+      </div>
+    </>
   );
 };
 

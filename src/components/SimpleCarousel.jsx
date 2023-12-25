@@ -14,37 +14,37 @@ const SimpleCarousel = () => {
   const slides = [
     {
       url: marketImage,
-      why: "Why US ?",
+      why: "Why Us ?",
       header: "Market Competition",
       info: "Fierce competition in the market poses a challenge for businesses to differentiate and capture market share.",
     },
     {
       url: talentImage,
-      why: "Why US ?",
+      why: "Why Us ?",
       header: "Talent Auquisation",
       info: "Attracting and retaining skilled talent is a constant challenge,impacting organizational productivity and success.",
     },
     {
       url: regulatryImage,
-      why: "Why US ?",
+      why: "Why Us ?",
       header: "Regulatory Compliance",
       info: "Navigating complex regulatory landscapes poses challenges,requiring businesses to stay compliant and avoid risks.",
     },
     {
       url: brandImage,
-      why: "Why US ?",
+      why: "Why Us ?",
       header: "Brand Positioning",
       info: "Positioning your brand amidst market turbulence requires strategic foresight, agility, and a commitment to delivering value.",
     },
     {
       url: financeImage,
-      why: "Why US ?",
+      why: "Why Us ?",
       header: "Financial Constraints",
       info: "Limited financial resources can hinder growth and innovation, requiring strategic financial management.",
     },
     {
       url: techImage,
-      why: "Why US ?",
+      why: "Why Us ?",
       header: "Technological Disruption",
       info: "Rapid technological advancements require businesses to adapt quickly, often leading to operational challenges.",
     },

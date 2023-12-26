@@ -76,9 +76,13 @@
 }
 
 .event-card {
-  max-width: calc(100% / 3); /* Adjust the percentage as needed */
+  max-width: calc(100% / 4); /* Adjust the percentage as needed */
   margin: 10px;
+  width: 25%;
   border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
   overflow-x: hidden; /* Ensure the overflow is hidden for the zoom effect */
@@ -87,6 +91,7 @@
 
   &:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
   }
 }
 
@@ -107,6 +112,7 @@
 .event-card-img {
   overflow: hidden;
   margin-top: -30px;
+  border-radius: 3%;
 }
 
 .event-card img {

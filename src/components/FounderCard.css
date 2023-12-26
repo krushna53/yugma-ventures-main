@@ -27,6 +27,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
   /* Animation */
   animation: gradientAnimation 5s infinite alternate;
 }

@@ -4,22 +4,23 @@
 
 .aboutUs-heading{
     font-size: 70px;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 0px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bolder;
-    text-decoration: solid;
-    /* -webkit-text-stroke: 1px #000000; */
-    /* Gradient Background */
-    background: linear-gradient(270deg, #fb12b5, #3a5eff);
-    /* Adjust colors as needed */
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    /* Animation */
-    animation: gradientAnimation 5s infinite alternate;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  text-decoration: solid;
+  /* -webkit-text-stroke: 1px #000000; */
+  /* Gradient Background */
+  background: linear-gradient(270deg, #fb12b5, #3a5eff);
+  /* Adjust colors as needed */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* Animation */
+  animation: gradientAnimation 5s infinite alternate;
 }
 
 /* Animation Keyframes */

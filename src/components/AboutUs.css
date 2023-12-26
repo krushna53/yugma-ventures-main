@@ -4,9 +4,8 @@
 
 .aboutUs-heading{
     font-size: 70px;
-  margin-bottom: 30px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 0px;
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
@@ -39,8 +38,8 @@
     transform: scale(0.8);
     flex-direction: row;
     justify-content: center; /* Centers the div horizontally */
-  align-items: center;     /* Centers the div vertically */
-  height: 70vh;
+    align-items: center;     /* Centers the div vertically */
+    height: 50vh;
 }
 
 .section-image{
@@ -63,7 +62,7 @@
     background-color: #f9f9f9; /* Add a light background color */
     border-radius: 10px; /* Add border-radius for rounded corners */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    margin-top: 20px; /* Add margin at the top for separation */
+    margin-top: 10px; /* Add margin at the top for separation */
     
 }
 .aboutUs-content:hover {
@@ -72,7 +71,7 @@
 
 .aboutUs-container h1{
     margin: 10px 0;
-  font-size: 32px;
+  font-size: 4rem;
   font-weight: 700;
   /* color: rgb(34, 89, 255); */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -82,8 +81,8 @@
 
 .aboutUs-container p{
     font-family: Basis-regular;
-    font-size: 1.125rem;
-    line-height: 2rem;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
     letter-spacing: .03125rem;
     color: #5E6162;
     opacity: .9;

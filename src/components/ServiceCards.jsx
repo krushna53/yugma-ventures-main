@@ -11,37 +11,37 @@ import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-ico
 const servicesData = [
   {
     id: 0,
-    icon: require('../images/planning.png'),
+    icon: require('../images/planning.webp'),
     title: 'STRATEGIC PLANNING',
     description: 'We provide strategic planning services to help businesses set and achieve their goals',
   },
   {
     id: 1,
-    icon: require('../images/FC.png'),
+    icon: require('../images/FC.webp'),
     title: 'FINANCIAL CONSULTING',
     description: 'Our financial consulting services help businesses manage their finances effectively.',
   },
   {
     id: 2,
-    icon: require('../images/op.png'),
+    icon: require('../images/op.webp'),
     title: 'OPERATIONS MANAGEMENT',
     description: 'We optimize business operations to enhance efficiency and reduce costs.',
   },
   {
     id: 3,
-    icon: require('../images/leader.png'),
+    icon: require('../images/leader.webp'),
     title: 'LEADERSHIP DEVELOPMENT',
     description: 'We offer leadership development programs to nurture and empower your team.',
   },
   {
     id: 4,
-    icon: require('../images/Technology.png'),
+    icon: require('../images/Technology.webp'),
     title: 'TECHNOLOGY CONSULTING',
     description: 'Empower your business with our strategic Technology Consulting services, delivering tailored solutions to drive innovation and maximize technological efficiency.',
   },
   {
     id: 5,
-    icon: require('../images/cxo.png'),
+    icon: require('../images/cxo.webp'),
     title: 'CXO HIRING',
     description: 'Unlock executive potential and drive organizational excellence with our CXO Hiring services, dedicated to placing top-tier leadership that aligns seamlessly with your company\'s vision and goals.',
   },

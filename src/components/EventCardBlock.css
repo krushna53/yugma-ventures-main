@@ -131,10 +131,6 @@
   /* overflow: hidden; */
 }
 
-.event-card:hover img {
-  transform: scale(1.2); /* Zoom effect on hover */
-  
-}
 
 .event-card-details {
   padding: 10px;

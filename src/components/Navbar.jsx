@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
-import logo from '../images/yg.png';
+import logo from '../images/yg.webp';
 import Switch from 'react-switch';
 import { useNavigate, useLocation } from 'react-router-dom'; // Import useNavigate and useLocation
 import { IoMdMenu } from "react-icons/io";

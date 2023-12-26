@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowCircleRight, FaArrowCircleLeft } from "react-icons/fa";
-import brandImage from "../images/brandpositioning.jpg";
-import regulatryImage from "../images/regulation.jpg";
-import techImage from "../images/techdisp.jpg";
-import marketImage from "../images/market.jpg";
-import talentImage from "../images/talent.jpg";
+import brandImage from "../images/brandpositioning.webp";
+import regulatryImage from "../images/regulation.webp";
+import techImage from "../images/techdisp.webp";
+import marketImage from "../images/market.webp";
+import talentImage from "../images/talent.webp";
 import financeImage from "../images/talent.webp";
 import "./SimpleCarousel.css"; // Create a CSS file for styling
 

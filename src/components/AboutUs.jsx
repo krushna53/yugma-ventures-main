@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutUs.css';
-import visionImage from '../images/services2.jpg';
-import missionImage from '../images/mission3.jpg';
+import visionImage from '../images/services2.webp';
+import missionImage from '../images/mission3.webp';
 
 const AboutUs = () => {
   return (

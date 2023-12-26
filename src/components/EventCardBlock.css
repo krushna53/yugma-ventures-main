@@ -13,7 +13,7 @@
   text-decoration: solid;
   /* -webkit-text-stroke: 1px #000000; */
   /* Gradient Background */
-  background: linear-gradient(270deg, #fb12b5, #3a5eff);
+  background: linear-gradient(90deg, #fb12b5, #3a5eff);
   /* Adjust colors as needed */
   background-clip: text;
   -webkit-background-clip: text;
@@ -21,6 +21,14 @@
 
   /* Animation */
   animation: gradientAnimation 5s infinite alternate;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 
@@ -61,7 +69,7 @@
 }
 
 .event-card-block {
-  transform: scale(1.15);
+  /* transform: scale(1.15); */
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -76,9 +84,13 @@
 }
 
 .event-card {
-  max-width: calc(100% / 3); /* Adjust the percentage as needed */
+  max-width: calc(100% / 4); /* Adjust the percentage as needed */
   margin: 10px;
+  width: 25%;
   border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
   overflow-x: hidden; /* Ensure the overflow is hidden for the zoom effect */
@@ -87,6 +99,7 @@
 
   &:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
   }
 }
 
@@ -107,6 +120,7 @@
 .event-card-img {
   overflow: hidden;
   margin-top: -30px;
+  border-radius: 3%;
 }
 
 .event-card img {
@@ -132,11 +146,20 @@
 .event-card-details h3 {
   margin: 0;
   font-size: 1.2em;
+  letter-spacing: 1px;
+  font-family: 'Droid Serif', serif;
 }
 
 .event-card-details p.date-place {
   margin: 5px 0;
   font-size: 0.9em;
+
+  font-family: Basis-regular;
+   
+    line-height: 2rem;
+    letter-spacing: .03125rem;
+    color: #5E6162;
+    opacity: .9;
 }
 
 
@@ -163,11 +186,12 @@
   flex-direction: column;
   align-items: center;
   margin: 5px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 .event-card {
   max-width: 100%;
+  width: 90%;
 }
 
 .event-card img {

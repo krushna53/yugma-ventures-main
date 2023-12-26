@@ -1,6 +1,7 @@
 
 
 .service-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,8 +99,8 @@
 
 .Services h1 {
   margin: 10px 0;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   /* color: rgb(34, 89, 255); */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
@@ -107,11 +108,13 @@
 }
 
 .Services p {
-  margin: 10px 0;
-  font-family: 'Arial', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #000000;
+  font-family: Basis-regular;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    letter-spacing: .03125rem;
+    color: #5E6162;
+    opacity: .9;
+    margin-bottom: 0;
 }
 
 
@@ -160,11 +163,64 @@
 }
 
 
+@media only screen and ( max-width: 1440px) and (min-width : 1201px){
+  .Services .fadeInUpSD-0{
+    left : 630px;
+  }
+
+  .Services .fadeInUpSD-1{
+    left : 400px;
+  }
+  
+  .Services .fadeInUpSD-2{
+    left : 200px;
+  }
+  
+  .Services .fadeInUpSD-3{
+    left : -200px;
+  }
+  
+  .Services .fadeInUpSD-4{
+    left : -600px;
+  }
+  
+  
+  .Services .fadeInUpSD-5{
+    left : -630px;
+  }
+}
+
 
 /* Media Queries for responsiveness */
-@media screen and (max-width: 1200px) {
+@media only screen and ( max-width: 1200px) and (min-width : 768px) {
   .Services .Card-root {
-    width: calc(50% - 20px);
+    width: 280px;
+  }
+
+  
+
+  .Services .fadeInUpSD-0{
+    left : 650px;
+  }
+  
+  .Services .fadeInUpSD-1{
+    left : 560px;
+  }
+  
+  .Services .fadeInUpSD-2{
+    left : 180px;
+  }
+  
+  .Services .fadeInUpSD-3{
+    left : -180px;
+  }
+  
+  .Services .fadeInUpSD-4{
+    left : -560px;
+  }
+  
+  .Services .fadeInUpSD-5{
+    left : -650px;
   }
 }
 
@@ -194,9 +250,9 @@
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1); /* Adjust the box-shadow */
   }
 
-  .Services .Card-root:hover {
-    /* transform: scale(0.95); */
-    box-shadow: 0 7px 15px 0 rgb(198, 134, 255); /* Adjust the box-shadow on hover */
+  .Services .active-service {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px 0 rgb(198, 134, 255);
   }
 
   .Services .image img {
@@ -222,16 +278,33 @@
     margin: 10px 0;
     font-family: 'Arial', sans-serif;
     font-size: 12px;
+    line-height: 1.2rem;
     /* line-height: 1.6; */
     color: #000000;
   }
 
   .Services .fadeInUpSD-0{
-    left : 550px;
+    left : 590px;
+  }
+  
+  .Services .fadeInUpSD-1{
+    left : 360px;
+  }
+  
+  .Services .fadeInUpSD-2{
+    left : 120px;
+  }
+  
+  .Services .fadeInUpSD-3{
+    left : -120px;
+  }
+  
+  .Services .fadeInUpSD-4{
+    left : -360px;
   }
   
   .Services .fadeInUpSD-5{
-    left : -550px;
+    left : -600px;
   }
   
 

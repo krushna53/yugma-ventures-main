@@ -70,13 +70,13 @@ export default function ActionAreaCard() {
   };
   checkActive(servicesData[0]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextService();
-    }, 2000); // Auto-slide every 3 seconds (adjust as needed)
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextService();
+  //   }, 2000); // Auto-slide every 3 seconds (adjust as needed)
 
-    return () => clearInterval(interval); // Clear interval on component unmount
-  }, []);
+  //   return () => clearInterval(interval); // Clear interval on component unmount
+  // }, []);
 
 
   return (

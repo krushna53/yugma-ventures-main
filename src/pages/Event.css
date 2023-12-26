@@ -63,7 +63,7 @@
 
 .event-name h1 {
   font-size: 4rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Droid Serif', serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
@@ -73,7 +73,6 @@
   border-radius: 15px; /* Optional: Add border-radius for a subtle rounded look */
   transform: translateY(-20%);
 }
-
 /* Styling for the event date and venue */
 .event-date-venue:hover{
   transform: scale(1.1);
@@ -82,9 +81,8 @@
 
 .event-date-venue h2 {
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: Basis-regular;
   font-weight: bold;
-  text-transform: uppercase;
   color: #fff;
   opacity: 0.9; /* Adjust opacity as needed for visibility */
   /* transform: translateY(%); */
@@ -127,7 +125,7 @@ text-align: center;
   list-style: none;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .event-why ul li,
@@ -157,7 +155,7 @@ text-align: center;
 .event-who h1 {
   font-size: 1.7em;
   margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Droid Serif', serif;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -173,13 +171,13 @@ text-align: center;
   text-align: left;
   margin-bottom: 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: Basis-regular;
 
 }
 
 .event-intro-title h1 {
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Droid Serif', serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;

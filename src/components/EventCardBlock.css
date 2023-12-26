@@ -13,7 +13,7 @@
   text-decoration: solid;
   /* -webkit-text-stroke: 1px #000000; */
   /* Gradient Background */
-  background: linear-gradient(270deg, #fb12b5, #3a5eff);
+  background: linear-gradient(90deg, #fb12b5, #3a5eff);
   /* Adjust colors as needed */
   background-clip: text;
   -webkit-background-clip: text;

@@ -49,26 +49,65 @@ const servicesData = [
 
 export default function ActionAreaCard() {
   const [currentService, setCurrentService] = useState(0);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+      
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const nextService = () => {
-    setCurrentService((prevService) => (prevService + 1) % servicesData.length);
+    if (windowSize.innerWidth <= 376) {
+      setCurrentService((prevService) => (prevService + 1) % servicesData.length);
+    }
+
+    else if ((windowSize.innerWidth <= 769)){
+      setCurrentService((prevService) => (prevService + 2) % servicesData.length);
+    }
+
+    else {
+      setCurrentService((prevService) => (prevService + 3) % servicesData.length);
+    }
   };
 
   const prevService = () => {
-    setCurrentService(
-      (prevService) => (prevService - 1 + servicesData.length) % servicesData.length
-    );
+    if (windowSize.innerWidth <= 376) {
+      setCurrentService(
+        (prevService) => (prevService - 1 + servicesData.length) % servicesData.length
+      );
+    }
+
+    else if ((windowSize.innerWidth <= 769)){
+      setCurrentService(
+        (prevService) => (prevService - 2 + servicesData.length) % servicesData.length
+      );
+    }
+
+    else {
+      setCurrentService(
+        (prevService) => (prevService - 3 + servicesData.length) % servicesData.length
+      );
+    }
+    
   };
 
   const generateAnimationNames = () => `fadeInUpSD-${currentService}`;
   console.log(generateAnimationNames());
 
-  const checkActive = (service) => {
-    if (service.id === currentService) {
-      return 1;
-    }
-  };
-  checkActive(servicesData[0]);
+  // const checkActive = (service) => {
+  //   if (service.id === currentService) {
+  //     return 1;
+  //   }
+  // };
+  // checkActive(servicesData[0]);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -84,7 +123,7 @@ export default function ActionAreaCard() {
       <h1 id='title'>Our Services</h1>
       <div className='Services'>
         {servicesData.map((service) => (
-          <Card key={service.id} className={`${generateAnimationNames()} ${checkActive(service) === 1 ? 'active-service Card-root' : 'Card-root'}`} sx={{ maxWidth: 345 }} raised= {true}>
+          <Card key={service.id} className={`${generateAnimationNames()} ${'Card-root'}`} sx={{ maxWidth: 345 }} raised= {true}>
            <div className='image'>
               <img src={service.icon} alt={service.title}   />
             </div>
@@ -100,4 +139,9 @@ export default function ActionAreaCard() {
       </div>
     </div>
   );
+}
+
+function getWindowSize() {
+  const {innerWidth, innerHeight} = window;
+  return {innerWidth, innerHeight};
 }

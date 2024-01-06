@@ -133,10 +133,10 @@
 
 /* Animation styles */
 
-.Services .active-service {
+/* .Services .active-service {
   transform: scale(1.05);
   box-shadow: 0 15px 40px 0 rgb(198, 134, 255);
-}
+} */
 
 .Services .fadeInUpSD-0{
   left : 400px;
@@ -168,26 +168,26 @@
     left : 630px;
   }
 
-  .Services .fadeInUpSD-1{
+  /* .Services .fadeInUpSD-1{
     left : 400px;
   }
   
   .Services .fadeInUpSD-2{
     left : 200px;
-  }
+  } */
   
   .Services .fadeInUpSD-3{
-    left : -200px;
+    left : -600px;
   }
   
-  .Services .fadeInUpSD-4{
+  /* .Services .fadeInUpSD-4{
     left : -600px;
   }
   
   
   .Services .fadeInUpSD-5{
     left : -630px;
-  }
+  } */
 }
 
 

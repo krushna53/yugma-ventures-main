@@ -44,7 +44,7 @@
 .card {
   position: relative;
   max-width: calc(100% / 4);
-  height: 200px;
+  height: fit-content;
   background-color: #fff;
   margin: 30px 10px;
   padding: 20px 15px;
@@ -55,10 +55,12 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.5s ease-in-out;
   border-radius: 3%;
+  
 }
 
 .card:hover {
-  height: 600px;
+  height: fit-content;
+
 }
 /* .card:hover {
   transition: height 0.5s ease-in-out;
@@ -84,7 +86,7 @@
   border-radius: 50%;
 }
 
-.card .content {
+.content {
   position: relative;
   top: -60px;
   padding: 10px 15px;
@@ -119,7 +121,7 @@
 }
 .founder-header p{
   font-family: Basis-regular;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1rem;
   letter-spacing: .03125rem;
   color: #5E6162;
@@ -129,12 +131,13 @@
 
 .founder-description p{
   font-family: Basis-regular;
-  font-size: 1rem;
-  line-height: 1rem;
-  letter-spacing: .03125rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  letter-spacing: .04125rem;
   color: #5E6162;
   opacity: .9;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  justify-content: center;
 }
 
 .card:hover .founder-header {
@@ -170,13 +173,14 @@
 .social-icons a {
   margin: 0 10px;
   color: #333;
-  font-size: 20px;
+  font-size: 30px;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
   color: #0077b5;
+  font-size: 40px;
 }
 
 .content {

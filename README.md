@@ -27,17 +27,17 @@ For detailed information about specific events, you can update the `src/eventsDa
 ## Adding Image in Application
 To add a new image to your application, follow these steps:
 
-#### 1. Navigate to src/images folder:
+#### 1. Navigate to public/eventImages folder:
 
-Locate the src/images directory in your project.
+Locate the `public/eventImages` directory in your project.
 
 #### 2. Add your image:
 
-Copy and paste your new image into the src/images folder.
+Copy and paste your new `image` into the `public/eventImages` folder.
 
 #### 3. Import image in src/eventsData.json:
 
-In the src/eventsData.json file, find the event or event details where you want to use the image.
-Update the image property with the path to your new image. For example, "image": "src/images/your-image.jpg".
+In the `src/eventsData.json` file, find the event or event details where you want to use the image.
+Update the image property with the path to your new image. For example, `"image": "../eventImages/your-image.jpg"`.
 
 Now, your new image is added to the application, and you can use it in your events or event details as needed.

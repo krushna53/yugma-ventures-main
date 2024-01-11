@@ -1,17 +1,43 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Welcome to Yugma Ventures 
 
-In the project directory, you can run:
 
+## Getting Started
+
+In the project directory, you can run the following command to install project modules:
+
+
+### `npm install`
+
+Run this command to run the project:
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Adding new event on Home page
 
+To add a new event on the Home page, navigate to the `src/eventsData.json` file. Inside this file, you will find a variable named `events` where you can add or update event cards in the Home page's event block. Follow the existing format for consistency.
 
+## Adding event details
+
+For detailed information about specific events, you can update the `src/eventsData.json` file. Inside this file, you will find a variable named `eventDetails` where you can add or update details regarding a specific event. Use the existing structure for consistency.
+
+## Adding Image in Application
+To add a new image to your application, follow these steps:
+
+#### 1. Navigate to src/images folder:
+
+Locate the src/images directory in your project.
+
+#### 2. Add your image:
+
+Copy and paste your new image into the src/images folder.
+
+#### 3. Import image in src/eventsData.json:
+
+In the src/eventsData.json file, find the event or event details where you want to use the image.
+Update the image property with the path to your new image. For example, "image": "src/images/your-image.jpg".
+
+Now, your new image is added to the application, and you can use it in your events or event details as needed.

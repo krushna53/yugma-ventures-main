@@ -41,3 +41,7 @@ In the `src/eventsData.json` file, find the event or event details where you wan
 Update the image property with the path to your new image. For example, `"image": "../eventImages/your-image.jpg"`.
 
 Now, your new image is added to the application, and you can use it in your events or event details as needed.
+
+### video reference:
+
+https://github.com/krushna53/yugma-ventures-main/blob/master/public/Yugma-Ventures---Management-Consulting-Company.mp4

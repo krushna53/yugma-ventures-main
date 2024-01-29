@@ -44,4 +44,4 @@ Now, your new image is added to the application, and you can use it in your even
 
 ### video reference:
 
-https://github.com/krushna53/yugma-ventures-main/blob/master/public/Yugma-Ventures---Management-Consulting-Company.mp4
+https://github.com/krushna53/yugma-ventures-main/blob/master/public/basic-setup.mp4

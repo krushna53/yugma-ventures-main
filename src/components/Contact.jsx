@@ -1,21 +1,23 @@
 import './Contact.css';
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from "react-toastify";
+import React from 'react';
+// import emailjs from 'emailjs-com';
+import { toast } from "react-toastify";
+import { useForm, ValidationError } from '@formspree/react';
 
 const ContactUs = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isNameFocused, setIsNameFocused] = useState(false);
-  const [isEmailFocused, setIsEmailFocused] = useState(false);
-  const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
+  // const [isNameFocused, setIsNameFocused] = useState(false);
+  // const [isEmailFocused, setIsEmailFocused] = useState(false);
+  // const [isSent, setIsSent] = useState(false);
+  // const [error, setError] = useState("");
+  const [state, handleSubmit] = useForm("xayggykg");
 
-  const notify = () => {
-    toast.success(
-      "Thank you for contacting yugma. We will respond to your message within 3 working days.😊",
-      {
+
+  if (state.succeeded) {
+    // Trigger toast notification
+    toast.success("Thank you for contacting yugma. We will respond to your message within 3 working days.😊", {
         position: "top-right",
         autoClose: 5000, // Display the toast for 5 seconds
         hideProgressBar: false,
@@ -24,46 +26,61 @@ const ContactUs = () => {
         draggable: true,
         progress: undefined,
         theme: "dark",
-      }
-    );
-  };
+    });
+  }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!name || !email || !message) {
-      setError("Please fill in all fields.");
-      return;
-    }
+  // const notify = () => {
+  //   toast.success(
+  //     "Thank you for contacting yugma. We will respond to your message within 3 working days.😊",
+  //     {
+  //       position: "top-right",
+  //       autoClose: 5000, // Display the toast for 5 seconds
+  //       hideProgressBar: false,
+  //       closeOnClick: true,
+  //       pauseOnHover: true,
+  //       draggable: true,
+  //       progress: undefined,
+  //       theme: "dark",
+  //     }
+  //   );
+  // };
 
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message,
-    };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (!name || !email || !message) {
+  //     setError("Please fill in all fields.");
+  //     return;
+  //   }
 
-    emailjs
-      .send(
-        process.env.REACT_APP_EMAILJS_SERVICEID,
-        process.env.REACT_APP_EMAILJS_TEMPLATEID,
-        templateParams,
-        process.env.REACT_APP_EMAILJS_PUBLICKEY
-      )
-      .then(
-        (response) => {
-          notify();
-          setIsSent(true);
-          setName("");
-          setEmail("");
-          setMessage("");
-          setError("");
-          console.log("Email sent:", response);
-        },
-        (error) => {
-          console.error("Failed to send the email:", error);
-          setError("Oops! Something went wrong. Please try again later.");
-        }
-      );
-  };
+  //   const templateParams = {
+  //     from_name: name,
+  //     from_email: email,
+  //     message: message,
+  //   };
+
+  //   emailjs
+  //     .send(
+  //       process.env.REACT_APP_EMAILJS_SERVICEID,
+  //       process.env.REACT_APP_EMAILJS_TEMPLATEID,
+  //       templateParams,
+  //       process.env.REACT_APP_EMAILJS_PUBLICKEY
+  //     )
+  //     .then(
+  //       (response) => {
+  //         notify();
+  //         setIsSent(true);
+  //         setName("");
+  //         setEmail("");
+  //         setMessage("");
+  //         setError("");
+  //         console.log("Email sent:", response);
+  //       },
+  //       (error) => {
+  //         console.error("Failed to send the email:", error);
+  //         setError("Oops! Something went wrong. Please try again later.");
+  //       }
+  //     );
+  // };
 
   return (
     <div className="ContactUS">
@@ -73,7 +90,7 @@ const ContactUs = () => {
       <div className="contact-block">
         <div className="leftside">
           <h2>Get in touch with us for personalized consulting services tailored to your business needs.</h2>
-          {isSent ? (
+          {/* {isSent ? (
             <div>
               <p>Thank you for contacting yugma. We will respond to your message within 3 working days. 😊</p>
             </div>
@@ -113,7 +130,54 @@ const ContactUs = () => {
               </div>
               <button type="submit">Submit</button>
             </form>
-          )}
+          )} */}
+          {state.succeeded ? (
+            <div>
+              <p>Thank you for contacting yugma. We will respond to your message within 3 working days. 😊</p>
+            </div>
+          ) : (  
+        <form onSubmit={handleSubmit}>
+            <input
+              placeholder="Name"
+              type="text"
+              id="name"
+              name="name"
+              required
+                />
+            <ValidationError 
+              prefix="Message" 
+              field="message"
+              errors={state.errors}
+            />
+            <input
+              placeholder="Email"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+            <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+            />
+            <input
+              placeholder="Message"
+              id="message"
+              name="message"
+              required
+            />
+            <ValidationError 
+              prefix="Message" 
+              field="message"
+              errors={state.errors}
+            />
+            
+            <button type="submit" disabled={state.submitting}>
+              Submit
+            </button>
+          </form>
+          )};
         </div>
         <div className="rightside">
           <div className="picture">

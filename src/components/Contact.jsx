@@ -177,7 +177,7 @@ const ContactUs = () => {
               Submit
             </button>
           </form>
-          )};
+          )}
         </div>
         <div className="rightside">
           <div className="picture">

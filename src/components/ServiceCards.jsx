@@ -100,7 +100,7 @@ export default function ActionAreaCard() {
   };
 
   const generateAnimationNames = () => `fadeInUpSD-${currentService}`;
-  console.log(generateAnimationNames());
+  // console.log(generateAnimationNames());
 
   // const checkActive = (service) => {
   //   if (service.id === currentService) {

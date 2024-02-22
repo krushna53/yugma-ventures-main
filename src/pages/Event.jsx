@@ -55,7 +55,7 @@ const Event = () => {
   const { eventPathName } = useParams();
   const event = eventData.eventDetails.find((e) => e.eventName === eventPathName);
   const imageUrl = event.imageUrl;
-  console.log(imageUrl)
+  // console.log(imageUrl)
 
   if (!event) {
     return <div>Error: Event not found</div>;

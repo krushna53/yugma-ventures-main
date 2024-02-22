@@ -183,7 +183,7 @@ const ContactUs = () => {
           <div className="picture">
             <img
               src="https://th.bing.com/th/id/OIP.Gal8T40MNWTINM15QEuLAwHaLH?rs=1&pid=ImgDetMain"
-              alt="Image"
+              alt="contact pic"
             />
           </div>
         </div>

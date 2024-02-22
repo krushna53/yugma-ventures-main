@@ -59,15 +59,15 @@ const Home = () => {
   // console.log(categorizedEvents);
 
 
-  const scrollToSection = (sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    if (sectionElement) {
-      window.scrollTo({
-        top: sectionElement.offsetTop - 50,
-        behavior: 'smooth',
-      });
-    }
-  };
+  // const scrollToSection = (sectionId) => {
+  //   const sectionElement = document.getElementById(sectionId);
+  //   if (sectionElement) {
+  //     window.scrollTo({
+  //       top: sectionElement.offsetTop - 50,
+  //       behavior: 'smooth',
+  //     });
+  //   }
+  // };
 
   return (
     <div className="home-container">

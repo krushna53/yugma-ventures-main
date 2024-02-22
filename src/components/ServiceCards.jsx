@@ -2,10 +2,10 @@ import * as React from 'react';
 import { useState,useEffect } from 'react';
 import Card from '@mui/material/Card';
 import './ServiceCards.css';
-import { FaHireAHelper } from "react-icons/fa";
-import { BsPersonRaisedHand } from "react-icons/bs";
-import { BsBarChartLineFill, BsCashStack, BsDiagram3Fill } from "react-icons/bs";
-import { GrTechnology } from "react-icons/gr";
+// import { FaHireAHelper } from "react-icons/fa";
+// import { BsPersonRaisedHand } from "react-icons/bs";
+// import { BsBarChartLineFill, BsCashStack, BsDiagram3Fill } from "react-icons/bs";
+// import { GrTechnology } from "react-icons/gr";
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
 
 const servicesData = [

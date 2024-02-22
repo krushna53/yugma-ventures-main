@@ -4,7 +4,7 @@ import React from 'react';
 import FounderCard from './FounderCard';
 import './FounderCard.css'
 
-const FounderSection = ({}) => {
+const FounderSection = () => {
 
     const founders = [
         {

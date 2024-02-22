@@ -46,7 +46,7 @@ const Home = () => {
    const categorizeEvents = (event) => {
     const currentDate = new Date();
     const eventDate = new Date(event.date);
-    console.log(eventDate);
+    // console.log(eventDate);
     // console.log(event.date);
     return eventDate >= currentDate ? 'Upcoming' : 'Past';
   };
@@ -56,7 +56,7 @@ const Home = () => {
     ...event,
     tag: categorizeEvents(event)
   }));
-  console.log(categorizedEvents);
+  // console.log(categorizedEvents);
 
 
   const scrollToSection = (sectionId) => {

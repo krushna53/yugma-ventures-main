@@ -15,12 +15,33 @@
   padding: 50px;
   background-position: center;
   overflow: hidden;
+  /* height: 100vh; */
 }
 
 .Services {
   display: flex;
-  /* justify-content: row; */
-  /* overflow-x:hidden; */
+  justify-content: row;
+  overflow-x:hidden;
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex: 1;
+}
+.Card-root {
+  margin: 10px; /* Adjust the margin as needed */
+}
+
+.service-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-buttons button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 #title {
@@ -188,6 +209,9 @@
   .Services .fadeInUpSD-5{
     left : -630px;
   } */
+  /* .service-container{
+    height: 90vh;
+  } */
 }
 
 
@@ -197,7 +221,9 @@
     width: 280px;
   }
 
-  
+  .service-container{
+    height: 90vh;
+  }
 
   .Services .fadeInUpSD-0{
     left : 650px;
@@ -231,7 +257,9 @@
     padding: 20px; /* Reduce padding for smaller screens */
     /* height: 60%; */
   }
-
+  .service-container{
+    height: 90vh;
+  }
   #title {
     font-size: 40px; /* Reduce font size for the title */
     padding-top: 20px; /* Adjust spacing for the title */
@@ -243,7 +271,7 @@
 
   .Services .Card-root {
     width: 180px; /* Adjust the width */
-    height: 75%; /* Adjust the height to be auto or a specific value */
+    height: 65%; /* Adjust the height to be auto or a specific value */
     margin: 10px;
     padding: 20px; /* Adjust the padding */
     border-radius: 10px; /* Adjust the border-radius */

@@ -1,27 +1,32 @@
-
-
 .service-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   /* background-image: url('../images/services.jpg'); */
-  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 70%,#fb12b5 50%, #3a5eff 110%);
-  
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 70%,
+    #fb12b5 50%,
+    #3a5eff 110%
+  );
+
   background-size: cover; /*Ensure the background covers the entire container*/
   background-repeat: no-repeat; /* Prevent background image repetition */
   /* background-attachment: fixed; Keep the background fixed when scrolling */
-  background-color: rgba(255, 255, 255, 0.3); 
-  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 3rem 0px;
   background-position: center;
   overflow: hidden;
   /* height: 100vh; */
+  padding-bottom: 11rem;
 }
 
 .Services {
-  display: flex;
-  justify-content: row;
-  overflow-x:hidden;
+  /* display: flex; */
+  /* justify-content: row; */
+  /* overflow-x:hidden; */
   justify-content: center;
   align-items: center;
   /* flex-wrap: wrap; */
@@ -62,7 +67,7 @@
   color: transparent;
 
   /* Animation */
-  animation: gradientAnimation 5s infinite alternate;
+  /* animation: gradientAnimation 5s infinite alternate; */
 }
 
 /* Animation Keyframes */
@@ -74,7 +79,6 @@
     background-position: 100% 50%;
   }
 }
-
 
 .Services .image {
   display: flex;
@@ -99,18 +103,19 @@
 }
 
 .Services .Card-root {
-  width: 300px;
-  height: 80%;
+  width: 300px !important;
+  height: 450px;
   margin: 20px;
   padding: 30px;
   border-radius: 20px;
-  position: relative;
+  /* position: relative; */
   text-align: center;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.398);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, left 1s ease-in;
-  
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    left 1s ease-in;
+
   /* Removed white background and added a transparent background */
-  background: rgb(255, 255, 255);  ;
+  background: rgb(255, 255, 255);
 }
 
 .Services .Card-root:hover {
@@ -125,19 +130,24 @@
   /* color: rgb(34, 89, 255); */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
 }
 
 .Services p {
   font-family: Basis-regular;
-    font-size: 1.125rem;
-    line-height: 2rem;
-    letter-spacing: .03125rem;
-    color: #5E6162;
-    opacity: .9;
-    margin-bottom: 0;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: 0.03125rem;
+  color: #5e6162;
+  opacity: 0.9;
+  margin-bottom: 0;
 }
-
+.slick-track {
+  width: 100%;
+}
+.css-berk65-MuiPaper-root-MuiCard-root {
+  box-shadow: none !important;
+}
 
 /* .service-container .service-buttons {
   margin-right: 900px;
@@ -152,39 +162,53 @@
   cursor: pointer;
 }
 
+.service-buttons button {
+  display: none;
+}
+/* Style for Next button */
+
+.slider-container {
+  position: relative;
+}
+.slick-slide {
+  display: flex !important ;
+    justify-content: center !important;
+    margin: auto;
+    align-items: center;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 50px !important;
+}
+.slick-prev,
+.slick-next {
+  top: 115% !important;
+}
+.slick-prev {
+  left: 570px !important;
+}
+.slick-next {
+  left: 765px !important;
+}
+/* Style for navigation buttons */
+
 /* Animation styles */
 
-/* .Services .active-service {
+.Services .active-service {
   transform: scale(1.05);
   box-shadow: 0 15px 40px 0 rgb(198, 134, 255);
-} */
-
-.Services .fadeInUpSD-0{
-  left : 400px;
-}
-
-.Services .fadeInUpSD-1{
-  left : 400px;
-}
-
-.Services .fadeInUpSD-2{
-  left : 400px;
-}
-
-.Services .fadeInUpSD-3{
-  left : -400px;
-}
-
-.Services .fadeInUpSD-4{
-  left : -400px;
-}
-
-.Services .fadeInUpSD-5{
-  left : -400px;
 }
 
 
-@media only screen and ( max-width: 1440px) and (min-width : 1201px){
+@media screen and (min-width:1400px) {
+  .slick-next {
+    left: 55% !important;
+}
+.slick-prev {
+  left: 42% !important;
+}
+}
+/* @media only screen and ( max-width: 1440px) and (min-width : 1201px){
   .Services .fadeInUpSD-0{
     left : 630px;
   }
@@ -196,12 +220,12 @@
   .Services .fadeInUpSD-2{
     left : 200px;
   } */
-  
-  .Services .fadeInUpSD-3{
+
+/* .Services .fadeInUpSD-3{
     left : -600px;
-  }
-  
-  /* .Services .fadeInUpSD-4{
+  } */
+
+/* .Services .fadeInUpSD-4{
     left : -600px;
   }
   
@@ -209,55 +233,35 @@
   .Services .fadeInUpSD-5{
     left : -630px;
   } */
-  /* .service-container{
+/* .service-container{
     height: 90vh;
-  } */
+  } 
 }
 
 
 /* Media Queries for responsiveness */
-@media only screen and ( max-width: 1200px) and (min-width : 768px) {
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
   .Services .Card-root {
     width: 280px;
+    height: 70vh;
   }
 
-  .service-container{
+  /* .service-container{
     height: 90vh;
+  }  */
+  .slick-prev {
+    left: 400px !important;
   }
-
-  .Services .fadeInUpSD-0{
-    left : 650px;
-  }
-  
-  .Services .fadeInUpSD-1{
-    left : 560px;
-  }
-  
-  .Services .fadeInUpSD-2{
-    left : 180px;
-  }
-  
-  .Services .fadeInUpSD-3{
-    left : -180px;
-  }
-  
-  .Services .fadeInUpSD-4{
-    left : -560px;
-  }
-  
-  .Services .fadeInUpSD-5{
-    left : -650px;
+  .slick-next {
+    left: 560px !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  
-  
   .service-container {
-    padding: 20px; /* Reduce padding for smaller screens */
-    /* height: 60%; */
+    padding: 20px 0px;
   }
-  .service-container{
+  .service-container {
     height: 90vh;
   }
   #title {
@@ -270,12 +274,13 @@
   /*} */
 
   .Services .Card-root {
-    width: 180px; /* Adjust the width */
-    height: 65%; /* Adjust the height to be auto or a specific value */
+    width: 180px !important; /* Adjust the width */
+    height: 60vh; /* Adjust the height to be auto or a specific value */
     margin: 10px;
     padding: 20px; /* Adjust the padding */
     border-radius: 10px; /* Adjust the border-radius */
     box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.1); /* Adjust the box-shadow */
+
   }
 
   .Services .active-service {
@@ -299,44 +304,84 @@
     /* color: rgb(34, 89, 255); */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
-    font-family: 'Droid Serif', serif;
+    font-family: "Droid Serif", serif;
   }
-  
+
   .Services p {
     margin: 10px 0;
-    font-family: 'Arial', sans-serif;
-    font-size: 12px;
-    line-height: 1.2rem;
-    /* line-height: 1.6; */
+    font-family: "Arial", sans-serif;
+    font-size: 12px !important;
+    /* line-height: 1.2rem; */
+    line-height: 1.6;
     color: #000000;
   }
+  .css-berk65-MuiPaper-root-MuiCard-root {
+    box-shadow: none !important;
+  }
 
-  .Services .fadeInUpSD-0{
-    left : 590px;
+  .slick-slider {
+    text-align: center;
   }
-  
-  .Services .fadeInUpSD-1{
-    left : 360px;
+  .slick-prev {
+    left: 12px !important;
+    color: #000 !important;
   }
-  
-  .Services .fadeInUpSD-2{
-    left : 120px;
+  .slick-next {
+    right: 36px !important;
+    color: #000 !important;
   }
-  
-  .Services .fadeInUpSD-3{
-    left : -120px;
+  .slick-prev,
+  .slick-next {
+    top: 40% !important;
   }
-  
-  .Services .fadeInUpSD-4{
-    left : -360px;
+  .slick-prev:before,
+  .slick-next:before {
+    color: #000 !important;
+    font-size: 40px !important;
   }
-  
-  .Services .fadeInUpSD-5{
-    left : -600px;
-  }
-  
+  .slick-next {
+    left: 362px !important;
+}
+.Services .image{
+  margin: 40px 0px;
+}
+.css-berk65-MuiPaper-root-MuiCard-root h1{
+  font-size: 20px;
+  margin: 30px 0;
+}
+}
+@media screen and (min-width:430px) and (max-width:430px) {
+  .slick-next {
+    left: 380px;
+}
+.Services p {
+  margin: 10px 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  /* line-height: 1.2rem; */
+  line-height: 1.6;
+  color: #000000;
+}
 
-  
 }
 
 
+@media screen and (min-width: 390px) and (max-width: 390px){
+  .slick-next {
+    left: 330px !important;
+}
+.Services p {
+  margin: 10px 0;
+  font-family: "Arial", sans-serif;
+  font-size: 16px !important;
+  /* line-height: 1.2rem; */
+  line-height: 1.6;
+  color: #000000;
+}
+}
+
+@media screen and (max-width: 320px) {
+  .slick-next {
+    left: 275px !important;
+}
+}

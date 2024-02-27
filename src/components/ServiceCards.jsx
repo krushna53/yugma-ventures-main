@@ -7,7 +7,9 @@ import { BsPersonRaisedHand } from "react-icons/bs";
 import { BsBarChartLineFill, BsCashStack, BsDiagram3Fill } from "react-icons/bs";
 import { GrTechnology } from "react-icons/gr";
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
-
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 const servicesData = [
   {
     id: 0,
@@ -118,25 +120,84 @@ export default function ActionAreaCard() {
   // }, []);
 
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    arrow:true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay:false,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1  
+        }
+    },
+    {
+      breakpoint: 1400,
+      settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1  
+      }
+  },
+    {
+      breakpoint: 1300,
+      settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1  
+      }
+  },
+    {
+      breakpoint: 1200,
+      settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+      }
+  },
+  {
+      breakpoint: 600,
+      settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1  
+      }
+  },
+  {
+      breakpoint: 480,
+      settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1 
+      }
+  }
+  ]
+     }
+  
+
   return (
     <div className='service-container'>
       <h1 id='title'>Our Services</h1>
       <div className='Services'>
-        {servicesData.map((service) => (
-          <Card key={service.id} className={`${generateAnimationNames()} ${'Card-root'}`} sx={{ maxWidth: 345 }} raised= {true}>
-           <div className='image'>
-              <img src={service.icon} alt={service.title}   />
+        <Slider {...settings}>
+          {servicesData.map((service) => (
+            <div key={service.id} className={`${generateAnimationNames()} ${'Card-root'}`}>
+              <Card sx={{ maxWidth: 345 }} raised={true}>
+                <div className='image'>
+                  <img src={service.icon} alt={service.title} />
+                </div>
+                <h1>{service.title}</h1>
+                <p>{service.description}</p>
+              </Card>
             </div>
-            <h1>{service.title}</h1>
-            <p>{service.description}</p>
-          </Card>
-        ))}
-        
-      </div>
-      <div className="service-buttons">
+          ))}
+        </Slider>
+        <div className="service-buttons">
         <button onClick={prevService}><IoArrowBackCircleOutline /></button>
         <button onClick={nextService}><IoArrowForwardCircleOutline /></button>
       </div>
+      </div>
+      
     </div>
   );
 }

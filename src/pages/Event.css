@@ -184,6 +184,25 @@ text-align: center;
   margin-bottom: 10px;
 }
 
+.event-description .event-video {
+  /* Styles for your video section */
+}
+
+.event-desc-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-pastdesc {
+  flex: 1;
+  /* Styles for description of past events */
+}
+
+.event-pastimg {
+  flex: 1;
+  /* Styles for images of past events */
+}
+
 
 
 /* Additional adjustments for better responsiveness */

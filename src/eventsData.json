@@ -5,16 +5,18 @@
         "eventName": "elevate-msme-sector-with-ai-powered-innovation",
         "name": "ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION",
         "imageUrl": "../eventImage/MSMEEvent_jp.jpg",
-        "date": "January 30, 2024",
+        "date": "July 30, 2024",
         "place": "Mumbai Press Club, Mumbai"
       },
       {
+        "eventName": "mumbai-enterpreneurs-award-2022",
         "name": "MUMBAI ENTREPRENEURS AWARD 2022",
-        "imageUrl": "../eventImage/Mumbai_Ent_Jp.jpg",
+        "imageUrl": "../eventImage/MSMEEvent_jp.jpg",
         "date": "April 12, 2023",
         "place": "Vile Parle, Mumbai"
       },
       {
+        "eventName": "kolkata-enterpreneurs-award-2022",
         "name": "KOLKATA ENTREPRENEURS AWARD 2022",
         "imageUrl": "../eventImage/Kolkata_ent_jp.jpg",
         "date": "June 17, 2023",
@@ -39,8 +41,9 @@
         "registrationLinkSpeaker": "https://docs.google.com/forms/d/e/1FAIpQLSdQa2o6qgyiVPgqMEBgDF4LVC6tkbz3AMx_63dow3Lyju5YHA/viewform"
       },
       {
+        "eventName": "mumbai-enterpreneurs-award-2022",
         "name": "Understanding of Web Development",
-        "imageUrl": "https://example.com/event1-image.jpg",
+        "imageUrl": "../eventImage/MSMEEvent.png",
         "date": "Jan 1",
         "venue": "Tech Hall",
         "time": "Pune",

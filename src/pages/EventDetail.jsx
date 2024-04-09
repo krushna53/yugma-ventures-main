@@ -70,16 +70,18 @@ const EventDetail = () => {
                 <p>{event.introDesc}</p>
               </div>
             </div>
-            <div className="event-video">
-              {/* Dummy video content */}
-              <iframe
-                title="Dummy Video"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+            <div className="event-video-wrapper">
+              <div className="event-video">
+                <iframe
+                  title="Dummy Video"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
+
             <div className="event-desc-img">
               <div className="event-pastdesc">
                 {/* Dummy description for past events */}

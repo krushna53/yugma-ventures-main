@@ -36,10 +36,6 @@
   width: 95%; /* Adjust width as needed */
 }
 
-.event-description-container:hover {
-  transform: scale(1.01);
-}
-
 .event-description {
   background: #f1f8fb;
   padding: 20px;

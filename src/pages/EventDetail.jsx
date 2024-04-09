@@ -96,10 +96,15 @@ const EventDetail = () => {
               </div>
               <div className="event-pastimg">
                 {/* Dummy image for past events */}
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAUE-L3jF7fybmubhDWkz1-pShYyAUkVHk06kVojiivw&s"
-                  alt="Past Event"
-                />
+                <div class="carousel-wrapper">
+                  <div class="carousel-container">
+                    <div class="carousel">
+                      <div class="image-one"></div>
+                      <div class="image-two"></div>
+                      <div class="image-three"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

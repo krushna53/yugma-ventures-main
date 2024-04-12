@@ -5,13 +5,14 @@ import {
   FaUserFriends,
   FaChalkboardTeacher,
 } from "react-icons/fa"; // Import icons from react-icons
-import "./Event.css";
+// import "./Event.css";
 // import MSME from '../images/MSMEEvent.png'
 import eventData from "../eventsData.json";
+import "./eventdetails.css";
 
 import Footer from "../components/Footer";
 
-const Event = () => {
+const EventDetail = () => {
   // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo({
@@ -57,14 +58,6 @@ const Event = () => {
                 {event.venue} | {event.date} | {event.time}
               </h2>
             </div>
-            <div className="registration-options">
-              <button onClick={() => handleRegistration("attendee")}>
-                Register as Attendee
-              </button>
-              <button onClick={() => handleRegistration("speaker")}>
-                Register as Speaker
-              </button>
-            </div>
           </div>
         </div>
         <div className="event-description-container">
@@ -77,32 +70,32 @@ const Event = () => {
                 <p>{event.introDesc}</p>
               </div>
             </div>
-            <div className="event-who-why">
-              <div className="event-why">
-                <h1>Why Attend?</h1>
-                <ul>
-                  <li>
-                    <FaLightbulb style={{ fontSize: "30px" }} />{" "}
-                    {event.whyAttend[0]}
-                  </li>
-                  <li>
-                    <FaUserFriends style={{ fontSize: "30px" }} />{" "}
-                    {event.whyAttend[1]}
-                  </li>
-                  <li>
-                    <FaChalkboardTeacher style={{ fontSize: "30px" }} />{" "}
-                    {event.whyAttend[2]}
-                  </li>
-                </ul>
+            <div className="event-video-wrapper">
+              <div className="event-video">
+                <iframe
+                  title="Dummy Video"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
+            </div>
 
-              <div className="event-who">
-                <h1>Who Should Attend?</h1>
-                <ul>
-                  {event.whoShouldAttend.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
+            <div className="event-desc-img">
+              <div className="event-pastdesc">
+                <p>{event.pastdescription}</p>
+              </div>
+              <div className="event-pastimg">
+                <div className="carousel-wrapper">
+                  <div className="carousel-container">
+                    <div className="carousel">
+                      {event.carouselImages.map((image, index) => (
+                        <div key={index} className={`carousel-image image-${index + 1}`} style={{ backgroundImage: `url(${image})` }}></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -115,4 +108,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default EventDetail;

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Event from './pages/Event';
 
 import './App.css';
+import EventDetail from './pages/EventDetail';
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/event/:eventPathName" element={<Event />} />
+          <Route path="/eventdetail/:eventPathName" element={<EventDetail />} />
         </Routes>
       </div>
     </Router>

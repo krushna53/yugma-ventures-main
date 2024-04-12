@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './EventCardBlock.css';
 import eventData from '../eventsData.json';
 
-
 const EventCardBlock = ({ events }) => {
   const [filter, setFilter] = useState('all');
 
@@ -39,7 +38,11 @@ const EventCardBlock = ({ events }) => {
 
       <div className="event-card-block">
         {filteredEvents.map((event) => (
-          <Link key={event.eventName} to={event.tag === 'Past' ? '#' : `/event/${event.eventName}`} className={`event-card ${event.tag}`}>
+          <Link
+            key={event.eventName}
+            to={event.tag === 'Past' ? `/eventdetail/${event.eventName}` : `/event/${event.eventName}`}
+            className={`event-card ${event.tag}`}
+          >
             <div className="event-card-img">
               <div className="event-card-tags">{event.tag}</div>
               <img src={event.imageUrl} alt={event.name} />

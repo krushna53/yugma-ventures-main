@@ -5,16 +5,18 @@
         "eventName": "elevate-msme-sector-with-ai-powered-innovation",
         "name": "ELEVATE MSME SECTOR WITH AI-POWERED INNOVATION",
         "imageUrl": "../eventImage/MSMEEvent_jp.jpg",
-        "date": "January 30, 2024",
+        "date": "July 30, 2024",
         "place": "Mumbai Press Club, Mumbai"
       },
       {
+        "eventName": "mumbai-enterpreneurs-award-2022",
         "name": "MUMBAI ENTREPRENEURS AWARD 2022",
-        "imageUrl": "../eventImage/Mumbai_Ent_Jp.jpg",
+        "imageUrl": "../eventImage/MSMEEvent_jp.jpg",
         "date": "April 12, 2023",
         "place": "Vile Parle, Mumbai"
       },
       {
+        "eventName": "kolkata-enterpreneurs-award-2022",
         "name": "KOLKATA ENTREPRENEURS AWARD 2022",
         "imageUrl": "../eventImage/Kolkata_ent_jp.jpg",
         "date": "June 17, 2023",
@@ -39,13 +41,45 @@
         "registrationLinkSpeaker": "https://docs.google.com/forms/d/e/1FAIpQLSdQa2o6qgyiVPgqMEBgDF4LVC6tkbz3AMx_63dow3Lyju5YHA/viewform"
       },
       {
-        "name": "Understanding of Web Development",
-        "imageUrl": "https://example.com/event1-image.jpg",
+        "eventName": "mumbai-enterpreneurs-award-2022",
+        "name": "MUMBAI ENTREPRENEURS AWARD 2022",
+        "imageUrl": "../eventImage/MSMEEvent.png",
         "date": "Jan 1",
         "venue": "Tech Hall",
         "time": "Pune",
         "introTitle": "WELCOME TO THE WORLD OF DATA, APPS AND AI COLLABORATION",
         "introDesc": "Snowflake is coming home to San Francisco. Join us at Snowflake Summit 2024 to explore all the cutting-edge innovation the Data Cloud has to offer. Discover the latest in AI, genAI, Apache Iceberg, streaming, privacy-preserving collaboration, flexible programmability, application development and much more.",
+        "pastdescription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit omnis, eligendi itaque nostrum voluptas tempore consequatur incidunt voluptatibus iure fugit dolorem vitae voluptatum similique? Commodi odio hic totam nihil quaerat! Quia quam quaerat officiis fuga id eveniet commodi rerum autem labore tempora deserunt ratione dolore architecto, aut, molestiae, illo recusandae sed dolorem maxime saepe ea laborum ipsum. Accusamus, deleniti est.",
+        "carouselImages": [ 
+          "../eventImage/pastEventImage/mumbaiEvent/image1.jpeg",
+          "../eventImage/pastEventImage/mumbaiEvent/image2.jpeg",
+          "../eventImage/pastEventImage/mumbaiEvent/image3.jpeg",
+          "../eventImage/pastEventImage/mumbaiEvent/image4.jpeg",
+          "../eventImage/pastEventImage/mumbaiEvent/image5.jpeg",
+          "../eventImage/pastEventImage/mumbaiEvent/image6.jpeg" ],
+        "whyAttend": ["Gain insights into the vast opportunities AI presents for MSMEs.", "Connect with like-minded professionals, industry experts, and thought leaders.", "Learn from industry experts, successful entrepreneurs, and AI pioneers."],
+        "whoShouldAttend": ["Developers", "Blockchain enthusiasts", "Tech enthusiasts"],
+        "registrationLinkAttendee": "https://example.com/register-attendee",
+        "registrationLinkSpeaker": "https://example.com/register-speaker"
+      },
+      {
+        "eventName": "kolkata-enterpreneurs-award-2022",
+        "name": "KOLKATA ENTREPRENEURS AWARD 2022",
+        "imageUrl": "../eventImage/MSMEEvent.png",
+        "date": "Jan 1",
+        "venue": "Tech Hall",
+        "time": "Pune",
+        "introTitle": "WELCOME TO THE WORLD OF DATA, APPS AND AI COLLABORATION",
+        "introDesc": "Snowflake is coming home to San Francisco. Join us at Snowflake Summit 2024 to explore all the cutting-edge innovation the Data Cloud has to offer. Discover the latest in AI, genAI, Apache Iceberg, streaming, privacy-preserving collaboration, flexible programmability, application development and much more.",
+        "pastdescription": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit omnis, eligendi itaque nostrum voluptas tempore consequatur incidunt voluptatibus iure fugit dolorem vitae voluptatum similique? Commodi odio hic totam nihil quaerat! Quia quam quaerat officiis fuga id eveniet commodi rerum autem labore tempora deserunt ratione dolore architecto, aut, molestiae, illo recusandae sed dolorem maxime saepe ea laborum ipsum. Accusamus, deleniti est.",
+        "carouselImages": [ 
+          "../eventImage/pastEventImage/kolkataEvent/image1.jpeg",
+          "../eventImage/pastEventImage/kolkataEvent/image2.jpeg",
+          "../eventImage/pastEventImage/kolkataEvent/image3.jpeg",
+          "../eventImage/pastEventImage/kolkataEvent/image4.jpeg",
+          "../eventImage/pastEventImage/kolkataEvent/image5.jpeg",
+          "../eventImage/pastEventImage/kolkataEvent/image6.jpeg"
+         ],
         "whyAttend": ["Gain insights into the vast opportunities AI presents for MSMEs.", "Connect with like-minded professionals, industry experts, and thought leaders.", "Learn from industry experts, successful entrepreneurs, and AI pioneers."],
         "whoShouldAttend": ["Developers", "Blockchain enthusiasts", "Tech enthusiasts"],
         "registrationLinkAttendee": "https://example.com/register-attendee",

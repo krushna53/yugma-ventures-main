@@ -1,9 +1,8 @@
 /* Styling for the background image and details container */
 
-
 .event-details {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   top: 50%;
   left: 50%;
   padding: 40px; /* Add padding for better readability */
@@ -19,8 +18,6 @@
   position: relative;
   overflow: hidden; /* Ensure child elements don't overflow */
   /* object-fit: cover; */
-  
-
 }
 
 .event-img-detail img {
@@ -31,15 +28,12 @@
 
 .event-description-container {
   display: flex;
+  flex-direction: column;
   color: #333; /* Set background color */
   /* padding: 20px; */
   border-radius: 10px;
   margin: 20px auto; /* Center the details horizontally */
   width: 95%; /* Adjust width as needed */
-}
-
-.event-description-container:hover{
-  transform: scale(1.01);
 }
 
 .event-description {
@@ -63,7 +57,7 @@
 
 .event-name h1 {
   font-size: 4rem;
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
@@ -74,7 +68,7 @@
   transform: translateY(-20%);
 }
 /* Styling for the event date and venue */
-.event-date-venue:hover{
+.event-date-venue:hover {
   transform: scale(1.1);
   color: #f1f8fb;
 }
@@ -87,7 +81,7 @@
   opacity: 0.9; /* Adjust opacity as needed for visibility */
   /* transform: translateY(%); */
   font-size: 30px;
-text-align: center;
+  text-align: center;
 }
 .event-date-venue {
   margin-top: 50px; /* Adjust as needed */
@@ -116,7 +110,6 @@ text-align: center;
   transform: translateY(25px);
 }
 
-
 /* Styling for the "Why Attend?" and "Who Should Attend?" cards */
 .event-why ul,
 .event-who ul {
@@ -134,12 +127,11 @@ text-align: center;
   margin: 10px;
   padding: 20px;
   border-radius: 15px;
-  background: #FFFFFF;
+  background: #ffffff;
   text-align: left;
   box-shadow: 0 10px 20px 0 rgba(0, 69, 255, 0.06);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-sizing: border-box; /* Ensure padding is included in the width */
-  
 }
 
 .event-who ul li:hover {
@@ -155,7 +147,7 @@ text-align: center;
 .event-who h1 {
   font-size: 1.7em;
   margin-bottom: 10px;
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -172,19 +164,25 @@ text-align: center;
   margin-bottom: 20px;
   text-align: center;
   font-family: Basis-regular;
-
 }
 
 .event-intro-title h1 {
   font-size: 2rem;
-  font-family: 'Droid Serif', serif;
+  font-family: "Droid Serif", serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
 }
 
+.event-description .event-video {
+  /* Styles for your video section */
+}
 
+.event-desc-img {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Additional adjustments for better responsiveness */
 @media only screen and (max-width: 768px) {
@@ -222,7 +220,9 @@ text-align: center;
     /* padding: 0%; */
     margin-top: 50px;
     border-radius: 8px; /* Adjust border-radius for a subtle rounded look */
-    transform: translateY(0%); /* Adjust translateY for better vertical alignment */
+    transform: translateY(
+      0%
+    ); /* Adjust translateY for better vertical alignment */
   }
 
   .event-date-venue h2 {
@@ -242,32 +242,28 @@ text-align: center;
     margin-top: -40px;
   }
 
-  .event-description h1{
+  .event-description h1 {
     font-size: 18px; /* Reduce font size for the title */
     padding-top: 20px; /* Adjust spacing for the title */
   }
 
-  .event-description p{
+  .event-description p {
     font-size: 16px; /* Reduce font size for the title */
     padding-top: 20px; /* Adjust spacing for the title */
   }
 
-  .event-who ul{
-    
+  .event-who ul {
     font-size: 16px; /* Reduce font size for the title */
     padding-top: 20px; /* Adjust spacing for the title */
-  
   }
 
-  .event-why ul{
-    
+  .event-why ul {
     font-size: 16px; /* Reduce font size for the title */
     padding-top: 20px; /* Adjust spacing for the title */
-  
   }
 
   /* Centering event name and date-venue */
-  
+
   /* .event-date-venue {
     text-align: center;
     position: relative;
@@ -275,4 +271,3 @@ text-align: center;
     transform: translateX(-50%);
   } */
 }
-

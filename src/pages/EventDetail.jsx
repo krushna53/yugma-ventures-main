@@ -84,26 +84,15 @@ const EventDetail = () => {
 
             <div className="event-desc-img">
               <div className="event-pastdesc">
-                {/* Dummy description for past events */}
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Suscipit omnis, eligendi itaque nostrum voluptas tempore
-                  consequatur incidunt voluptatibus iure fugit dolorem vitae
-                  voluptatum similique? Commodi odio hic totam nihil quaerat!
-                  Quia quam quaerat officiis fuga id eveniet commodi rerum autem
-                  labore tempora deserunt ratione dolore architecto, aut,
-                  molestiae, illo recusandae sed dolorem maxime saepe ea laborum
-                  ipsum. Accusamus, deleniti est.
-                </p>
+                <p>{event.pastdescription}</p>
               </div>
               <div className="event-pastimg">
-                {/* Dummy image for past events */}
-                <div class="carousel-wrapper">
-                  <div class="carousel-container">
-                    <div class="carousel">
-                      <div class="image-one"></div>
-                      <div class="image-two"></div>
-                      <div class="image-three"></div>
+                <div className="carousel-wrapper">
+                  <div className="carousel-container">
+                    <div className="carousel">
+                      {event.carouselImages.map((image, index) => (
+                        <div key={index} className={`carousel-image image-${index + 1}`} style={{ backgroundImage: `url(${image})` }}></div>
+                      ))}
                     </div>
                   </div>
                 </div>

@@ -53,11 +53,11 @@ const EventDetail = () => {
             <div className="event-name">
               <h1>{event.name}</h1>
             </div>
-            <div className="event-date-venue">
+            {/* <div className="event-date-venue">
               <h2>
                 {event.venue} | {event.date} | {event.time}
               </h2>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="event-description-container">

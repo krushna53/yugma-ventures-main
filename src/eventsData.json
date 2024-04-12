@@ -11,14 +11,14 @@
       {
         "eventName": "mumbai-enterpreneurs-award-2022",
         "name": "MUMBAI ENTREPRENEURS AWARD 2022",
-        "imageUrl": "../eventImage/MSMEEvent_jp.jpg",
+        "imageUrl": "../eventImage/pastEventImage/mumbaiEvent/image3.jpeg",
         "date": "April 12, 2023",
         "place": "Vile Parle, Mumbai"
       },
       {
         "eventName": "kolkata-enterpreneurs-award-2022",
         "name": "KOLKATA ENTREPRENEURS AWARD 2022",
-        "imageUrl": "../eventImage/Kolkata_ent_jp.jpg",
+        "imageUrl": "../eventImage/pastEventImage/kolkataEvent/image5.jpeg",
         "date": "June 17, 2023",
         "place": "Kolkata"
       }

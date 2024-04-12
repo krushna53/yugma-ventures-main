@@ -76,7 +76,7 @@
           "../eventImage/pastEventImage/kolkataEvent/image2.jpeg",
           "../eventImage/pastEventImage/kolkataEvent/image3.jpeg"
          ],
-        "video": "../eventVideo/mumbaiEvent/video1.mp4",
+        "video": "../eventVideo/kolkataEvent/video1.mp4",
         "whyAttend": ["Gain insights into the vast opportunities AI presents for MSMEs.", "Connect with like-minded professionals, industry experts, and thought leaders.", "Learn from industry experts, successful entrepreneurs, and AI pioneers."],
         "whoShouldAttend": ["Developers", "Blockchain enthusiasts", "Tech enthusiasts"],
         "registrationLinkAttendee": "https://example.com/register-attendee",

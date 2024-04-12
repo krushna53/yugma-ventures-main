@@ -73,10 +73,11 @@ const EventDetail = () => {
             <div className="event-video-wrapper">
               <div className="event-video">
                 <iframe
-                  title="Dummy Video"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="Event Video"
+                  src={event.video}
                   frameborder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  scrolling="no"
                   allowfullscreen
                 ></iframe>
               </div>

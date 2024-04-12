@@ -1,3 +1,7 @@
+.event-pastdesc p {
+  font-size: 20px;
+}
+
 .event-video-wrapper {
   position: relative;
   overflow: hidden;
@@ -13,9 +17,11 @@
   right: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 iframe {
+  overflow: hidden;
   width: 100%;
   height: 100%;
 }

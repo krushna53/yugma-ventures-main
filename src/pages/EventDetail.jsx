@@ -58,17 +58,19 @@ const EventDetail = () => {
         </div>
         <div className="event-description-container">
           <div className="event-description">
-            <div className="event-intro">
-              <div className="event-intro-title">
-                <h1>{introTitle}</h1>
+            {introTitle && (
+              <div className="event-intro">
+                <div className="event-intro-title">
+                  <h1>{introTitle}</h1>
+                </div>
+                <div className="event-intro-desc">
+                  <p>{introDesc}</p>
+                </div>
               </div>
-              <div className="event-intro-desc">
-                <p>{introDesc || "No description available"}</p>
-              </div>
-            </div>
-            <div className="event-video-wrapper">
-              <div className="event-video">
-                {video ? (
+            )}
+            {video && (
+              <div className="event-video-wrapper">
+                <div className="event-video">
                   <iframe
                     title="Event Video"
                     src={video}
@@ -77,36 +79,35 @@ const EventDetail = () => {
                     scrolling="no"
                     allowFullScreen
                   ></iframe>
-                ) : (
-                  <p>No video available</p>
-                )}
+                </div>
               </div>
-            </div>
-
-            <div className="event-desc-img">
-              <div className="event-pastdesc">
-                <p>{pastdescription || "No description available"}</p>
-              </div>
-              <div className="event-pastimg">
-                <div className="carousel-wrapper">
-                  <div className="carousel-container">
-                    <div className="carousel">
-                      {carouselImages.length > 0 ? (
-                        carouselImages.map((image, index) => (
-                          <div
-                            key={index}
-                            className={`carousel-image image-${index + 1}`}
-                            style={{ backgroundImage: `url(${image})` }}
-                          ></div>
-                        ))
-                      ) : (
-                        <p>No images available</p>
-                      )}
+            )}
+            {pastdescription && (
+              <div className="event-desc-img">
+                <div className="event-pastdesc">
+                  <p>{pastdescription}</p>
+                </div>
+                <div className="event-pastimg">
+                  <div className="carousel-wrapper">
+                    <div className="carousel-container">
+                      <div className="carousel">
+                        {carouselImages.length > 0 ? (
+                          carouselImages.map((image, index) => (
+                            <div
+                              key={index}
+                              className={`carousel-image image-${index + 1}`}
+                              style={{ backgroundImage: `url(${image})` }}
+                            ></div>
+                          ))
+                        ) : (
+                          <p>No images available</p>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

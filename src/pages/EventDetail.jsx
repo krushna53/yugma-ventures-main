@@ -1,19 +1,10 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {
-  FaLightbulb,
-  FaUserFriends,
-  FaChalkboardTeacher,
-} from "react-icons/fa"; // Import icons from react-icons
-// import "./Event.css";
-// import MSME from '../images/MSMEEvent.png'
 import eventData from "../eventsData.json";
 import "./eventdetails.css";
-
 import Footer from "../components/Footer";
 
 const EventDetail = () => {
-  // Scroll to top when the component mounts
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -21,19 +12,24 @@ const EventDetail = () => {
     });
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
-  // const { index } = useParams();
-  // const event = eventDetails[index];
-
   const { eventPathName } = useParams();
   const event = eventData.eventDetails.find(
     (e) => e.eventName === eventPathName
   );
-  const imageUrl = event.imageUrl;
-  // console.log(imageUrl)
 
   if (!event) {
     return <div>Error: Event not found</div>;
   }
+
+  const {
+    imageUrl,
+    name,
+    introTitle,
+    introDesc,
+    video,
+    pastdescription,
+    carouselImages = [], // Default to an empty array if undefined
+  } = event;
 
   const handleRegistration = (type) => {
     const registrationLink =
@@ -47,11 +43,11 @@ const EventDetail = () => {
     <>
       <div className="event-detail-block">
         <div className="event-img-detail">
-          <img src={imageUrl} alt={event.name} className="event-background" />
+          <img src={imageUrl} alt={name} className="event-background" />
 
           <div className="event-details">
             <div className="event-name">
-              <h1>{event.name}</h1>
+              <h1>{name}</h1>
             </div>
             {/* <div className="event-date-venue">
               <h2>
@@ -64,36 +60,48 @@ const EventDetail = () => {
           <div className="event-description">
             <div className="event-intro">
               <div className="event-intro-title">
-                <h1>{event.introTitle}</h1>
+                <h1>{introTitle}</h1>
               </div>
               <div className="event-intro-desc">
-                <p>{event.introDesc}</p>
+                <p>{introDesc || "No description available"}</p>
               </div>
             </div>
             <div className="event-video-wrapper">
               <div className="event-video">
-                <iframe
-                  title="Event Video"
-                  src={event.video}
-                  frameborder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  scrolling="no"
-                  allowfullscreen
-                ></iframe>
+                {video ? (
+                  <iframe
+                    title="Event Video"
+                    src={video}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    scrolling="no"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <p>No video available</p>
+                )}
               </div>
             </div>
 
             <div className="event-desc-img">
               <div className="event-pastdesc">
-                <p>{event.pastdescription}</p>
+                <p>{pastdescription || "No description available"}</p>
               </div>
               <div className="event-pastimg">
                 <div className="carousel-wrapper">
                   <div className="carousel-container">
                     <div className="carousel">
-                      {event.carouselImages.map((image, index) => (
-                        <div key={index} className={`carousel-image image-${index + 1}`} style={{ backgroundImage: `url(${image})` }}></div>
-                      ))}
+                      {carouselImages.length > 0 ? (
+                        carouselImages.map((image, index) => (
+                          <div
+                            key={index}
+                            className={`carousel-image image-${index + 1}`}
+                            style={{ backgroundImage: `url(${image})` }}
+                          ></div>
+                        ))
+                      ) : (
+                        <p>No images available</p>
+                      )}
                     </div>
                   </div>
                 </div>
